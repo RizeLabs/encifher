@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #3578e5; /*#25c2a0;*/
+  --ifm-color-primary-dark: #1d68e1; /*rgb(33, 175, 144);*/
+  --ifm-color-primary-darker: #1b62d4; /*rgb(31, 165, 136);*/
+  --ifm-color-primary-darkest: #1751af; /*rgb(26, 136, 112);*/
+  --ifm-color-primary-light: #4e89e8; /*rgb(70, 203, 174);*/
+  --ifm-color-primary-lighter: #5a91ea; /*rgb(102, 212, 189);*/
+  --ifm-color-primary-lightest: #80aaef; /*rgb(146, 224, 208);*/
+  --ifm-code-font-size: 90%; /*95%;*/
+
+  --footer-bg: #E7E7E9;
+  --primary-dark: #0A090B;
+  --secondary-dark: #141216;
+  --primary-brand: #7857FF;
+  font-family: 'Menseal', 'Sora', sans-serif;  
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #25c2a0;
+  --ifm-color-primary-dark: #21af90;
+  --ifm-color-primary-darker: #1fa588;
+  --ifm-color-primary-darkest: #1a8870;
+  --ifm-color-primary-light: #29d5b0;
+  --ifm-color-primary-lighter: #32d8b4;
+  --ifm-color-primary-lightest: #4fddbf;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0A090B;
+  color: #E7E7E9;
+  --ifm-heading-color: #fff;
+  --ifm-link-color: #A994FF;
+  --ifm-link-hover-color: #A994FF;
+  --ifm-font-color-base: red;
+  --ifm-pagination-nav-color-hover: #A994FF;  
+  --ifm-font-family-base: 'Sora', sans-serif;    
+  --ifm-heading-font-family: 'Menseal', sans-serif;                        
+}
+
+/* ----- */
+/* Custom Fonts */
+/* ----- */
+
+@font-face {
+  font-family: 'Menseal';
+  src: url('/static/fonts/menseal-regular.ttf') format('truetype');
+  font-weight: 100 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Menseal';
+  src: url('/static/fonts/menseal-medium.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Menseal';
+  src: url('/static/fonts/menseal-semiBold.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Menseal';
+  src: url('/static/fonts/menseal-bold.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Menseal';
+  src: url('/static/fonts/menseal-extrabold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Menseal';
+  src: url('/static/fonts/menseal-black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sora';
+  src: url('/static/fonts/Sora-ExtraLight.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sore';
+  src: url('/static/fonts/Sora-Light.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sora';
+  src: url('/static/fonts/Sora-Regular.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sora';
+  src: url('/static/fonts/Sora-Medium.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sora';
+  src: url('/static/fonts/Sora-SemiBold.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sora';
+  src: url('/static/fonts/Sora-Bold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sora';
+  src: url('/static/fonts/Sora-ExtraBold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
