@@ -14,6 +14,7 @@ export default function Navbar({ onMenuClick }: NavbarProps): JSX.Element {
           <img
             className="h-4 sm:h-6 hover:cursor-pointer"
             src={require(`@site/static/assets/header/logo.png`).default}
+            alt="logo"
           />
         </Link>
         <div className="flex gap-8 items-center">
@@ -25,6 +26,7 @@ export default function Navbar({ onMenuClick }: NavbarProps): JSX.Element {
             <img
               className="h-[10px]"
               src={require(`@site/static/assets/header/down-arrow.png`).default}
+              alt="redirect btn"
             />
           </a>
           <button

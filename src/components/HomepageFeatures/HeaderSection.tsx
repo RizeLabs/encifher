@@ -30,6 +30,7 @@ export default function HeaderSection(): JSX.Element {
                       require(`@site/static/assets/down-arrow-circle-btn.png`)
                         .default
                     }
+                    alt="Link button"
                   />
                 </a>
               </div>
@@ -37,6 +38,7 @@ export default function HeaderSection(): JSX.Element {
             <img
               className="w-full md:w-[400px]"
               src={require(`@site/static/assets/video.png`).default}
+              alt="Video"
             />
           </div>
         </div>
