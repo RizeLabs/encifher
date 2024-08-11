@@ -76,7 +76,7 @@ body {
 
 @font-face {
   font-family: 'Menseal';
-  src: url('/static/fonts/menseal-semiBold.ttf') format('truetype');
+  src: url('/static/fonts/menseal-semibold.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
