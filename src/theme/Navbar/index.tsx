@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import NavbarLayout from "@theme/Navbar/Layout";
-import NavbarContent from "@theme/Navbar/Content";
+import { Link } from 'react-router-dom';
 
 interface NavbarProps {
   onMenuClick: () => void;
@@ -11,12 +10,12 @@ export default function Navbar({ onMenuClick }: NavbarProps): JSX.Element {
   return (
     <div className="w-screen lg:px-20 md:px-10 px-5 py-6 flex">
       <div className="w-full md:max-w-none text-white flex justify-between items-center">
-        <div>
+        <Link className="bg-transparent border-0" to="/">
           <img
-            className="h-4 sm:h-6 hover:cursor-pointer "
+            className="h-4 sm:h-6 hover:cursor-pointer"
             src={require(`@site/static/assets/header/logo.png`).default}
           />
-        </div>
+        </Link>
         <div className="flex gap-8 items-center">
           <a
             href="#getintouch"
