@@ -44,6 +44,7 @@ function Footer(): JSX.Element | null {
                 <input
                   type="email"
                   placeholder="Email"
+                  autoComplete="true"
                   id="email"
                   name="email"
                   required={true}

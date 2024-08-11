@@ -13,9 +13,9 @@ export default function HeaderSection(): JSX.Element {
         <div className="max-w-[400px] md:w-full md:max-w-none mr-auto ml-auto lg:mt-4">
           <div className="flex gap-20 lg:gap-32 md:flex-row flex-col">
             <div className="flex flex-col w-full">
-              <div className="text-4xl uppercase font-medium">
+              <h1 className="text-4xl uppercase font-medium">
                 Open-Source Code is good.
-              </div>
+              </h1>
               <div className="lg:text-[64px] text-6xl uppercase mt-10 font-bold">
                 But Open-Source Value is not!
               </div>
