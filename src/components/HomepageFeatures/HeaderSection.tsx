@@ -41,7 +41,7 @@ export default function HeaderSection(): JSX.Element {
               </div>
             </div>
             <video
-              className="md:w-[360px] lg:w-[420px]"
+              className="w-[320px] md:w-[360px] lg:w-[420px] self-center"
               autoPlay
               loop
               muted
