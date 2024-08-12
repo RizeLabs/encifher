@@ -61,7 +61,7 @@ body {
 
 @font-face {
   font-family: 'Menseal';
-  src: url('/static/fonts/menseal-regular.ttf') format('truetype');
+  src: url('/static/fonts/menseal-regular.woff2') format('woff2');
   font-weight: 100 200;
   font-style: normal;
   font-display: swap;
@@ -69,7 +69,7 @@ body {
 
 @font-face {
   font-family: 'Menseal';
-  src: url('/static/fonts/menseal-medium.ttf') format('truetype');
+  src: url('/static/fonts/menseal-medium.woff2') format('woff2');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -77,7 +77,7 @@ body {
 
 @font-face {
   font-family: 'Menseal';
-  src: url('/static/fonts/menseal-semibold.ttf') format('truetype');
+  src: url('/static/fonts/menseal-semibold.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -85,7 +85,7 @@ body {
 
 @font-face {
   font-family: 'Menseal';
-  src: url('/static/fonts/menseal-bold.ttf') format('truetype');
+  src: url('/static/fonts/menseal-bold.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -93,7 +93,7 @@ body {
 
 @font-face {
   font-family: 'Menseal';
-  src: url('/static/fonts/menseal-extrabold.ttf') format('truetype');
+  src: url('/static/fonts/menseal-extrabold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -101,7 +101,7 @@ body {
 
 @font-face {
   font-family: 'Menseal';
-  src: url('/static/fonts/menseal-black.ttf') format('truetype');
+  src: url('/static/fonts/menseal-black.woff2') format('woff2');
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -109,7 +109,7 @@ body {
 
 @font-face {
   font-family: 'Sora';
-  src: url('/static/fonts/Sora-ExtraLight.ttf') format('truetype');
+  src: url('/static/fonts/Sora-ExtraLight.woff2') format('woff2');
   font-weight: 100;
   font-style: normal;
   font-display: swap;
@@ -117,7 +117,7 @@ body {
 
 @font-face {
   font-family: 'Sore';
-  src: url('/static/fonts/Sora-Light.ttf') format('truetype');
+  src: url('/static/fonts/Sora-Light.woff2') format('woff2');
   font-weight: 200;
   font-style: normal;
   font-display: swap;
@@ -125,7 +125,7 @@ body {
 
 @font-face {
   font-family: 'Sora';
-  src: url('/static/fonts/Sora-Regular.ttf') format('truetype');
+  src: url('/static/fonts/Sora-Regular.woff2') format('woff2');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -133,7 +133,7 @@ body {
 
 @font-face {
   font-family: 'Sora';
-  src: url('/static/fonts/Sora-Medium.ttf') format('truetype');
+  src: url('/static/fonts/Sora-Medium.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -141,7 +141,7 @@ body {
 
 @font-face {
   font-family: 'Sora';
-  src: url('/static/fonts/Sora-SemiBold.ttf') format('truetype');
+  src: url('/static/fonts/Sora-SemiBold.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -149,7 +149,7 @@ body {
 
 @font-face {
   font-family: 'Sora';
-  src: url('/static/fonts/Sora-Bold.ttf') format('truetype');
+  src: url('/static/fonts/Sora-Bold.woff2') format('woff2');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -157,7 +157,7 @@ body {
 
 @font-face {
   font-family: 'Sora';
-  src: url('/static/fonts/Sora-ExtraBold.ttf') format('truetype');
+  src: url('/static/fonts/Sora-ExtraBold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;

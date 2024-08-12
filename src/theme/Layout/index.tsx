@@ -52,7 +52,7 @@ export default function Layout(props: Props): JSX.Element {
   useKeyboardNavigation();
 
   return (
-    <div data-aos="fade-up" data-aos-duration="1200" data-aos-delay="0">
+    <div data-aos-duration="1200" data-aos-delay="0">
       <LayoutProvider>
         <PageMetadata title={title} description={description} />
 
