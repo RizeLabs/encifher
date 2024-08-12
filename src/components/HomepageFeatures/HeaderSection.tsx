@@ -37,7 +37,7 @@ export default function HeaderSection(): JSX.Element {
               </div>
             </div>
             <img
-              className="w-full md:w-[400px]"
+              className="md:w-[360px] lg:w-[400px]"
               src={require(`@site/static/assets/video.webp`).default}
               alt="Video"
             />

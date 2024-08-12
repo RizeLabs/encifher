@@ -47,7 +47,7 @@ export default function EventsSection({ recentPosts }: Props): JSX.Element {
             <EventsHeading />
             <ViewAllButton className="hidden md:flex" />
           </div>
-          <div className="flex flex-wrap gap-8 justify-center " data-aos="fade-up">
+          <div className="flex flex-wrap gap-8 justify-between " data-aos="fade-up">
             {recentPosts && recentPosts.slice(0, 3).map(({ content: BlogPostContent }) => (
               <BlogPostProvider
                 key={BlogPostContent.metadata.permalink}
