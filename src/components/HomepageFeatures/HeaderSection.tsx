@@ -1,6 +1,6 @@
 import React from "react";
 import Marquee from "./Marquee";
-import OverlayImage from '@site/static/assets/bg-image1.webp';
+import OverlayImage from "@site/static/assets/bg-image1.webp";
 
 export default function HeaderSection(): JSX.Element {
   return (
@@ -10,7 +10,7 @@ export default function HeaderSection(): JSX.Element {
         alt="background image"
         src={OverlayImage}
       />
-      <div className="w-screen lg:px-20 md:px-10 px-5 pt-16 pb-8 md:pt-20 md:pb-10 flex flex-col items-start gap-24 text-white">
+      <div className="w-screen lg:px-20 md:px-10 px-5 pt-16 pb-8 md:pt-20 md:pb-10 flex flex-col items-start text-white">
         <div className="max-w-[400px] md:w-full md:max-w-none mr-auto ml-auto lg:mt-4">
           <div className="flex gap-20 lg:gap-32 md:flex-row flex-col">
             <div className="flex flex-col w-full">
@@ -22,9 +22,13 @@ export default function HeaderSection(): JSX.Element {
               </div>
               <div className="flex mt-20 gap-2 md:gap-8 items-center">
                 <div className="text-lg sm:text-xl max-w-[300px]">
-                  World's first solution for encrypting <span className="font-bold">Bitcoin</span>
+                  World's first solution for encrypting{" "}
+                  <span className="font-bold">Bitcoin</span>
                 </div>
-                <a className="bg-transparent contents border-none w-16 h-16" href="#eventsandnews">
+                <a
+                  className="bg-transparent contents border-none w-16 h-16"
+                  href="#eventsandnews"
+                >
                   <img
                     className="w-16 h-16 hover:cursor-pointer hover:opacity-75"
                     src={
@@ -36,11 +40,23 @@ export default function HeaderSection(): JSX.Element {
                 </a>
               </div>
             </div>
-            <img
-              className="md:w-[360px] lg:w-[400px]"
-              src={require(`@site/static/assets/video.webp`).default}
-              alt="Video"
-            />
+            <video
+              className="md:w-[360px] lg:w-[420px]"
+              autoPlay
+              loop
+              muted
+              playsInline
+            >
+              <source
+                src={require(`@site/static/assets/video.webm`).default}
+                type="video/webm"
+              />
+              <source
+                src={require(`@site/static/assets/video_2x.webm`).default}
+                type="video/webm"
+              />
+              Your browser does not support the video tag.
+            </video>
           </div>
         </div>
       </div>
