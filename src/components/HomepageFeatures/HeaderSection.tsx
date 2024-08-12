@@ -20,12 +20,12 @@ export default function HeaderSection(): JSX.Element {
                 But Open-Source Value is not!
               </div>
               <div className="flex mt-20 gap-2 md:gap-8 items-center">
-                <div className="text-xl max-w-[300px]">
+                <div className="text-lg sm:text-xl max-w-[300px]">
                   World's first solution for encrypting <span className="font-bold">Bitcoin</span>
                 </div>
-                <a className="bg-transparent border-none" href="#eventsandnews">
+                <a className="bg-transparent contents border-none w-16 h-16" href="#eventsandnews">
                   <img
-                    className="w-full h-16 hover:cursor-pointer hover:opacity-75"
+                    className="w-16 h-16 hover:cursor-pointer hover:opacity-75"
                     src={
                       require(`@site/static/assets/down-arrow-circle-btn.png`)
                         .default
