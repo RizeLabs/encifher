@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 import tailwindPlugin from "./plugins/tailwind-config.cjs";
 
 const config: Config = {
-  title: 'Encifher Website | Bitcoin encryption',
+  title: 'Bitcoin, but Encrypted 🔐',
   tagline: 'Encrypting Bitcoin',
   favicon: 'img/logo.ico',
 
@@ -71,7 +71,16 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: '/img/twitter_cover.webp',
+    metadata: [
+      { name: 'keywords', content: 'encifher, bitcoin, encryption, blockchain, fhe' },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:site', content: '@encifherio' },
+      { name: 'twitter:title', content: 'Bitcoin, but Encrypted' },
+      { name: 'twitter:description', content: "Encifher is the world\'s first FHE-enabled confidential execution engine over Bitcoin. It allows the creation of encrypted and trustless Apps on the most economically secure blockchain. By leveraging industry-leading TFHE, Encifher achieves blazing-fast composability between multiple private states. Encifher offers on-chain confidential computation using lattice-based cryptography methods, ensuring post-quantum security. More info can be found here: https://bananahq.notion.site/Encifher-public-2bc108ece90a42109369b414748b6b8a?pvs=4" },
+      { name: 'twitter:image', content: '/img/twitter_cover.webp' },
+      {name: 'og:title', content: 'Bitcoin, but Encrypted 🔐'}
+    ],
     navbar: {
       title: 'My Site',
       logo: {

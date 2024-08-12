@@ -1,15 +1,20 @@
 import React, { useState } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Footer(): JSX.Element | null {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  // const {footer} = useThemeConfig();
-  // if (!footer) {
-  //   return null;
-  // }
-  // const {copyright, links, logo, style} = footer;
+
+  // Define the URL for the Google Form
+  const googleFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLScwSsE1O0sZYhi9g9aQGAhIm1r0TpdAtJKDHY1zPy18BEhIfQ/viewform?usp=sf_link';
+
+  // Handler for the button click
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault(); // Prevent the default form submission
+    // Open the Google Form in a new tab with prefilled data
+    window.open(googleFormUrl, '_blank');
+  };
 
   return (
     <div
@@ -29,7 +34,7 @@ function Footer(): JSX.Element | null {
             />
           </div>
           <div className="lg:w-1/2 md:w-1/2 mt-12 md:mt-0">
-            <form className="flex flex-col">
+            <form className="flex flex-col" onSubmit={handleSubmit}>
               <div className="text-2xl">
                 <input
                   type="text"
