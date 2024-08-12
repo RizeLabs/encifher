@@ -14,23 +14,23 @@ export default function CommunitySection(): JSX.Element {
         <img
           className="w-[44%]"
           alt="background image 1"
-          src={require(`@site/static/assets/community/Image-1.png`).default}
+          src={require(`@site/static/assets/community/Image-1.webp`).default}
         />
         <img
           className="w-[27%]"
           alt="background image 2"
-          src={require(`@site/static/assets/community/Image-2.png`).default}
+          src={require(`@site/static/assets/community/Image-2.webp`).default}
         />
         <div className="w-[30%] flex flex-col gap-2 md:gap-3">
           <img
             className="w-full h-1/2"
             alt="background image 3"
-            src={require(`@site/static/assets/community/Image-3.png`).default}
+            src={require(`@site/static/assets/community/Image-3.webp`).default}
           />
           <img
             className="w-full h-1/2"
             alt="background image 4"
-            src={require(`@site/static/assets/community/Image-4.png`).default}
+            src={require(`@site/static/assets/community/Image-4.webp`).default}
           />
         </div>
       </div>

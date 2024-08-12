@@ -1,5 +1,6 @@
 import React from "react";
 import Marquee from "./Marquee";
+import OverlayImage from '@site/static/assets/bg-image1.webp';
 
 export default function HeaderSection(): JSX.Element {
   return (
@@ -7,7 +8,7 @@ export default function HeaderSection(): JSX.Element {
       <img
         className="absolute mix-blend-screen bottom-0 pointer-events-none"
         alt="background image"
-        src={require(`@site/static/assets/bg-image1.png`).default}
+        src={OverlayImage}
       />
       <div className="w-screen lg:px-20 md:px-10 px-5 pt-16 pb-8 md:pt-20 md:pb-10 flex flex-col items-start gap-24 text-white">
         <div className="max-w-[400px] md:w-full md:max-w-none mr-auto ml-auto lg:mt-4">
@@ -27,7 +28,7 @@ export default function HeaderSection(): JSX.Element {
                   <img
                     className="w-16 h-16 hover:cursor-pointer hover:opacity-75"
                     src={
-                      require(`@site/static/assets/down-arrow-circle-btn.png`)
+                      require(`@site/static/assets/down-arrow-circle-btn.webp`)
                         .default
                     }
                     alt="Link button"
@@ -37,7 +38,7 @@ export default function HeaderSection(): JSX.Element {
             </div>
             <img
               className="w-full md:w-[400px]"
-              src={require(`@site/static/assets/video.png`).default}
+              src={require(`@site/static/assets/video.webp`).default}
               alt="Video"
             />
           </div>

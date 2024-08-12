@@ -24,7 +24,7 @@ function Footer(): JSX.Element | null {
             </div>
             <img
               className="lg:h-64 lg:w-64 md:w-52 md:h-52 h-60 w-60 mr-auto ml-auto md:ml-0 md:mr-0"
-              src={require(`@site/static/assets/footer/footerlogo.png`).default}
+              src={require(`@site/static/assets/footer/footerlogo.webp`).default}
               alt="footer logo"
             />
           </div>
@@ -71,7 +71,7 @@ function Footer(): JSX.Element | null {
                 <img
                   className="md:h-3 h-[10px]"
                   src={
-                    require(`@site/static/assets/footer/top-right-arrow.png`)
+                    require(`@site/static/assets/footer/top-right-arrow.webp`)
                       .default
                   }
                   alt="arrow btn"

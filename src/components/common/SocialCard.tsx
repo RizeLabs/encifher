@@ -30,7 +30,7 @@ const SocialCard: React.FC<SocialCardProps> = ({
         target="_blank"
       >
         <img
-          src={require(`@site/static/assets/top-right-arrow-btn.png`).default}
+          src={require(`@site/static/assets/top-right-arrow-btn.webp`).default}
           alt="Arrow Button"
           className="w-full h-full object-contain"
         />

@@ -6,7 +6,7 @@ import tailwindPlugin from "./plugins/tailwind-config.cjs";
 const config: Config = {
   title: 'Encifher Website | Bitcoin encryption',
   tagline: 'Encrypting Bitcoin',
-  favicon: 'img/logo.png',
+  favicon: 'img/logo.ico',
 
   // Set the production url of your site here
   url: 'https://encifer.vercel.app',

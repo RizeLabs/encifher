@@ -16,7 +16,7 @@ function useContainerClassName() {
 
 // Import default image statically
 const DEFAULT_IMAGE_URL =
-  require("@site/static/assets/random-image.png").default;
+  require("@site/static/assets/random-image.webp").default;
 
 export default function BlogPostItem({
   children,

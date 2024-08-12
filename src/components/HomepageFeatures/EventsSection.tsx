@@ -18,7 +18,7 @@ const ViewAllButton: React.FC<ViewAllButtonProps> = ({ className }) => {
       <span>View All</span>
       <img
         className="md:h-3 h-[10px]"
-        src={require(`@site/static/assets/footer/top-right-arrow.png`).default}
+        src={require(`@site/static/assets/footer/top-right-arrow.webp`).default}
         alt="Arrow Icon"
       />
     </Link>

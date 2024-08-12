@@ -10,7 +10,7 @@ const MarqueeItem = ({ text, imageSrc }) => (
 
 const Marquee = () => {
   const items = ["secure", "fast", "trustworthy", "reliable"];
-  const imageSrc = require(`@site/static/assets/marquee-shape.png`).default;
+  const imageSrc = require(`@site/static/assets/marquee-shape.webp`).default;
 
   return (
     <div className="overflow-hidden whitespace-nowrap bg-transparent text-[#E7E7E9] py-2 flex font-bold text-2xl uppercase">

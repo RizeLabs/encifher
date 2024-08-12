@@ -9,7 +9,7 @@ interface CardProps {
 }
 
 const Card: React.FC<CardProps> = ({ imageUrl, heading, description, url }) => {
-  const DEFAULT_IMAGE_URL = require(`@site/static/assets/random-image.png`).default;
+  const DEFAULT_IMAGE_URL = require(`@site/static/assets/random-image.webp`).default;
   const DESCRIPTION_LIMIT = 55; // Limit for the number of characters in the description
 
   // Function to truncate description based on characters
@@ -33,7 +33,7 @@ const Card: React.FC<CardProps> = ({ imageUrl, heading, description, url }) => {
           className="absolute top-10 right-10 bg-white rounded-full shadow-md w-16 h-16"
         >
           <img
-            src={require(`@site/static/assets/top-right-arrow-btn.png`).default}
+            src={require(`@site/static/assets/top-right-arrow-btn.webp`).default}
             alt="Arrow Button"
             className="w-full h-full object-contain"
           />
