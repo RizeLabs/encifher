@@ -6,14 +6,26 @@ function Footer(): JSX.Element | null {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  // Define the URL for the Google Form
-  const googleFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLScwSsE1O0sZYhi9g9aQGAhIm1r0TpdAtJKDHY1zPy18BEhIfQ/viewform?usp=sf_link';
+  // Define the base URL for the Google Form
+  const googleFormBaseUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSecs7BM563iyyA-zzo_B03z6krkHKMOWXZALsTpHoM5rEjIYw/viewform';
 
   // Handler for the button click
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault(); // Prevent the default form submission
+
+    // Construct the URL with prefilled data
+    const url = new URL(googleFormBaseUrl);
+    const params = new URLSearchParams({
+      'entry.2005620554': name,
+      'entry.1045781291': email,
+      'entry.1065046570': message,
+    });
+
+    // Append the parameters to the base URL
+    url.search = params.toString();
+
     // Open the Google Form in a new tab with prefilled data
-    window.open(googleFormUrl, '_blank');
+    window.open(url.toString(), '_blank');
   };
 
   return (
