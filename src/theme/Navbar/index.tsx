@@ -7,7 +7,7 @@ interface NavbarProps {
 
 export default function Navbar({ onMenuClick }: NavbarProps): JSX.Element {
   return (
-    <div className="w-screen lg:px-20 md:px-10 px-5 py-6 flex">
+    <nav className="w-screen lg:px-20 md:px-10 px-5 py-6 flex navbar">
       <div className="w-full md:max-w-none text-white flex justify-between items-center">
         <Link className="bg-transparent border-0" to="/">
           <img
@@ -44,6 +44,6 @@ export default function Navbar({ onMenuClick }: NavbarProps): JSX.Element {
           </button>
         </div>
       </div>
-    </div>
+    </nav>
   );
 }

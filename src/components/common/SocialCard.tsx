@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 interface SocialCardProps {
   socialIconUrl: string;
@@ -24,8 +23,8 @@ const SocialCard: React.FC<SocialCardProps> = ({
       <div className="absolute top-10 left-10">
         <img src={socialIconUrl} alt="Social Icon" className="w-12 h-12" />
       </div>
-      <Link
-        to={linkUrl}
+      <a
+        href={linkUrl}
         className="absolute top-10 right-10 bg-white rounded-full shadow-md w-16 h-16"
         target="_blank"
       >
@@ -34,7 +33,7 @@ const SocialCard: React.FC<SocialCardProps> = ({
           alt="Arrow Button"
           className="w-full h-full object-contain"
         />
-      </Link>
+      </a>
       <div className="absolute bottom-2 left-1/2 -translate-x-1/2 text-white text-center text-4xl font-bold p-4">
         {text}
       </div>

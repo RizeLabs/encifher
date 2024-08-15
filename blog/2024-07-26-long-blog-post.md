@@ -15,26 +15,13 @@ Using Fully Homomorphic Encryption leverages lattice-based cryptography methods 
 ![Docusaurus Plushie2](/assets/random-image.webp)
 
 <br></br>
-<br></br>
 
-# TEMPORARY HEADING FOR DOCUSAURUS MARKDOWN
-# INTRODUCTION
+## INTRODUCTION
 
 Using Fully Homomorphic Encryption leverages lattice-based cryptography methods to provide on-chain ability for encrypted computation. Using FHE, users can build applications with encrypted states and use those states for blind data processing, getting compatibility between multiple encrypted states.
 
-<br></br>
 
-# HIGHLIGHTS
-
-* Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-
-* Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-
-* Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-
-<br></br>
-
-# TECHNICAL UPDATES
+## HIGHLIGHTS
 
 * Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
 
@@ -42,9 +29,15 @@ Using Fully Homomorphic Encryption leverages lattice-based cryptography methods 
 
 * Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
 
-<br></br>
+## TECHNICAL UPDATES
 
-# VIDEOS
+* Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+
+* Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+
+* Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+
+## VIDEOS
 
 [Lorem Ipsum is simply dummy text of the printing and typesetting industry.](http://a.com)
 

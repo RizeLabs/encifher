@@ -52,7 +52,8 @@ body {
   --ifm-pagination-nav-color-hover: #A994FF;  
   --ifm-font-family-base: 'Sora', sans-serif;    
   --ifm-heading-font-family: 'Menseal', sans-serif; 
-  --ifm-code-background: darkgreen;                       
+  --ifm-code-background: darkgreen;       
+  --ifm-navbar-background-color: var(--primary-dark);                
 }
 
 /* ----- */
