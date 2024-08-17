@@ -8,7 +8,7 @@ import { BlogPostProvider } from "@docusaurus/theme-common/internal";
 const EventsHeading: React.FC = () => {
   return (
     <div className="text-5xl text-primary-dark font-bold uppercase">
-      <div>EVENTS</div>
+      <div>BLOGS</div>
     </div>
   );
 };
@@ -30,7 +30,7 @@ export default function AllEventsSection({ recentPosts }: Props): JSX.Element {
               const { metadata } = BlogPostContent;
 
               // Check if the topic is "news" and skip rendering if it is
-              if (metadata?.frontMatter?.topic !== "events") return null;
+              if (metadata?.frontMatter?.topic !== "blog") return null;
               return (
                 <BlogPostProvider
                   key={BlogPostContent.metadata.permalink}
