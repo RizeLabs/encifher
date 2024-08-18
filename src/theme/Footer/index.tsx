@@ -29,8 +29,9 @@ function Footer(): JSX.Element | null {
   };
 
   return (
+    <footer className="bg-secondary-dark">
     <div
-      className="w-screen lg:px-20 md:px-10 px-5 py-16 md:py-20 flex flex-col items-start bg-secondary-dark gap-24 z-10"
+      className="w-full max-w-[1440px] ml-auto mr-auto lg:px-20 md:px-10 px-5 py-16 md:py-20 flex flex-col items-start gap-24 z-10"
       id="getintouch"
     >
       <div className="max-w-[400px] md:w-full md:max-w-none mr-auto ml-auto">
@@ -128,6 +129,7 @@ function Footer(): JSX.Element | null {
         </div>
       </div>
     </div>
+    </footer>
   );
 }
 

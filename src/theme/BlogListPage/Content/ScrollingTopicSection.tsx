@@ -29,10 +29,10 @@ export default function ScrollingTopicSection({
   topic,
 }: Props): JSX.Element {
   return (
-    <section>
-      <div className="w-screen lg:px-20 md:px-10 px-5 py-16 md:py-32 flex flex-col items-start bg-secondary-dark gap-24 z-10">
+    <section className="bg-secondary-dark">
+      <div className="w-full max-w-[1440px] ml-auto mr-auto lg:px-20 md:px-10 px-5 py-16 md:py-32 flex flex-col items-start  gap-24 z-10">
         <div className="max-w-[400px] md:w-full md:max-w-none mr-auto ml-auto">
-          <div className="flex justify-between items-center mb-16 w-full">
+          <div className="flex justify-start items-center mb-16 w-full">
             <Heading heading={heading} />
           </div>
           <div className="flex overflow-x-scroll gap-8 md:-mr-10 lg:-mr-20">

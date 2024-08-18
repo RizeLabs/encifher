@@ -10,7 +10,7 @@ export default function HeaderSection(): JSX.Element {
         alt="background image"
         src={OverlayImage}
       />
-      <div className="w-screen lg:px-20 md:px-10 px-5 pt-16 pb-8 md:pt-20 md:pb-10 flex flex-col items-start text-white">
+      <div className="max-w-[1440px] ml-auto mr-auto lg:px-20 md:px-10 px-5 pt-16 pb-8 md:pt-20 md:pb-10 flex flex-col items-start text-white">
         <div className="max-w-[400px] md:w-full md:max-w-none mr-auto ml-auto lg:mt-4">
           <div className="flex gap-20 lg:gap-32 md:flex-row flex-col">
             <div className="flex flex-col w-full">

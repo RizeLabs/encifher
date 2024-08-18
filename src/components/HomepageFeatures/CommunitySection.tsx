@@ -1,9 +1,9 @@
 import React from "react";
-import Marquee from "./Marquee";
 
 export default function CommunitySection(): JSX.Element {
   return (
-    <section className="relative" data-aos="fade-up" id="jointhecommunity">
+    <section className="bg-secondary-dark" data-aos="fade-up" id="jointhecommunity">
+      <div className="relative max-w-[1440px] ml-auto mr-auto">
         <div
         className="absolute w-full h-full bg-gradient-to-t from-[#141216] via-[#141216] via-15% to-[#14121600] pointer-events-none"
       />
@@ -33,6 +33,7 @@ export default function CommunitySection(): JSX.Element {
             src={require(`@site/static/assets/community/Image-4.webp`).default}
           />
         </div>
+      </div>
       </div>
     </section>
   );
