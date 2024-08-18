@@ -89,7 +89,7 @@ export default function HeaderSection(): JSX.Element {
                 </a>
               </div>
             </div>
-            <div className="mix-blend-screen">
+            <div className="mix-blend-screen flex self-center">
             <video
               ref={videoRef}
               className="w-[280px] md:w-[380px] lg:w-[460px] self-center"
