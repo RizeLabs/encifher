@@ -18,7 +18,7 @@ export default function Navbar({ onMenuClick }: NavbarProps): JSX.Element {
             alt="logo"
           />
         </Link>
-        <div className="flex gap-8 items-center">
+        <div className="flex gap-2 sm:gap-8 items-center">
           <a
             href="#getintouch"
             className="flex gap-2 hover:no-underline transition-colors duration-700 justify-center font-menseal items-center hover:cursor-pointer hover:opacity-95 self-end bg-custom-gradient py-2 px-2 md:px-6 text-base md:text-lg font-semibold rounded-[60px] border-none text-white"
