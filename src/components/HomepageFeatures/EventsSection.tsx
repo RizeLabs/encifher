@@ -28,7 +28,7 @@ const ViewAllButton: React.FC<ViewAllButtonProps> = ({ className }) => {
 const EventsHeading: React.FC = () => {
   return (
     <div className="text-5xl text-primary-dark font-bold">
-      <div>EVENTS</div>
+      <div>BLOGS</div>
       <div>AND NEWS</div>
     </div>
   );
