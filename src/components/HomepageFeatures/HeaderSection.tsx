@@ -3,7 +3,7 @@ import Marquee from "./Marquee";
 import OverlayImage from "@site/static/assets/bg-image1.webp";
 
 export default function HeaderSection(): JSX.Element {
-  const videoRef = useRef(null); // Using useRef to reference the video element
+  const videoRef = useRef<HTMLVideoElement>(null); // Using useRef to reference the video element
 
   useEffect(() => {
     const video = videoRef.current;
@@ -55,11 +55,11 @@ export default function HeaderSection(): JSX.Element {
   return (
     <section className="relative">
       <img
-        className="absolute mix-blend-screen bottom-0 pointer-events-none"
+        className="absolute bottom-0 pointer-events-none mix-blend-screen"
         alt="background image"
         src={OverlayImage}
       />
-      <div className="max-w-[1440px] ml-auto mr-auto lg:px-20 md:px-10 px-5 pt-16 pb-8 md:pt-20 md:pb-10 flex flex-col items-start text-white">
+      <div className="max-w-[1440px] ml-auto mr-auto lg:px-20 md:px-10 px-5 pt-16 md:pt-20 md:pb-10 flex flex-col items-start text-white">
         <div className="max-w-[400px] md:w-full md:max-w-none mr-auto ml-auto lg:mt-4">
           <div className="flex md:flex-row flex-col">
             <div className="flex flex-col w-full">
@@ -89,6 +89,7 @@ export default function HeaderSection(): JSX.Element {
                 </a>
               </div>
             </div>
+            <div className="mix-blend-screen">
             <video
               ref={videoRef}
               className="w-[280px] md:w-[380px] lg:w-[460px] self-center"
@@ -112,6 +113,7 @@ export default function HeaderSection(): JSX.Element {
               />
               Your browser does not support the video tag.
             </video>
+            </div>
           </div>
         </div>
       </div>
