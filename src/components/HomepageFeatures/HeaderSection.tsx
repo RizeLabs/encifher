@@ -56,6 +56,10 @@ export default function HeaderSection(): JSX.Element {
                 src={require(`@site/static/assets/video_2x.webm`).default}
                 type="video/webm"
               />
+              <source
+                src={require(`@site/static/assets/video.mp4`).default}
+                type="video/mp4"
+              />
               Your browser does not support the video tag.
             </video>
           </div>
