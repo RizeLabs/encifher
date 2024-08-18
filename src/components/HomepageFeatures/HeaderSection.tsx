@@ -1,8 +1,57 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Marquee from "./Marquee";
 import OverlayImage from "@site/static/assets/bg-image1.webp";
 
 export default function HeaderSection(): JSX.Element {
+  const videoRef = useRef(null); // Using useRef to reference the video element
+
+  useEffect(() => {
+    const video = videoRef.current;
+
+    // Function to play the video when it's visible or on user interaction
+    const handlePlayVideo = () => {
+      if (video && video.paused) {
+        video.play().catch((error) => {
+          console.error('Autoplay blocked, will wait for user interaction:', error);
+        });
+      }
+    };
+
+    // Intersection Observer to detect when the video is in the viewport
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            handlePlayVideo();
+          }
+        });
+      },
+      { threshold: 0.5 } // Play video when 50% of it is visible
+    );
+
+    if (video) {
+      observer.observe(video);
+    }
+
+    // Fallback: Force video play on user interaction if autoplay is blocked
+    const handleUserInteraction = () => {
+      if (video && video.paused) {
+        handlePlayVideo();
+      }
+    };
+
+    document.addEventListener('click', handleUserInteraction, { once: true });
+    document.addEventListener('touchstart', handleUserInteraction, { once: true });
+
+    return () => {
+      if (video) {
+        observer.unobserve(video);
+      }
+      document.removeEventListener('click', handleUserInteraction);
+      document.removeEventListener('touchstart', handleUserInteraction);
+    };
+  }, []);
+
   return (
     <section className="relative">
       <img
@@ -41,11 +90,12 @@ export default function HeaderSection(): JSX.Element {
               </div>
             </div>
             <video
+              ref={videoRef}
               className="w-[280px] md:w-[380px] lg:w-[460px] self-center"
               autoPlay
-              loop
               muted
               playsInline
+              loop
               preload="auto"
             >
               <source
