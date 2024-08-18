@@ -41,11 +41,12 @@ export default function HeaderSection(): JSX.Element {
               </div>
             </div>
             <video
-              className="w-[320px] md:w-[380px] lg:w-[460px] self-center"
+              className="w-[280px] md:w-[380px] lg:w-[460px] self-center"
               autoPlay
               loop
               muted
               playsInline
+              preload="auto"
             >
               <source
                 src={require(`@site/static/assets/video.webm`).default}

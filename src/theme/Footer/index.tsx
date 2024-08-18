@@ -101,7 +101,7 @@ function Footer(): JSX.Element | null {
       </div>
       <div className="max-w-[400px] md:w-full md:max-w-none mr-auto ml-auto">
         <div className="md:flex items-start justify-between w-full text-white">
-          <div className="text-lg flex gap-2 font-bold mr-auto ml-auto md:ml-0 md:mr-0">
+          <div className="text-lg flex gap-2 font-bold mr-auto ml-auto md:ml-0 md:mr-0 flex-wrap">
             <Link
               to="/"
               className="text-white hover:cursor-pointer hover:no-underline hover:text-white"
@@ -123,7 +123,7 @@ function Footer(): JSX.Element | null {
               COMMUNITY
             </Link>
           </div>
-          <div className="text-lg mt-10 md:mt-0 text-center flex">
+          <div className="text-lg mt-10 md:mt-0 text-center flex flex-wrap">
             © 2024 Rize Labs, HQ Singapore
           </div>
         </div>
