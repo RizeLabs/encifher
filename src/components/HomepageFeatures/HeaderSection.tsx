@@ -55,7 +55,7 @@ export default function HeaderSection(): JSX.Element {
   return (
     <section className="relative">
       <img
-        className="absolute bottom-0 pointer-events-none mix-blend-screen"
+        className="absolute bottom-0 pointer-events-none mix-blend-screen opacity-[60%]"
         alt="background image"
         src={OverlayImage}
       />
