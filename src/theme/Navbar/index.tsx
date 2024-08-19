@@ -7,7 +7,7 @@ interface NavbarProps {
 
 export default function Navbar({ onMenuClick }: NavbarProps): JSX.Element {
   return (
-    <nav className="w-screen lg:px-20 md:px-10 px-5 py-6 flex navbar">
+    <nav className="max-w-[1440px] ml-auto mr-auto lg:px-20 md:px-10 px-5 py-6 flex navbar">
       <div className="w-full md:max-w-none text-white flex justify-between items-center">
         <Link className="bg-transparent border-0" to="/">
           <img
@@ -18,10 +18,10 @@ export default function Navbar({ onMenuClick }: NavbarProps): JSX.Element {
             alt="logo"
           />
         </Link>
-        <div className="flex gap-8 items-center">
+        <div className="flex gap-2 sm:gap-8 items-center">
           <a
             href="#getintouch"
-            className="flex gap-2 hover:no-underline transition-colors duration-700 justify-center font-menseal items-center hover:cursor-pointer hover:opacity-95 self-end bg-custom-gradient py-2 px-2 md:px-6 text-base md:text-lg font-semibold rounded-[60px] border-none text-white"
+            className="flex gap-2 hover:no-underline transition-colors duration-700 justify-center font-menseal items-center hover:cursor-pointer hover:opacity-95 self-end bg-custom-gradient py-2 px-2 md:px-6 text-[10px] sm:text-base md:text-lg font-semibold rounded-[60px] border-none text-white"
           >
             <span>Get in touch</span>
             <img
@@ -33,13 +33,13 @@ export default function Navbar({ onMenuClick }: NavbarProps): JSX.Element {
             />
           </a>
           <button
-            className="flex text-4xl md:text-5xl bg-transparent border-none hover:cursor-pointer"
+            className="flex text-2xl sm:text-4xl md:text-5xl bg-transparent border-none hover:cursor-pointer"
             onClick={onMenuClick}
           >
             <img
               src={require(`@site/static/assets/menu-button.webp`).default}
               alt="Menu Button"
-              className="h-4 w-10 cursor-pointer"
+              className="w-8 h-3 sm:h-4 sm:w-10 cursor-pointer"
             />
           </button>
         </div>

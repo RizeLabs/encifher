@@ -40,14 +40,14 @@ interface Props {
 
 export default function EventsSection({ recentPosts }: Props): JSX.Element {
   return (
-    <section id="eventsandnews">
-      <div className="w-screen lg:px-20 md:px-10 px-5 py-16 md:py-32 flex flex-col items-start bg-footer-bg gap-24 z-10" >
+    <section id="eventsandnews" className="bg-footer-bg">
+      <div className="w-full max-w-[1440px] ml-auto mr-auto lg:px-20 md:px-10 px-5 py-16 md:py-32 flex flex-col items-start gap-24 z-10" >
         <div className="max-w-[400px] md:w-full md:max-w-none mr-auto ml-auto">
           <div className="flex justify-between items-center mb-16 w-full">
             <EventsHeading />
             <ViewAllButton className="hidden md:flex" />
           </div>
-          <div className="flex flex-wrap gap-8 justify-between " data-aos="fade-up">
+          <div className="flex flex-wrap gap-8 justify-start " data-aos="fade-up">
             {recentPosts && recentPosts.slice(0, 3).map(({ content: BlogPostContent }) => (
               <BlogPostProvider
                 key={BlogPostContent.metadata.permalink}

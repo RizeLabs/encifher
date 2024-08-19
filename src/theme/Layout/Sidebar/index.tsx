@@ -66,7 +66,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
           Home
         </NavLink>
         <NavLink href="/blog" onClick={() => handleNavClick("/blog")}>
-          Events & News
+          Blogs & News
         </NavLink>
         <NavLink
           href="/"
