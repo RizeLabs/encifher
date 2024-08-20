@@ -23,7 +23,7 @@ const NavLink: React.FC<{
 );
 
 const CloseButton: React.FC<{ onClick: () => void }> = ({ onClick }) => (
-  <div className="navbar-toggle flex justify-end mt-8 mr-6">
+  <div className="navbar-toggle flex justify-end mt-6">
     <button
       className="text-white bg-transparent border-0 text-2xl md:text-3xl lg:text-4xl"
       onClick={onClick}
@@ -54,30 +54,32 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
   };
 
   const sidebarClasses = `
-    nav-menu fixed top-0 left-0 w-full h-screen bg-primary-dark z-50 px-8 md:px-16 pb-16 overflow-y-auto transition-opacity duration-500 ease-in-out
+    nav-menu fixed top-0 left-0 w-full h-screen bg-primary-dark z-50 pb-16 overflow-y-auto transition-opacity duration-500 ease-in-out
     ${isOpen ? "opacity-100 visible" : "opacity-0 invisible"}
   `;
 
   return (
     <nav className={sidebarClasses}>
-      <CloseButton onClick={toggleSidebar} />
-      <ul className="mt-2 h-full">
-        <NavLink href="/" onClick={() => handleNavClick("/")}>
-          Home
-        </NavLink>
-        <NavLink href="/blog" onClick={() => handleNavClick("/blog")}>
-          Blogs & News
-        </NavLink>
-        <NavLink
-          href="/"
-          onClick={() => handleNavClick("/", "jointhecommunity")}
-        >
-          Join the Community
-        </NavLink>
-        <NavLink href="#getintouch" onClick={toggleSidebar}>
-          Get in touch
-        </NavLink>
-      </ul>
+      <div className="max-w-[1440px] ml-auto mr-auto lg:px-20 md:px-10 px-5">
+        <CloseButton onClick={toggleSidebar} />
+        <ul className="mt-2 h-full">
+          <NavLink href="/" onClick={() => handleNavClick("/")}>
+            Home
+          </NavLink>
+          <NavLink href="/blog" onClick={() => handleNavClick("/blog")}>
+            Blogs & News
+          </NavLink>
+          <NavLink
+            href="/"
+            onClick={() => handleNavClick("/", "jointhecommunity")}
+          >
+            Join the Community
+          </NavLink>
+          <NavLink href="#getintouch" onClick={toggleSidebar}>
+            Get in touch
+          </NavLink>
+        </ul>
+      </div>
     </nav>
   );
 };
