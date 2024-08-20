@@ -53,7 +53,8 @@ body {
   --ifm-font-family-base: 'Sora', sans-serif;    
   --ifm-heading-font-family: 'Menseal', sans-serif; 
   --ifm-code-background: darkgreen;       
-  --ifm-navbar-background-color: var(--primary-dark);                
+  --ifm-navbar-background-color: var(--primary-dark);   
+  --ifm-navbar-height: auto;             
 }
 
 /* ----- */
