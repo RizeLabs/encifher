@@ -59,9 +59,9 @@ export default function HeaderSection(): JSX.Element {
         alt="background image"
         src={OverlayImage}
       />
-      <div className="max-w-[1440px] ml-auto mr-auto lg:px-20 md:px-10 px-5 pt-16 md:pt-20 md:pb-10 flex flex-col items-start text-white">
+      <div className="max-w-[1440px] ml-auto mr-auto lg:px-20 md:px-10 px-5 pt-16 md:pt-4 md:pb-10 flex flex-col items-start text-white">
         <div className="max-w-[400px] md:w-full md:max-w-none mr-auto ml-auto lg:mt-4">
-          <div className="flex md:flex-row flex-col">
+          <div className="flex md:flex-row flex-col items-center">
             <div className="flex flex-col w-full">
               <h1 className="text-4xl uppercase font-medium">
                 Open-Source Code is good.
@@ -92,19 +92,19 @@ export default function HeaderSection(): JSX.Element {
             <div className="mix-blend-screen flex self-center">
             <video
               ref={videoRef}
-              className="w-[280px] md:w-[380px] lg:w-[460px] self-center"
+              className="w-[280px] sm:w-[340px] md:w-[380px] lg:w-[460px] self-center"
               autoPlay
               muted
               playsInline
               loop
               preload="auto"
             >
-              <source
+              {/* <source
                 src={require(`@site/static/assets/video.webm`).default}
                 type="video/webm"
-              />
+              /> */}
               <source
-                src={require(`@site/static/assets/video_2x.webm`).default}
+                src={require(`@site/static/assets/video2_2x.webm`).default}
                 type="video/webm"
               />
               <source
