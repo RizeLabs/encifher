@@ -19,7 +19,7 @@ function HeadingSection(): JSX.Element {
 
       {/* Main Image */}
       <img
-        className={`top-0 mix-blend-screen object-cover pointer-events-none transition-opacity duration-500 ease-in-out ${
+        className={`top-0 mix-blend-screen object-cover w-full pointer-events-none transition-opacity duration-500 ease-in-out ${
           isLoaded ? 'opacity-100' : 'opacity-0'
         }`}
         alt="background image"
