@@ -40,7 +40,7 @@ const Card: React.FC<CardProps> = ({ imageUrl, heading, description, url }) => {
         </Link>
       </div>
       <div className="p-8 bg-primary-dark flex-grow">
-        <h2 className="text-2xl font-semibold mb-2 text-white font-menseal">{heading}</h2>
+        <h2 className="text-xl font-semibold mb-2 text-white font-menseal uppercase">{heading}</h2>
         <p className="text-lg text-[#E7E7E9B8] font-sora">
           {truncateDescription(description, DESCRIPTION_LIMIT)}
         </p>
