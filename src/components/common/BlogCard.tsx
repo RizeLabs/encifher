@@ -21,12 +21,12 @@ const Card: React.FC<CardProps> = ({ imageUrl, heading, description, url }) => {
   };
 
   return (
-    <div className="flex-[1_1_300px] max-w-[400px] h-[520px] border overflow-hidden shadow-md flex flex-col">
-      <div className="relative bg-pink-950 flex-shrink-0 w-full h-[300px] max-h-[400px]">
+    <div className="max-w-[320px] mid:max-w-[400px] border overflow-hidden shadow-md flex flex-col">
+      <div className="relative bg-pink-950 flex-shrink-0 max-w-[320px] mid:max-w-[400px] h-[400px] max-h-[400px]">
         <img
           src={imageUrl || DEFAULT_IMAGE_URL}
           alt={heading}
-          className="w-full h-full object-cover"
+          className="w-full h-full"
         />
         <Link
           to={url}
@@ -40,7 +40,7 @@ const Card: React.FC<CardProps> = ({ imageUrl, heading, description, url }) => {
         </Link>
       </div>
       <div className="p-8 bg-primary-dark flex-grow">
-        <h2 className="text-2xl font-semibold mb-2 text-white font-menseal">{heading}</h2>
+        <h2 className="text-xl font-semibold mb-2 text-white font-menseal uppercase">{heading}</h2>
         <p className="text-lg text-[#E7E7E9B8] font-sora">
           {truncateDescription(description, DESCRIPTION_LIMIT)}
         </p>
