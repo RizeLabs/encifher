@@ -7,9 +7,14 @@ interface NavbarProps {
 
 interface NewsStripProps {
   message: string;
+  linkText: string;
+  linkHref: string;
 }
 
-function NewsStrip({ message }: NewsStripProps): JSX.Element {
+function NewsStrip({ message, linkText, linkHref }: NewsStripProps): JSX.Element {
+  // Split the message into parts
+  const parts = message.split(linkText);
+  
   return (
     <div
       role="banner"
@@ -17,13 +22,19 @@ function NewsStrip({ message }: NewsStripProps): JSX.Element {
       className="bg-[#E7E7E9] flex gap-2 md:gap-6 items-center justify-center text-secondary-dark text-center text-xs sm:text-sm md:text-lg font-menseal font-semibold"
     >
       <img
-        className="h-8 w-8 md:h-12 md:w-12"
+        className="h-8 w-8 md:h-12 md:w-12 self-end"
         src={require(`@site/static/assets/megaphone.webp`).default}
         alt="Encifher logo"
       />
-      <p className="mb-0">{message}</p>
+      <p className="mb-0">
+        {parts[0]}
+        <a href={linkHref} target="_blank" className="text-primary-brand underline hover:opacity-95">
+          {linkText}
+        </a>
+        {parts[1]}
+      </p>
       <img
-        className="h-8 w-8 md:h-12 md:w-12 "
+        className="h-8 w-8 md:h-12 md:w-12 self-end"
         src={require(`@site/static/assets/megaphone.webp`).default}
         alt="Encifher logo"
         style={{ transform: "rotateY(180deg)" }}
@@ -35,7 +46,11 @@ function NewsStrip({ message }: NewsStripProps): JSX.Element {
 export default function Navbar({ onMenuClick }: NavbarProps): JSX.Element {
   return (
     <header className="relative">
-      <NewsStrip message="We’ve just raised our seed funding!" />
+      <NewsStrip
+        message="Our Private Devnet is now Live! Get in touch to try it out."
+        linkText="Live"
+        linkHref="https://docs.encifher.io"
+      />
 
       <nav
         role="navigation"
