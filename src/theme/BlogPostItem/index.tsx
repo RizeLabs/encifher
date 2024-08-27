@@ -32,6 +32,7 @@ export default function BlogPostItem({
         description={metadata.description}
         url={metadata.permalink}
         imageUrl={metadata.frontMatter.image || DEFAULT_IMAGE_URL}
+        topic={metadata.frontMatter.topic || ''}
       />
     );
   }

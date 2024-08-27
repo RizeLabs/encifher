@@ -1,49 +1,42 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 interface CardProps {
   imageUrl?: string;
   heading: string;
   description: string;
   url: string;
+  topic: string;
 }
 
-const Card: React.FC<CardProps> = ({ imageUrl, heading, description, url }) => {
+const Card: React.FC<CardProps> = ({ imageUrl, heading, description, url, topic }) => {
   const DEFAULT_IMAGE_URL = require(`@site/static/assets/random-image.webp`).default;
-  const DESCRIPTION_LIMIT = 55; // Limit for the number of characters in the description
-
-  // Function to truncate description based on characters
-  const truncateDescription = (text: string, charLimit: number): string => {
-    if (text.length > charLimit) {
-      return text.slice(0, charLimit) + "...";
-    }
-    return text;
-  };
 
   return (
-    <div className="max-w-[320px] mid:max-w-[400px] border overflow-hidden shadow-md flex flex-col">
-      <div className="relative bg-pink-950 flex-shrink-0 max-w-[320px] mid:max-w-[400px] h-[400px] max-h-[400px]">
+    <div className="max-w-[320px] mid:max-w-[400px] border hover:shadow-primary-purple border-solid border-[#5F5F68] overflow-hidden shadow-md flex flex-col bg-secondary-dark rounded-2xl">
+      <div className="relative bg-pink-950 flex-shrink-0 max-w-[320px] mid:max-w-[400px] h-[250px]">
         <img
           src={imageUrl || DEFAULT_IMAGE_URL}
           alt={heading}
           className="w-full h-full"
         />
+      </div>
+      <div className="p-8 bg-primary-dark flex flex-col">
+        <button className="bg-primary-brand text-white px-5 py-2 mb-4 capitalize flex self-start border-none font-menseal text-base font-semibold rounded-[60px] hover:pointer-events-none">
+          {topic}
+        </button>
+        <h2 className="text-xl font-semibold text-white font-menseal uppercase mb-3">
+          {heading}
+        </h2>
+        <p className="text-lg text-[#E7E7E9B8] font-sora line-clamp-2 mb-6">
+          {description}
+        </p>
         <Link
           to={url}
-          className="absolute top-10 right-10 bg-white rounded-full shadow-md w-16 h-16"
+          className="rounded-full shadow-md w-full font-menseal text-primary-brand text-base font-semibold hover:no-underline flex"
         >
-          <img
-            src={require(`@site/static/assets/top-right-arrow-btn.webp`).default}
-            alt="Arrow Button"
-            className="w-full h-full object-contain"
-          />
+          Read More
         </Link>
-      </div>
-      <div className="p-8 bg-primary-dark flex-grow">
-        <h2 className="text-xl font-semibold mb-2 text-white font-menseal uppercase">{heading}</h2>
-        <p className="text-lg text-[#E7E7E9B8] font-sora">
-          {truncateDescription(description, DESCRIPTION_LIMIT)}
-        </p>
       </div>
     </div>
   );
