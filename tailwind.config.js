@@ -12,6 +12,9 @@ module.exports = {
         'menseal': ["'Menseal'", 'sans-serif'], // Adding 'Menseal' font family
         'sora': ["'Sora'", 'sans-serif']
       },
+      boxShadow: {
+        'primary-purple': '0px 0px 16px 0px #7857FF99',
+      },
       keyframes: {
         marquee: {
           '0%': { transform: 'translateX(0%)' },
