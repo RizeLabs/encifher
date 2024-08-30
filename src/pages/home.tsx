@@ -22,7 +22,7 @@ export default function Home({ recentPosts }: Props): JSX.Element {
       {/* <HomepageHeader /> */}
       <main>
         <HeaderSection />
-        {/* <EventsSection recentPosts={recentPosts} /> */}
+        <EventsSection recentPosts={recentPosts} />
         <CommunitySection />
         <SocialSection />
       </main>
