@@ -14,7 +14,7 @@ const Card: React.FC<CardProps> = ({ imageUrl, heading, description, url, topic 
 
   return (
     <div className="max-w-[320px] mid:max-w-[400px] border hover:shadow-primary-purple border-solid border-[#5F5F68] overflow-hidden shadow-md flex flex-col bg-secondary-dark rounded-2xl">
-      <div className="relative bg-pink-950 flex-shrink-0 max-w-[320px] mid:max-w-[400px] h-[250px]">
+      <div className="relative bg-pink-950 flex-shrink-0 max-w-[320px] mid:max-w-[400px] mid:h-[250px]">
         <img
           src={imageUrl || DEFAULT_IMAGE_URL}
           alt={heading}
