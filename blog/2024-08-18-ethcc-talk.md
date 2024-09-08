@@ -3,7 +3,7 @@ slug: fhe-on-bitcoin
 title: Why FHE rollups are not possible on Bitcoin?
 topic: blog
 authors: nitanshu
-image: /assets/blog/fhe-on-btc.jpeg
+image: /assets/blog/fhe-on-btc.webp
 ---
 
 In this blog we are going to talk about what the issues we face while building FHE rollups on top of Bitcoin.
@@ -11,7 +11,7 @@ In this blog we are going to talk about what the issues we face while building F
 
 <br></br>
 
-![Docusaurus Plushie2](/assets/blog/fhe-on-btc.jpeg)
+![Docusaurus Plushie2](/assets/blog/fhe-on-btc.webp)
 
 <br></br>
 
