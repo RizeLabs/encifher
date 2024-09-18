@@ -69,7 +69,7 @@ export default function HeaderSection(): JSX.Element {
               <div className="lg:text-[64px] text-6xl uppercase mt-10 font-bold">
                 But Open-Source Value is not!
               </div>
-              <div className="flex mt-20 gap-2 md:gap-8 items-center">
+              <div className="flex mt-10 gap-2 md:gap-8 items-center">
                 <div className="text-lg sm:text-xl max-w-[300px]">
                   World's first solution for encrypting{" "}
                   <span className="font-bold">Bitcoin</span>

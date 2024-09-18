@@ -19,7 +19,7 @@ function NewsStrip({ message, linkText, linkHref }: NewsStripProps): JSX.Element
     <div
       role="banner"
       aria-label="Seed Funding Announcement"
-      className="bg-[#E7E7E9] flex gap-2 md:gap-6 items-center justify-center text-secondary-dark text-center text-xs sm:text-sm md:text-lg font-menseal font-semibold"
+      className="bg-[#E7E7E9] flex gap-2 md:gap-6 items-center justify-center bg-secondary-dark text-white text-center text-xs sm:text-sm md:text-lg font-menseal font-semibold"
     >
       <img
         className="h-8 w-8 md:h-12 md:w-12 self-end"

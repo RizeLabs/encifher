@@ -124,7 +124,7 @@ function Footer(): JSX.Element | null {
             </Link>
           </div>
           <div className="text-lg mt-10 md:mt-0 text-center flex flex-wrap">
-            © 2024 Rize Labs, HQ Singapore
+            © 2024 Rize Labs
           </div>
         </div>
       </div>

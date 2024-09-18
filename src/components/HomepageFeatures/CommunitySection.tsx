@@ -27,11 +27,11 @@ export default function CommunitySection(): JSX.Element {
             alt="background image 3"
             src={require(`@site/static/assets/community/Image-3.webp`).default}
           />
-          <img
+          {/* <img
             className="w-full h-1/2"
             alt="background image 4"
             src={require(`@site/static/assets/community/Image-4.webp`).default}
-          />
+          /> */}
         </div>
       </div>
       </div>

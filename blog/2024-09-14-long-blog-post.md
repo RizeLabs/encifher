@@ -1,12 +1,12 @@
 ---
-slug: why-encryption-on-btc-make-sense
-title: Why encryption make sense on Bitcoin ?
+slug: why-encryption-on-btc-makes-sense
+title: Why encryption makes sense on Bitcoin ?
 topic: blog
 authors: endi
 image: /assets/blog/btc-encrypted.webp
 ---
 
-In this article we are going to talk about why encryption make sense on top of Bitcoin.
+In this article we are going to talk about why encryption makes sense on top of Bitcoin.
 <!--truncate-->
 
 <br></br>

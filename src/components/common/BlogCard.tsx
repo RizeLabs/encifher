@@ -22,21 +22,23 @@ const Card: React.FC<CardProps> = ({ imageUrl, heading, description, url, topic 
         />
       </div>
       <div className="p-8 bg-primary-dark flex flex-col">
-        <button className="bg-primary-brand text-white px-5 py-2 mb-4 capitalize flex self-start border-none font-menseal text-base font-semibold rounded-[60px] hover:pointer-events-none">
+        <p
+          className="rounded-full shadow-md w-full font-menseal text-primary-brand text-base font-semibold uppercase hover:no-underline flex"
+        >
           {topic}
-        </button>
+        </p>
         <h2 className="text-xl font-semibold text-white font-menseal uppercase mb-3">
           {heading}
         </h2>
         <p className="text-lg text-[#E7E7E9B8] font-sora line-clamp-2 mb-6">
           {description}
         </p>
-        <Link
-          to={url}
-          className="rounded-full shadow-md w-full font-menseal text-primary-brand text-base font-semibold hover:no-underline flex"
+        <button
+          onClick={() => window.open(url, '_blank')}
+          className='bg-primary-brand text-white px-5 py-2 mb-4 capitalize flex self-start border-none font-menseal text-base font-semibold rounded-[60px] hover:cursor-pointer'
         >
           Read More
-        </Link>
+        </button>
       </div>
     </div>
   );
