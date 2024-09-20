@@ -6,7 +6,7 @@ authors: endi
 image: /assets/blog/zama-partner.webp
 ---
 
-In this article we are going to talk about why encryption make sense on top of Bitcoin.
+Partnership announcement article between Zama and Encifher.
 <!--truncate-->
 
 <br></br>
