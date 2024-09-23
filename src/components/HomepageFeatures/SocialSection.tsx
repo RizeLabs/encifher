@@ -14,7 +14,7 @@ export default function SocialSection(): JSX.Element {
         />
         <SocialCard
             socialIconUrl={require(`@site/static/assets/social/telegramIcon.webp`).default}
-            linkUrl="https://t.me/BananaHQ"
+            linkUrl="https://t.me/encifher"
             text="Telegram"
             hoverColor="#28A8EA"
         />
