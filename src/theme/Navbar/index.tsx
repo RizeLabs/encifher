@@ -47,8 +47,8 @@ export default function Navbar({ onMenuClick }: NavbarProps): JSX.Element {
   return (
     <header className="relative">
       <NewsStrip
-        message="Our Private Devnet is now Live! Get in touch to try it out."
-        linkText="Live"
+        message="Our Private Devnet Closing soon! Get in touch to try it out."
+        linkText="Private Devnet"
         linkHref="https://docs.encifher.io"
       />
 
