@@ -1,7 +1,7 @@
 ---
 slug: encifher-zama-partnership
 title: Encifher x Zama partnership
-topic: blog
+topic: news
 authors: endi
 image: /assets/blog/zama-partner.webp
 ---
