@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 import tailwindPlugin from "./plugins/tailwind-config.cjs";
 
 const config: Config = {
-  title: 'Bitcoin, but Encrypted 🔐',
+  title: 'Encifher',
   tagline: 'Encrypting Bitcoin',
   favicon: 'img/logo.ico',
 
