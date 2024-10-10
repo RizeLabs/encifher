@@ -6,30 +6,25 @@ authors: endi
 image: /assets/blog/zama-partner.webp
 ---
 
-Partnership announcement article between Zama and Encifher.
+Let’s redefine how Bitcoin works—private and secure, just as it should be
 <!--truncate-->
 
-<br></br>
 
-![Docusaurus Plushie2](/assets/blog/zama-partner.webp)
-
-<br></br>
-
-## Encifher and Zama Partner to Revolutionize Bitcoin Privacy and Security with Fully Homomorphic Encryption
+## Encifher and Zama partner to revolutionize Bitcoin
 
 Privacy and security have never been more crucial in a world increasingly reliant on digital transactions. While lauded for its decentralization and transparency, Bitcoin has historically struggled with balancing privacy over user transactions. Encifher is changing that by partnering with Zama, a pioneering leader in Fully Homomorphic Encryption (FHE), to introduce unprecedented security and privacy to Bitcoin.
 
 This partnership marks a significant step forward, not only for Bitcoin privacy but also for how we approach data security in decentralized systems. Here’s how Encifher and Zama are working together to shape the future of Bitcoin, making it more 
 secure, private, and adaptable to real-world needs.
 
-## The Power of Fully Homomorphic Encryption
+## The Power of FHE
 
 FHE, the cutting-edge technology at the heart of this partnership, allows computations to be performed on encrypted data without decryption. This breakthrough addresses one of the most persistent challenges in the cryptocurrency space: maintaining privacy while ensuring the integrity and verifiability of transactions.
 Rand Hindi, CEO and Co-Founder of Zama explains, "FHE is not just an incremental improvement; it's a paradigm shift in how we approach data privacy and security in blockchain. With our technology, Encifher can offer Bitcoin users a level of confidentiality that was previously thought impossible without sacrificing the transparency and auditability that makes Bitcoin so powerful."
 
 ## About Zama
 
-Zama is an open source cryptography company that builds state-of-the-art Fully Homomorphic Encryption (FHE) solutions for blockchain and AI. Their technology enables a broad range of privacy-preserving use cases, from confidential smart contracts to encrypted machine learning and privacy-preserving cloud applications.
+Zama is an open source cryptography company that builds state-of-the-art FHE solutions for blockchain and AI. Their technology enables a broad range of privacy-preserving use cases, from confidential smart contracts to encrypted machine learning and privacy-preserving cloud applications.
 
 ## Enhancing Bitcoin's Privacy and Security
 
