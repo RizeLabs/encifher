@@ -21,11 +21,7 @@ function NewsStrip({ message, linkText, linkHref }: NewsStripProps): JSX.Element
       aria-label="Seed Funding Announcement"
       className="bg-[#E7E7E9] flex gap-2 md:gap-6 items-center justify-center text-secondary-dark text-center text-xs sm:text-sm md:text-lg font-menseal font-semibold"
     >
-      <img
-        className="h-8 w-8 md:h-12 md:w-12 self-end"
-        src={require(`@site/static/assets/megaphone.webp`).default}
-        alt="Encifher logo"
-      />
+      
       <p className="mb-0">
         {parts[0]}
         <a href={linkHref} target="_blank" className="text-primary-brand underline hover:opacity-95">
@@ -33,12 +29,6 @@ function NewsStrip({ message, linkText, linkHref }: NewsStripProps): JSX.Element
         </a>
         {parts[1]}
       </p>
-      <img
-        className="h-8 w-8 md:h-12 md:w-12 self-end"
-        src={require(`@site/static/assets/megaphone.webp`).default}
-        alt="Encifher logo"
-        style={{ transform: "rotateY(180deg)" }}
-      />
     </div>
   );
 }

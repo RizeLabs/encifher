@@ -9,14 +9,6 @@ image: /assets/blog/fhe-on-btc.webp
 In this blog we are going to talk about what the issues we face while building FHE rollups on top of Bitcoin.
 <!--truncate-->
 
-<br></br>
-
-![Docusaurus Plushie2](/assets/blog/fhe-on-btc.webp)
-
-<br></br>
-
-# Why FHE (Fully Homomorphic Encryption) Rollups are Not Possible on Bitcoin
-
 ## Introduction
 
 In this post, we will explore a complex and fascinating topic: the potential and limitations of Fully Homomorphic Encryption (FHE) rollups on Bitcoin. We'll cover an overview of rollups, discuss the mechanics of execution, settlement, and data availability (DA) on Bitcoin, and delve into the challenges of integrating FHE operations with rollups on the Bitcoin network.
