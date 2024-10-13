@@ -25,7 +25,7 @@ export default function CommunitySection(): JSX.Element {
           <img
             className="w-full h-1/2"
             alt="background image 3"
-            src={require(`@site/static/assets/community/image-5.webp`).default}
+            src={require(`@site/static/assets/community/Image-5.webp`).default}
           />
           <img
             className="w-full h-1/2"
