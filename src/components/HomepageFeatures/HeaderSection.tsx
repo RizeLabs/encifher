@@ -66,7 +66,7 @@ export default function HeaderSection(): JSX.Element {
               <h1 className="text-4xl uppercase font-medium">
                 Introducing Encifher
               </h1>
-              <div className="lg:text-[64px] text-8xl uppercase mt-10 font-bold">
+              <div className="lg:text-[64px] text-5xl uppercase mt-10 font-bold">
                 Trust Minimized Defi Suite For Bitcoin
               </div>
               <div className="flex mt-20 gap-2 md:gap-8 items-center">
