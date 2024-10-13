@@ -63,18 +63,19 @@ export default function Navbar({ onMenuClick }: NavbarProps): JSX.Element {
           </Link>
           <div className="flex gap-2 mid:gap-8 items-center">
             <a
-              href="#getintouch"
+              href="https://app.encifher.io/"
+              target="_blank"
               className="flex gap-2 hover:no-underline transition-colors duration-700 justify-center font-menseal items-center hover:cursor-pointer hover:opacity-95 self-end bg-custom-gradient py-2 px-2 md:px-6 text-[10px] sm:text-base md:text-lg font-semibold rounded-[60px] border-none text-white"
               aria-label="Get in touch"
             >
-              <span>Get in touch</span>
-              <img
+              <span>Launch App</span>
+              {/* <img
                 className="h-[10px]"
                 src={
                   require(`@site/static/assets/header/down-arrow.webp`).default
                 }
                 alt="Down arrow"
-              />
+              /> */}
             </a>
             <button
               className="flex text-2xl sm:text-4xl md:text-5xl bg-transparent border-none hover:cursor-pointer"

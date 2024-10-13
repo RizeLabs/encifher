@@ -12,13 +12,23 @@ const NavLink: React.FC<{
   onClick?: () => void;
 }> = ({ href, children, onClick }) => (
   <li className="py-5 md:py-6 lg:py-6 border-b border-white nav-text list-none">
-    <Link
+    {/* <Link
       to={href}
       onClick={onClick}
       className="text-white text-2xl sm:text-3xl font-bold transition-colors duration-700 md:text-5xl hover:no-underline hover:text-primary-brand uppercase"
     >
       <span>{children}</span>
-    </Link>
+    </Link> */}
+
+    <a
+        href={href}
+        onClick={onClick}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-white text-2xl sm:text-3xl font-bold transition-colors duration-700 md:text-5xl hover:no-underline hover:text-primary-brand uppercase"
+      >
+        <span>{children}</span>
+      </a>
   </li>
 );
 
@@ -75,7 +85,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
           >
             Join the Community
           </NavLink>
-          <NavLink href="#getintouch" onClick={toggleSidebar}>
+          <NavLink href="https://app.encifher.io/" onClick={toggleSidebar}>
             Get in touch
           </NavLink>
         </ul>
