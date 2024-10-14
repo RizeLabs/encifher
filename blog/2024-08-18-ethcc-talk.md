@@ -1,6 +1,6 @@
 ---
 slug: fhe-on-bitcoin
-title: Why FHE rollups are not possible on Bitcoin?
+title: Settlement for FHE based execution on Bitcoin?
 topic: blog
 authors: nitanshu
 image: /assets/blog/fhe-on-btc.webp
