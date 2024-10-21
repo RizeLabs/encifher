@@ -28,7 +28,7 @@ const Card: React.FC<CardProps> = ({
           className="w-full h-full"
         />
       </div>
-      <div className="p-8 bg-primary-dark flex flex-col">
+      <div className="p-8 bg-primary-dark h-full flex flex-col">
         <h4 className="shadow-md flex w-auto font-menseal text-primary-brand text-base font-semibold hover:no-underline capitalize">
           {topic}
         </h4>
