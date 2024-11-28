@@ -36,12 +36,6 @@ function NewsStrip({ message, linkText, linkHref }: NewsStripProps): JSX.Element
 export default function Navbar({ onMenuClick }: NavbarProps): JSX.Element {
   return (
     <header className="relative">
-      <NewsStrip
-        message="Our Devnet V0 closing soon!"
-        linkText="Devnet V0"
-        linkHref="https://docs.encifher.io"
-      />
-
       <nav
         role="navigation"
         aria-label="Main navigation"
@@ -61,34 +55,7 @@ export default function Navbar({ onMenuClick }: NavbarProps): JSX.Element {
               alt="Encifher logo"
             />
           </Link>
-          <div className="flex gap-2 mid:gap-8 items-center">
-            <a
-              href="https://app.encifher.io/"
-              target="_blank"
-              className="flex gap-2 hover:no-underline transition-colors duration-700 justify-center font-menseal items-center hover:cursor-pointer hover:opacity-95 self-end bg-custom-gradient py-2 px-2 md:px-6 text-[10px] sm:text-base md:text-lg font-semibold rounded-[60px] border-none text-white"
-              aria-label="Get in touch"
-            >
-              <span>Launch App</span>
-              {/* <img
-                className="h-[10px]"
-                src={
-                  require(`@site/static/assets/header/down-arrow.webp`).default
-                }
-                alt="Down arrow"
-              /> */}
-            </a>
-            <button
-              className="flex text-2xl sm:text-4xl md:text-5xl bg-transparent border-none hover:cursor-pointer"
-              onClick={onMenuClick}
-              aria-label="Menu"
-            >
-              <img
-                src={require(`@site/static/assets/menu-button.webp`).default}
-                alt="Menu button"
-                className="w-8 h-3 sm:h-4 sm:w-10 cursor-pointer"
-              />
-            </button>
-          </div>
+          
         </div>
       </nav>
     </header>

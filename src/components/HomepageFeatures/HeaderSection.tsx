@@ -67,15 +67,9 @@ export default function HeaderSection(): JSX.Element {
                 Introducing Encifher
               </h1>
               <div className="lg:text-[64px] text-5xl uppercase mt-10 font-bold">
-                Trust Minimized Defi Suite For Bitcoin
+                A Compliant Programmable Privacy Engine
               </div>
               <div className="flex mt-20 gap-2 md:gap-8 items-center">
-                <div className="text-lg sm:text-xl max-w-[500px]">
-                  World's most trusted privacy-based solution for DeFi on {""}
-                  <span className="font-bold">Bitcoin</span>
-                  {" "}using {" "}
-                  <span className="font-bold">verifiable FHE.</span>
-                </div>
                 <a
                   className="bg-transparent contents border-none w-16 h-16"
                   href="#eventsandnews"
