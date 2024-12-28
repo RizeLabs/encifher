@@ -1,5 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Lexend } from "next/font/google"
+
+const lexend = Lexend({
+  subsets: ["latin"],
+  style: "normal",
+});
 
 export const metadata: Metadata = {
   title: "Encifher",
@@ -13,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className={lexend.className}>
         {children}
       </body>
     </html>

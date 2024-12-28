@@ -3,12 +3,102 @@
 @tailwind utilities;
 
 :root {
-  --background: #0a0a0a;
-  --foreground: #ededed;
+  background-color: #000;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.gradient-text {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.6) 0%, #FFF 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.border-gradient {
+  position: relative;
+}
+
+.border-gradient::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 36px;
+  border: 1px solid transparent;
+  background: radial-gradient(100% 100% at 50% 0%, #FFFFFF 0%, rgba(255, 255, 255, 0.5) 20.07%, rgba(255, 255, 255, 0) 86.88%) border-box;
+  mask:
+    linear-gradient(#000 0 0) padding-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  z-index: -1;
+}
+
+.button-gradient {
+  position: relative;
+}
+
+.button-gradient::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  background: radial-gradient(59.02% 100% at 50.31% 100%, #FFFFFF 0%, rgba(255, 255, 255, 0.4) 44.62%, rgba(255, 255, 255, 0.12) 100%) border-box;
+  mask:
+    linear-gradient(#000 0 0) padding-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  z-index: -1;
+}
+
+.input-gradient {
+  position: relative;
+}
+
+.input-gradient::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  background: radial-gradient(59.02% 100% at 50.31% 100%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.2) 44.62%, rgba(255, 255, 255, 0.12) 100%) border-box;
+  mask:
+    linear-gradient(#000 0 0) padding-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  z-index: -1;
+}
+
+.card-border {
+  position: relative;
+}
+
+.card-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  border: 1.6px solid transparent;
+  background: linear-gradient(149.2deg, rgba(255, 255, 255, 0.08) 12.9%, rgba(255, 255, 255, 0.16) 43.98%, rgba(255, 255, 255, 0.16) 62.27%, rgba(255, 255, 255, 0.08) 82.65%) border-box;
+  mask:
+    linear-gradient(#000 0 0) padding-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  z-index: -1;
+}
+
+.faq-border {
+  position: relative;
+}
+
+.faq-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  border: 1.6px solid transparent;
+  background: linear-gradient(149.2deg, rgba(255, 255, 255, 0.08) 12.9%, rgba(255, 255, 255, 0.16) 43.98%, rgba(255, 255, 255, 0.16) 62.27%, rgba(255, 255, 255, 0.08) 82.65%) border-box;
+  mask:
+    linear-gradient(#000 0 0) padding-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  z-index: -1;
 }
