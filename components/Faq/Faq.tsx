@@ -13,12 +13,12 @@ const Question = ({ index }: QuestionProps) => {
         setIsOpen(!isOpen);
     };
     return (
-        <div className="rounded-lg p-[3%] text-white faq-border">
+        <div className="p-[3%] text-white faq-border">
             <div className="flex justify-between items-center">
                 <h3 className="text-[20px] font-[400] gradient-text">{faqs[index].question}</h3>
                 <button
                     onClick={toggleFAQ}
-                    className={`text-[#663FFF] transform transition-transform duration-300 text-2xl focus:outline-none ${isOpen ? 'rotate-90' : ''
+                    className={`text-primary-brand transform transition-transform duration-300 text-2xl focus:outline-none ${isOpen ? 'rotate-90' : ''
                         }`}
                 >
                     {String.fromCharCode(isOpen ? 0x2716 : 0x271a)}
@@ -28,10 +28,10 @@ const Question = ({ index }: QuestionProps) => {
                 className={`${isOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
                     } ease-in-out overflow-hidden transition-all duration-500 delay-100`}
             >
-                <p className="pt-4 text-white text-opacity-60 text-[16px] font-[300]">
+                <p className="pt-4 text-white text-opacity-60 text-[16px] font-[300] normal-case">
                     {faqs[0].answer}
                 </p>
-                <p className="pt-4 text-[#663fff] text-[16px] font-[300] hover:cursor-pointer">
+                <p className="pt-4 text-primary-brand text-[16px] font-[300] hover:cursor-pointer">
                     {faqs[0].linkText}
                 </p>
             </div>

@@ -7,17 +7,21 @@
 }
 
 .gradient-text {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.6) 0%, #FFF 100%);
+  color: white;
+  /* background: linear-gradient(180deg, rgba(255, 255, 255, 0.6) 0%, #FFF 100%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
 }
 
 .border-gradient {
-  position: relative;
+  /* position: relative; */
+  border: 1px solid;
+  border-image-slice: 1;
+  border-image-source: radial-gradient(100% 100% at 50% 0%, #FFFFFF 0%, rgba(255, 255, 255, 0.5) 20.07%, rgba(255, 255, 255, 0) 86.88%);
 }
 
-.border-gradient::before {
+/* .border-gradient::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -29,7 +33,7 @@
     linear-gradient(#000 0 0);
   mask-composite: exclude;
   z-index: -1;
-}
+} */
 
 .button-gradient {
   position: relative;
@@ -68,10 +72,13 @@
 }
 
 .card-border {
-  position: relative;
+  /* position: relative; */
+  border: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(149.2deg, rgba(255, 255, 255, 0.08) 12.9%, rgba(255, 255, 255, 0.16) 43.98%, rgba(255, 255, 255, 0.16) 62.27%, rgba(255, 255, 255, 0.08) 82.65%);
 }
 
-.card-border::before {
+/* .card-border::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -83,13 +90,16 @@
     linear-gradient(#000 0 0);
   mask-composite: exclude;
   z-index: -1;
-}
+} */
 
 .faq-border {
-  position: relative;
+  /* position: relative; */
+  border: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(149.2deg, rgba(255, 255, 255, 0.08) 12.9%, rgba(255, 255, 255, 0.16) 43.98%, rgba(255, 255, 255, 0.16) 62.27%, rgba(255, 255, 255, 0.08) 82.65%);
 }
 
-.faq-border::before {
+/* .faq-border::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -101,13 +111,16 @@
     linear-gradient(#000 0 0);
   mask-composite: exclude;
   z-index: -1;
-}
+} */
 
 .border-gradient-b {
-  position: relative;
+  /* position: relative; */
+  border: 1px solid;
+  border-image-slice: 1;
+  border-image-source: radial-gradient(100% 100% at 50% 100%, #FFFFFF 0%, rgba(255, 255, 255, 0.5) 20.07%, rgba(255, 255, 255, 0) 86.88%);
 }
 
-.border-gradient-b::before {
+/* .border-gradient-b::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -119,4 +132,10 @@
     linear-gradient(#000 0 0);
   mask-composite: exclude;
   z-index: -1;
+} */
+
+@layer base {
+  body {
+    @apply uppercase;
+  }
 }

@@ -9,12 +9,14 @@ interface ButtonProps {
 export default function Button({ text, onClick, className }: ButtonProps) {
     return (
         <div
-            className={`bg-grad-blue px-[24px] py-[6px] rounded-[12px]
-                       backdrop-blur-[25px] flex items-center justify-center hover:cursor-pointer
-                       transition-all duration-500 delay-300 hover:bg-grad-blue-hover button-gradient ${className}`}
+            className={
+                       `text-primary-brand-light bg-primary-brand/15 border-primary-brand/25 border px-4 py-2
+                       backdrop-blur-[25px] flex items-center justify-center hover:cursor-pointer text-sm font-[300]
+                       transition-all duration-300 hover:bg-primary-brand/25 ${className}`
+            }
             onClick={onClick}
         >
-            <p className="gradient-text text-[20px] font-[300]">{text}</p>
+            {text}
         </div>
     )
 }

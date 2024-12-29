@@ -1,6 +1,7 @@
 'use client'
 import Image from "next/image";
 import Button from "../Button/Button";
+import UnderlinedText from "../Underlined/Underlined";
 
 export default function Contact() {
     return (
@@ -9,21 +10,21 @@ export default function Contact() {
                 <div
                     className="flex flex-col items-center gap-[4rem] h-full w-full py-[8%] border-gradient-b"
                 >
-                    <div className="flex flex-col items-center gap-1">
-                        <h1 className="text-[48px] font-[400] gradient-text">Privacy Without Compromise</h1>
+                    <div className="flex flex-col items-center gap-2">
+                        <h1 className="text-[48px] font-[400] gradient-text">Privacy <UnderlinedText>Without</UnderlinedText> Compromise</h1>
                         <h1 className="text-[20px] font-[300] text-white text-opacity-60 text-center">
                             Join the movement for compliant privacy in DeFi
                         </h1>
                     </div>
-                    <div className="flex items-center justify-around gap-1 w-[41%]">
-                        <span className='h-full w-[62%] input-gradient'>
+                    <div className="flex items-center justify-center w-full gap-3">
+                        <span className='h-full border min-w-[400px]'>
                             <input
-                                className="bg-transparent h-full w-full px-6 py-2 text-white text-opacity-60 text-[18px] font-[300] focus:outline-none"
-                                placeholder="Enter email ID"
+                                className="bg-transparent h-full w-full px-6 py-2 text-white text-opacity-60 text-sm font-[300] focus:outline-none"
+                                placeholder="ENTER EMAIL ID"
                             />
                         </span>
                         <Button
-                            className="w-[36%]"
+                            className="max-w-[300px]"
                             text="Join the waitlist"
                             onClick={() => null}
                         />

@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Lexend } from "next/font/google"
+import { Lexend, JetBrains_Mono } from "next/font/google"
 
-const lexend = Lexend({
+// const lexend = Lexend({
+//   subsets: ["latin"],
+//   style: "normal",
+// });
+
+const jetbrainsFont = JetBrains_Mono({
   subsets: ["latin"],
-  style: "normal",
+  style: ["normal"]
 });
 
 export const metadata: Metadata = {
@@ -19,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={lexend.className}>
+      <body className={jetbrainsFont.className}>
         {children}
       </body>
     </html>
