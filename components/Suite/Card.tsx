@@ -8,7 +8,7 @@ interface CardProps {
 
 export const Card = ({ icon, title, description }: CardProps) => {
     return (
-        <div className="flex flex-col items-center py-4 card-border">
+        <div className="flex flex-col items-center py-4 card-border w-full">
             <Image src={icon} width={20} height={20} alt="" className="w-[98%]" />
             <div className="flex flex-col items-start w-full p-[5%] pr-[8rem] pb-[2rem]">
                 <h2 className="text-[32px] gradient-text font-[400]">{title}</h2>

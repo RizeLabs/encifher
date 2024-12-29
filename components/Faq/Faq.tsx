@@ -41,7 +41,7 @@ const Question = ({ index }: QuestionProps) => {
 
 export default function Faq() {
     return (
-        <div className="flex flex-col items-center gap-[2rem] mb-[7rem]">
+        <div className="flex flex-col items-center gap-[2rem] my-[7rem]">
             <div className="py-[4%] px-[10%] text-center">
                 <h1 className="text-[48px] gradient-text font-[400]">FAQ's</h1>
             </div>

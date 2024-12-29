@@ -4,7 +4,7 @@ import Button from "../Button/Button";
 
 export default function Exposed() {
     return (
-        <div className="h-[70vh] px-[5%] py-[2%]">
+        <div className="px-[5%] py-[2%]">
             <div
                 className="flex flex-col items-center gap-[4rem] h-full w-full pt-[8%] border-gradient"
             >

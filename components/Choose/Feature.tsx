@@ -16,9 +16,9 @@ export const Feature = ({ id, title, description, icon }: FeatureProps) => {
                     <Image src={icon} width={10} height={10} alt='' className='absolute m-auto inset-0 w-[160px] h-[160px]' />
                 </div>
             }
-            <div className="w-[55%] flex flex-col items-start gap-4">
+            <div className="w-[50%] flex flex-col items-start gap-4">
                 <h1 className="gradient-text text-[32px] font-[400]">{title}</h1>
-                <p className="text-white text-opacity-60 text-[20px] font-[300]">{description}</p>
+                <p className="text-white text-opacity-60 text-[20px] font-[300] leading-[32px]">{description}</p>
             </div>
             {
                 (id % 2) && <div className="relative">

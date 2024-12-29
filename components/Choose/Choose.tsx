@@ -20,7 +20,7 @@ const features = [
 
 export default function Choose() {
     return (
-        <div className="flex flex-col items-center gap-[4rem] mb-[4rem]">
+        <div className="mt-[8rem] flex flex-col items-center gap-[4rem] mb-[4rem]">
             <div className="px-[10%] py-[4%] w-full">
                 <h1 className="gradient-text text-[48px] font-[400]">Why Choose Encifher?</h1>
             </div>
