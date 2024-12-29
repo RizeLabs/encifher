@@ -10,7 +10,7 @@ export default function Exposed() {
             >
                 <div className="flex flex-col items-center gap-1">
                     <h1 className="text-[48px] font-[400] gradient-text">How Exposed Are You?</h1>
-                    <h1 className="text-lg font-[300] text-white text-opacity-60 text-center">
+                    <h1 className="text-[20px] font-[300] text-white text-opacity-60 text-center">
                         Your Data is Already Public Check Now!
                     </h1>
                 </div>

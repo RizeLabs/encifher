@@ -102,3 +102,21 @@
   mask-composite: exclude;
   z-index: -1;
 }
+
+.border-gradient-b {
+  position: relative;
+}
+
+.border-gradient-b::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 36px;
+  border: 1px solid transparent;
+  background: radial-gradient(100% 100% at 50% 100%, #FFFFFF 0%, rgba(255, 255, 255, 0.5) 20.07%, rgba(255, 255, 255, 0) 86.88%) border-box;
+  mask:
+    linear-gradient(#000 0 0) padding-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  z-index: -1;
+}
