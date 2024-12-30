@@ -13,9 +13,9 @@ const Question = ({ index }: QuestionProps) => {
         setIsOpen(!isOpen);
     };
     return (
-        <div className="p-[3%] text-white faq-border">
-            <div className="flex justify-between items-center">
-                <h3 className="text-[20px] font-[400] gradient-text">{faqs[index].question}</h3>
+        <div className="p-4 md:p-[3%] text-white faq-border">
+            <div className="flex justify-between items-center gap-4 md:gap-0">
+                <h3 className="text-[16px] md:text-[20px] font-[400] gradient-text">{faqs[index].question}</h3>
                 <button
                     onClick={toggleFAQ}
                     className={`text-primary-brand transform transition-transform duration-300 text-2xl focus:outline-none ${isOpen ? 'rotate-90' : ''
@@ -45,7 +45,7 @@ export default function Faq() {
             <div className="py-[4%] px-[10%] text-center">
                 <h1 className="text-[48px] gradient-text font-[400]">FAQ's</h1>
             </div>
-            <div className="flex flex-col gap-[1rem] w-[48%]">
+            <div className="flex flex-col gap-[1rem] w-[95%] md:w-[48%]">
                 {faqs.map((_, index) => (
                     <Question key={index} index={index} />
                 ))}
