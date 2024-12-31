@@ -16,10 +16,10 @@ export default function Hero() {
                     Unlocking the full potential of DeFi for institutional players. Lets not force Web 3 users to fragment their liquidity because of privacy.
                 </h1>
                 <div className="flex flex-col md:flex-row items-center gap-2 mt-[1rem] items-stretch">
-                    <Button text="Join community" onClick={() => console.log("Join Community")} />
+                    <Button text="Join community" onClick={() => window.open("https://t.me/BananaHQ/", "_blank")} />
                     <Button
                         text="Explore privacy"
-                        onClick={() => console.log("Explore privacy")}
+                        onClick={() => window.open("https://docs.encifher.io/docs/intro/", "_blank")}
                         className='text-white/60 bg-white/5 border-white/5 hover:bg-white/10'
                     />
                 </div>
