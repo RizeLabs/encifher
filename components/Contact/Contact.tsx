@@ -31,7 +31,7 @@ export default function Contact() {
                     </div>
                 </div>
             </div>
-            <div className="mt-[10rem] mb-[5rem] flex flex-col items-center justify-center gap-[6rem] px-[3%]">
+            <div className="mt-[10rem] mb-[5rem] flex flex-col items-center justify-center gap-6 px-[3%] h-[calc(10vh-14rem)]">
                 <div className="flex items-center justify-around gap-2 md:gap-4">
                     <Button text={
                         <Image src="/x.svg" height={20} width={20} alt="" className="h-[18px] w-[18px] md:h-[40px] md:w-[24px]" />
@@ -54,13 +54,8 @@ export default function Contact() {
                         onClick={() => null}
                     />
                 </div>
+                <div className="text-center text-white/60 text-sm font-[300]">© 2024 Rize Labs, HQ Singapore</div>
             </div>
-            {/* <div className="relative h-[40vh] overflow-hidden">
-                <p className="absolute bottom-[-7rem] left-1/2 transform -translate-x-1/2 text-[275px] font-[400] text-transparent text-clip bg-clip-text bg-white">
-                    ENCIFHER
-                    <GlowingText />
-                </p>
-            </div> */}
         </>
     );
 }

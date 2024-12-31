@@ -43,7 +43,7 @@ export default function Faq() {
     return (
         <div className="flex flex-col items-center gap-[2rem] my-[7rem]">
             <div className="py-[4%] px-[10%] text-center">
-                <h1 className="text-[48px] gradient-text font-[400]">FAQ's</h1>
+                <h1 className="text-[48px] gradient-text font-[400]">{"FAQ's"}</h1>
             </div>
             <div className="flex flex-col gap-[1rem] w-[95%] md:w-[48%]">
                 {faqs.map((_, index) => (
