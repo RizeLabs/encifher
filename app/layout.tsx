@@ -1,11 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Lexend, JetBrains_Mono } from "next/font/google"
-
-// const lexend = Lexend({
-//   subsets: ["latin"],
-//   style: "normal",
-// });
+import { JetBrains_Mono } from "next/font/google"
 
 const jetbrainsFont = JetBrains_Mono({
   subsets: ["latin"],

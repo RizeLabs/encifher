@@ -6,8 +6,8 @@ import { motion, AnimatePresence } from "framer-motion"
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState<boolean>(false);
-    const menuRef = useRef<any>(null);
-    const buttonsRef = useRef<any>(null);
+    const menuRef = useRef<HTMLDivElement>(null);
+    const buttonsRef = useRef<HTMLDivElement>(null);
     const menuVariants = {
         hidden: { x: "100%" },
         visible: { x: 0 },
@@ -15,8 +15,9 @@ export default function Navbar() {
     };
 
     useEffect(() => {
-        const handleTouch = (e: any) => {
-            if (menuRef.current && menuRef.current.contains(e.target) && !buttonsRef.current.contains(e.target))
+        const handleTouch = (e: TouchEvent) => {
+            const target = e.target as Node;
+            if (menuRef.current && menuRef.current.contains(target) && !buttonsRef.current?.contains(target))
                 setIsOpen(false);
         };
         window.addEventListener("touchstart", handleTouch);
