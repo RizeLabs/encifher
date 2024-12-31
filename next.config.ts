@@ -1,8 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  distDir: 'out',
-  target: 'serverless',
+  output: 'export',
+  distDir: 'out'
 };
 
 export default nextConfig;
