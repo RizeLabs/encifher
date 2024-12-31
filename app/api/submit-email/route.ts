@@ -3,6 +3,8 @@ import { MongoClient } from "mongodb";
 
 const client = new MongoClient(process.env.MONGODB_URI!);
 
+export const maxDuration = 300;
+
 export async function POST(req: NextRequest) {
     try {
         const { email } = await req.json();
