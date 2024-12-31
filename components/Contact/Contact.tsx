@@ -2,8 +2,38 @@
 import Image from "next/image";
 import Button from "../Button/Button";
 import UnderlinedText from "../Underlined/Underlined";
+import { useState } from "react";
+
+const statusEnum = {
+    loading: "Joining...",
+    success: "Joined",
+    default: "Join the waitlist"
+}
 
 export default function Contact() {
+    const [email, setEmail] = useState<string>('');
+    const [status, setStatus] = useState<string>(statusEnum.default);
+
+    const handleSubmit = async () => {
+        if (!email || status === statusEnum.success) return;
+        try {
+            setStatus(statusEnum.loading);
+            const response = await fetch('/api/submit-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email }),
+            });
+            if (!response.ok)
+                throw new Error(await response.text());
+            setStatus(statusEnum.success);
+        } catch (error) {
+            console.error(error);
+            setStatus(statusEnum.default);
+        }
+    }
+
     return (
         <>
             <div className="px-[5%] py-[2%]">
@@ -21,12 +51,14 @@ export default function Contact() {
                             <input
                                 className="bg-transparent h-full w-full px-6 py-2 text-white/60 text-sm font-[300] focus:outline-none"
                                 placeholder="ENTER EMAIL ID"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
                             />
                         </span>
                         <Button
-                            className="max-w-[300px]"
-                            text="Join the waitlist"
-                            onClick={() => null}
+                            className="w-[190px]"
+                            text={`${status}`}
+                            onClick={handleSubmit}
                         />
                     </div>
                 </div>
@@ -36,22 +68,22 @@ export default function Contact() {
                     <Button text={
                         <Image src="/x.svg" height={20} width={20} alt="" className="h-[18px] w-[18px] md:h-[40px] md:w-[24px]" />
                     }
-                        onClick={() => null}
+                        onClick={() => window.open("https://x.com/encifherio", "_blank")}
                     />
                     <Button text={
                         <Image src="/telegram.svg" height={20} width={20} alt="" className="h-[18px] w-[18px] md:h-[40px] md:w-[28px]" />
                     }
-                        onClick={() => null}
+                        onClick={() => window.open("https://t.me/BananaHQ", "_blank")}
                     />
                     <Button text={
                         <Image src="/discord.svg" height={20} width={20} alt="" className="h-[18px] w-[18px] md:h-[40px] md:w-[28px]" />
                     }
-                        onClick={() => null}
+                        onClick={() => window.open("https://t.me/BananaHQ", "_blank")}
                     />
                     <Button text={
                         <Image src="/github.svg" height={20} width={20} alt="" className="h-[18px] w-[18px] md:h-[40px] md:w-[28px]" />
                     }
-                        onClick={() => null}
+                        onClick={() => window.open("https://github.com/RizeLabs", "_blank")}
                     />
                 </div>
                 <div className="text-center text-white/60 text-sm font-[300]">© 2024 Rize Labs, HQ Singapore</div>

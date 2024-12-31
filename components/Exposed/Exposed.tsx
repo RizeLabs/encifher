@@ -25,7 +25,7 @@ export default function Exposed() {
                     <Button text={
                         <Image src="/search.svg" height={10} width={10} alt='' className='h-[24px] w-[24px]' />
                     }
-                        onClick={() => null}
+                        onClick={() => window.open("https://www.hfru.xyz/", "_blank")}
                     />
                 </div>
             </div>
