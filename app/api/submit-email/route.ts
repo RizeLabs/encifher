@@ -14,6 +14,6 @@ export async function POST(req: NextRequest) {
         if (!response.acknowledged) throw new Error('Failed to submit email');
         return NextResponse.json({ success: true });
     } catch (error: unknown) {
-        return NextResponse.json({ success: false, error });
+        return NextResponse.json({ success: false, error }, { status: 500 });
     }
 }

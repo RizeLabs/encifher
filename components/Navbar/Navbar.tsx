@@ -64,14 +64,14 @@ export default function Navbar() {
                                 animate={{ opacity: 1 }}
                                 transition={{ delay: 0.3, duration: 0.5, ease: "easeInOut" }}
                             >
-                                <Button text="Docs" onClick={() => console.log("Docs")} className="w-[80%] px-4 py-2 text-lg text-white/60 bg-white/5 border-white/5 hover:bg-white/10 select-none" />
+                                <Button text="Docs" onClick={() => window.open("https://docs.encifher.io/docs/intro/", "_blank")} className="w-[80%] px-4 py-2 text-lg text-white/60 bg-white/5 border-white/5 hover:bg-white/10 select-none" />
                             </motion.div>
                             <motion.div
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 transition={{ delay: 0.5, duration: 0.5, ease: "easeInOut" }}
                             >
-                                <Button text="Launch App" onClick={() => console.log("Launch App")} className="w-[80%] px-4 py-2 text-lg select-none" />
+                                <Button text="Launch App" onClick={() => window.open("https://swap.encifher.io", "_blank")} className="w-[80%] px-4 py-2 text-lg select-none" />
                             </motion.div>
                         </div>
                     </motion.div>
