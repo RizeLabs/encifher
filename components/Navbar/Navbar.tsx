@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion"
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState<boolean>(false);
+    const [tmpText, setTmpText] = useState<string>("Launch app")
     const menuRef = useRef<HTMLDivElement>(null);
     const buttonsRef = useRef<HTMLDivElement>(null);
     const menuVariants = {
@@ -35,7 +36,8 @@ export default function Navbar() {
             </div>
             <div className="items-center gap-2 hidden md:flex">
                 <Button text="Docs" onClick={() => window.open("https://docs.encifher.io/docs/intro/", "_blank")} className="px-4 py-2 text-sm text-white/60 bg-white/5 border-white/5 hover:bg-white/10" />
-                <Button text="Launch App" onClick={() => window.open("https://swap.encifher.io", "_blank")} className="px-4 py-2 text-sm" />
+                <div onMouseEnter={() => setTmpText("Coming soon")} onMouseLeave={() => setTmpText("Launch app")}><Button text={tmpText} onClick={() => null} className="px-4 py-2 text-sm w-[127px]" /></div>
+                {/* <Button text="Launch App" onClick={() => window.open("https://swap.encifher.io", "_blank")} className="px-4 py-2 text-sm" /> */}
             </div>
             <div className="md:hidden w-9 h-8 border-2 border-white/15 p-2 rounded-sm" onClick={() => setIsOpen(!isOpen)}>
                 <Image src={isOpen ? "/cross.svg" : "/ham.svg"} width={10} height={10} alt="" className="w-full h-full" />
@@ -71,7 +73,8 @@ export default function Navbar() {
                                 animate={{ opacity: 1 }}
                                 transition={{ delay: 0.5, duration: 0.5, ease: "easeInOut" }}
                             >
-                                <Button text="Launch App" onClick={() => window.open("https://swap.encifher.io", "_blank")} className="w-[80%] px-4 py-2 text-lg select-none" />
+                                <Button text="Launch App" onClick={() => null} className="w-[80%] px-4 py-2 text-lg select-none" />
+                                {/* <Button text="Launch App" onClick={() => window.open("https://swap.encifher.io", "_blank")} className="w-[80%] px-4 py-2 text-lg select-none" /> */}
                             </motion.div>
                         </div>
                     </motion.div>
