@@ -34,7 +34,7 @@ export default function Navbar() {
                 <Image width={120} height={30} src="/enc.svg" alt="logo" />
             </div>
             <div className="items-center gap-2 hidden md:flex">
-                <Button text="Blogs" onClick={() => window.open("https://docs.encifher.io/docs/intro/", "_blank")} className="px-4 py-2 text-sm text-white/60 bg-white/5 border-white/5 hover:bg-white/10" />
+                <Button text="Blogs" onClick={() => window.open("/blogs", "_blank")} className="px-4 py-2 text-sm text-white/60 bg-white/5 border-white/5 hover:bg-white/10" />
                 <Button text="Docs" onClick={() => window.open("https://docs.encifher.io/docs/intro/", "_blank")} className="px-4 py-2 text-sm text-white/60 bg-white/5 border-white/5 hover:bg-white/10" />
                 <Button text="Launch App" onClick={() => window.open("https://swap.encifher.io", "_blank")} className="px-4 py-2 text-sm" />
             </div>
