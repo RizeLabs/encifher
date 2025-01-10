@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Navbar from "../Navbar/Navbar";
 import { blogs } from "./blogdetails";
+import Share from "../Share/Share";
 
 export default function BlogPage({ blogIndex }) {
     const clock = "/clock.svg";
@@ -40,6 +41,18 @@ export default function BlogPage({ blogIndex }) {
                             </div>
                         ))
                     }
+
+                    <div className="w-full h-[1px] bg-white opacity-50">
+                    </div>
+                    <span className="text-white text-base normal-case md:mt-16" >
+                        Share on
+                    </span>
+                    <div className="flex flex-row justify-start my-4" >
+                        <Share image="/telegram.svg" />
+                        <Share image="/twitter.svg" />
+                        <Share image="/discord.svg" />
+                        <Share image="/github.svg" />
+                    </div>
                 </div>
             </div>
         </>
