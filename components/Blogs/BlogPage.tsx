@@ -9,7 +9,7 @@ interface BlogPageInterface {
     blogIndex: string;
 }
 
-export default function BlogPage({ blogIndex }:BlogPageInterface) {
+export default function BlogPage({ blogIndex }: BlogPageInterface) {
     const clock = "/clock.svg";
     const calendar = "/calendar.svg";
     const back = "/back.svg";
@@ -28,9 +28,8 @@ export default function BlogPage({ blogIndex }:BlogPageInterface) {
         <>
             <Navbar />
 
-            <div className="flex flex-row w-full h-full mt-8">
-
-                <div className="w-[33%] flex justify-center" >
+            <div className="flex flex-col md:flex-row w-full h-full mt-8">
+                <div className="w-full md:w-[33%] flex justify-center">
                     <div className="w-[200px] sticky top-20 ml-4 hidden md:block">
                         <span className="text-white text-lg font-bold mb-4">Table of Contents</span>
                         <div className="w-[200px] h-[1px] bg-white opacity-15 my-4"></div>
@@ -40,6 +39,7 @@ export default function BlogPage({ blogIndex }:BlogPageInterface) {
                                     <button
                                         onClick={() => scrollToSection(index)}
                                         className="text-white text-sm opacity-70 hover:opacity-100 hover:text-[#663FFF] transition-all"
+                                        aria-label={`Scroll to ${section.header}`}
                                     >
                                         {shortenTitle(section.header)}
                                     </button>
@@ -49,8 +49,7 @@ export default function BlogPage({ blogIndex }:BlogPageInterface) {
                     </div>
                 </div>
 
-                {/* Blog Content (Preserve Current Positioning and Size) */}
-                <div className="flex flex-col w-[709px]">
+                <div className="flex flex-col w-full md:w-[709px] px-4 md:px-0">
                     <span
                         className="flex flex-row text-white text-sm mb-4 cursor-pointer"
                         onClick={() => (window.location.href = `/blogs`)}
@@ -74,13 +73,13 @@ export default function BlogPage({ blogIndex }:BlogPageInterface) {
                         width={709}
                         height={400}
                         alt="Blog Image"
-                        className="my-12"
+                        className="my-12 w-full h-auto"
                     />
                     {blogs[Number(blogIndex)].sections.map((section, index) => (
                         <div
                             key={index}
                             className="flex flex-col mb-8"
-                            ref={(el) => { sectionRefs.current[index] = el; }} 
+                            ref={(el) => { sectionRefs.current[index] = el; }}
                         >
                             <span className="text-white text-2xl mb-4">{section.header}</span>
                             <div className="text-white text-base normal-case opacity-50">{section.content}</div>
