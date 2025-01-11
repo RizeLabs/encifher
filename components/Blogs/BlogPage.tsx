@@ -3,23 +3,24 @@ import Image from "next/image";
 import Navbar from "../Navbar/Navbar";
 import { blogs } from "./blogdetails";
 import Share from "../Share/Share";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 
-export default function BlogPage({ blogIndex }) {
+interface BlogPageInterface {
+    blogIndex: string;
+}
+
+export default function BlogPage({ blogIndex }:BlogPageInterface) {
     const clock = "/clock.svg";
     const calendar = "/calendar.svg";
     const back = "/back.svg";
 
-    // Refs for section headings
-    const sectionRefs = useRef([]);
+    const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-    // Scroll to section when a ToC item is clicked
-    const scrollToSection = (index) => {
+    const scrollToSection = (index: number) => {
         sectionRefs.current[index]?.scrollIntoView({ behavior: "smooth" });
     };
 
-    // Shorten the title to 10-15 characters
-    const shortenTitle = (title) => {
+    const shortenTitle = (title: string) => {
         return title.length > 20 ? title.substring(0, 20) + "..." : title;
     };
 
@@ -34,7 +35,7 @@ export default function BlogPage({ blogIndex }) {
                         <span className="text-white text-lg font-bold mb-4">Table of Contents</span>
                         <div className="w-[200px] h-[1px] bg-white opacity-15 my-4"></div>
                         <ul className="list-none p-0">
-                            {blogs[blogIndex].sections.map((section, index) => (
+                            {blogs[Number(blogIndex)].sections.map((section, index) => (
                                 <li key={index} className="mb-2">
                                     <button
                                         onClick={() => scrollToSection(index)}
@@ -57,29 +58,29 @@ export default function BlogPage({ blogIndex }) {
                         <Image src={back} width={9} height={9} alt="Back Icon" className="mr-2" />
                         Go Back
                     </span>
-                    <span className="text-white text-3xl text-[#663FFF]">{blogs[blogIndex].title}</span>
+                    <span className="text-white text-3xl text-[#663FFF]">{blogs[Number(blogIndex)].title}</span>
                     <span className="flex flex-row my-4 opacity-50">
                         <span className="flex flex-row text-white text-[12px] mr-6">
                             <Image src={clock} width={18} height={18} alt="Clock Icon" className="mr-2" />
-                            {blogs[blogIndex].readtime} min read
+                            {blogs[Number(blogIndex)].readtime} min read
                         </span>
                         <span className="text-white text-[12px] flex flex-row">
                             <Image src={calendar} width={14} height={14} alt="Calendar Icon" className="mr-2" />
-                            {blogs[blogIndex].date}
+                            {blogs[Number(blogIndex)].date}
                         </span>
                     </span>
                     <Image
-                        src={blogs[blogIndex].image}
+                        src={blogs[Number(blogIndex)].image}
                         width={709}
                         height={400}
                         alt="Blog Image"
                         className="my-12"
                     />
-                    {blogs[blogIndex].sections.map((section, index) => (
+                    {blogs[Number(blogIndex)].sections.map((section, index) => (
                         <div
                             key={index}
                             className="flex flex-col mb-8"
-                            ref={(el) => (sectionRefs.current[index] = el)} // Assign ref to each section
+                            ref={(el) => { sectionRefs.current[index] = el; }} 
                         >
                             <span className="text-white text-2xl mb-4">{section.header}</span>
                             <div className="text-white text-base normal-case opacity-50">{section.content}</div>

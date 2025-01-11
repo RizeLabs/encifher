@@ -1,6 +1,5 @@
 "use client"
 import BlogCard from "../BlogContent/BlogCard";
-import Hero from "../Hero/Hero";
 import Navbar from "../Navbar/Navbar";
 import { blogs } from "./blogdetails";
 

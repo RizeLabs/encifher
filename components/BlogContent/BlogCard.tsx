@@ -1,6 +1,15 @@
 import Image from "next/image";
 
-export default function BlogCard({ blogIndex, title, image, readtime, date, content }) {
+interface BlogCardInterface {
+    blogIndex: number;
+    title: string;
+    image: string;
+    readtime: string;
+    date: string;
+    content: string;
+}
+
+export default function BlogCard({ blogIndex, title, image, readtime, date, content }: BlogCardInterface) {
     const clock = "/clock.svg";
     const calendar = "/calendar.svg";
 
