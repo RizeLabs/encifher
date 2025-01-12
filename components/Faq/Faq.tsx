@@ -18,8 +18,7 @@ const Question = ({ index }: QuestionProps) => {
                 <h3 className="text-[16px] md:text-[20px] font-[400] gradient-text">{faqs[index].question}</h3>
                 <button
                     onClick={toggleFAQ}
-                    className={`text-primary-brand transform transition-transform duration-300 text-2xl focus:outline-none ${isOpen ? 'rotate-90' : ''
-                        }`}
+                    className={`text-primary-brand transform transition-transform duration-300 text-2xl focus:outline-none ${isOpen ? 'rotate-90' : ''}`}
                 >
                     {String.fromCharCode(isOpen ? 0x2716 : 0x271a)}
                 </button>
@@ -29,10 +28,10 @@ const Question = ({ index }: QuestionProps) => {
                     } ease-in-out overflow-hidden transition-all duration-500 delay-100`}
             >
                 <p className="pt-4 text-white text-opacity-60 text-[16px] font-[300] normal-case">
-                    {faqs[0].answer}
+                    {faqs[index].answer}
                 </p>
                 <p className="pt-4 text-primary-brand text-[16px] font-[300] hover:cursor-pointer">
-                    {faqs[0].linkText}
+                    {faqs[index].linkText}
                 </p>
             </div>
         </div>
