@@ -28,35 +28,35 @@ Unlike mixers, there are no shielding pools or assets involved. This approach en
         answer: `TL;DR: Yes!
 We have integrated with Uniswap and AAVE on Base, and we plan to expand to other protocols.
 Encifher also offers an SDK for developers to integrate privacy features into their platforms.
-If you're interested in an integration, contact us.`
+If you're interested in an integration, {contact us.}{https://t.me/rishotics}`
     },
-    {
-        question: "Can I customize the level of privacy for my transactions?",
-        answer: `Yes, developers can define the desired level of privacy for transactions.
-Visit our documentation to learn how to implement these features.`
-    },
+//     {
+//         question: "Can I customize the level of privacy for my transactions?",
+//         answer: `Yes, developers can define the desired level of privacy for transactions.
+// Visit our documentation to learn how to implement these features.`
+//     },
     // {
     //     question: "How secure is Encifher?",
     //     answer: ""
     // },
-    {
-        question: "How can I start using Encifher?",
-        answer: `We'll soon be launching a couple of applications to get you started`
-    },
-    {
-        question: "Does using Encifher increase transaction costs?",
-        answer: "Cost may slightly increase in transactions compared to standard DeFi protocols, but we strive to keep fees competitive"
-    },
-    {
-        question: "Is Encifher suitable for both individuals and businesses?",
-        answer: "Absolutely. Encifher is designed for anyone needing privacy and compliance, from individual users to large enterprises."
-    },
+    // {
+    //     question: "How can I start using Encifher?",
+    //     answer: `We'll soon be launching a couple of applications to get you started`
+    // },
+    // {
+    //     question: "Does using Encifher increase transaction costs?",
+    //     answer: "Cost may slightly increase in transactions compared to standard DeFi protocols, but we strive to keep fees competitive"
+    // },
+    // {
+    //     question: "Is Encifher suitable for both individuals and businesses?",
+    //     answer: "Absolutely. Encifher is designed for anyone needing privacy and compliance, from individual users to large enterprises."
+    // },
     {
         question: "Does Encifher have a community for discussions?",
-        answer: "Yes! Join our community on Discord and Twitter to stay updated and share feedback."
+        answer: "Yes! Join our community on {Telegram}{https://t.me/BananaHQ} and {Twitter}{https://x.com/@encifherio} to stay updated and share feedback."
     },
-    {
-        question: "How do I get involved with Encifher as a developer?",
-        answer: "Developers can access our SDKs and documentation to build on Encifher. Visit our developer portal for more information."
-    }
+    // {
+    //     question: "How do I get involved with Encifher as a developer?",
+    //     answer: "Developers can access our SDKs and documentation to build on Encifher. Visit our developer portal for more information."
+    // }
 ]

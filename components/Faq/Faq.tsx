@@ -8,9 +8,25 @@ interface QuestionProps {
 
 const Question = ({ index }: QuestionProps) => {
     const [isOpen, setIsOpen] = useState(false);
-
     const toggleFAQ = () => {
         setIsOpen(!isOpen);
+    };
+    const parseText = (str: string) => {
+        const regex = /{([^}]+)\}\{([^}]+)\}/g;
+        const parts = [];
+        let lastIndex = 0;
+        let match;
+        while ((match = regex.exec(str)) !== null) {
+            parts.push(str.slice(lastIndex, match.index));
+            parts.push(
+                <a key={match.index} href={match[2]} className="font-[500] text-primary-brand" target="_blank" rel="noopener noreferrer">
+                    {match[1]}
+                </a>
+            );
+            lastIndex = regex.lastIndex;
+        }
+        parts.push(str.slice(lastIndex));
+        return parts;
     };
     return (
         <div className="p-4 md:p-[3%] text-white faq-border">
@@ -28,9 +44,9 @@ const Question = ({ index }: QuestionProps) => {
                     } ease-in-out overflow-hidden transition-all duration-500 delay-100`}
             >
                 <p className="pt-4 text-white text-opacity-60 text-[16px] font-[300] normal-case">
-                    {faqs[index].answer}
+                    {parseText(faqs[index].answer)}
                 </p>
-                <p className="pt-4 text-primary-brand text-[16px] font-[300] hover:cursor-pointer" onClick={() => window.open(faqs[index].link, "_blank")}>
+                <p className="pt-4 text-primary-brand text-[16px] font-[500] hover:cursor-pointer" onClick={() => window.open(faqs[index].link, "_blank")}>
                     {faqs[index].linkText}
                 </p>
             </div>
