@@ -30,7 +30,7 @@ const Question = ({ index }: QuestionProps) => {
                 <p className="pt-4 text-white text-opacity-60 text-[16px] font-[300] normal-case">
                     {faqs[index].answer}
                 </p>
-                <p className="pt-4 text-primary-brand text-[16px] font-[300] hover:cursor-pointer">
+                <p className="pt-4 text-primary-brand text-[16px] font-[300] hover:cursor-pointer" onClick={() => window.open(faqs[index].link, "_blank")}>
                     {faqs[index].linkText}
                 </p>
             </div>

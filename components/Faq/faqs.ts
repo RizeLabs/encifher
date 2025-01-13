@@ -4,7 +4,7 @@ export const faqs = [
         answer: `Encifher allows users to export a detailed report of their transactions to provide to the relevant authorities. This report includes the total number of blockchain interactions.
 Additionally, we perform pre-transaction checks through hooks and predicates to verify the legitimacy of users before executing transactions`,
         linkText: "Learn more about our compliance policy here.",
-        link: "/compliance"
+        link: "https://docs.encifher.io/docs/solution/compliance/"
     },
     {
         question: "Is this similar to being a mixer?",
@@ -28,7 +28,7 @@ Unlike mixers, there are no shielding pools or assets involved. This approach en
         answer: `TL;DR: Yes!
 We have integrated with Uniswap and AAVE on Base, and we plan to expand to other protocols.
 Encifher also offers an SDK for developers to integrate privacy features into their platforms.
-If you’re interested in an integration, contact us.`
+If you're interested in an integration, contact us.`
     },
     {
         question: "Can I customize the level of privacy for my transactions?",
