@@ -4,6 +4,9 @@ import Navbar from "../Navbar/Navbar";
 import { blogs } from "./blogdetails";
 import Share from "../Share/Share";
 import { useRef } from "react";
+import ReactMarkdown from "react-markdown";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 interface BlogPageInterface {
     blogIndex: string;
@@ -29,6 +32,7 @@ export default function BlogPage({ blogIndex }: BlogPageInterface) {
             <Navbar />
 
             <div className="flex flex-col md:flex-row w-full h-full mt-8">
+                {/* Table of Contents for Desktop */}
                 <div className="w-full md:w-[33%] flex justify-center">
                     <div className="w-[200px] sticky top-20 ml-4 hidden md:block">
                         <span className="text-white text-lg font-bold mb-4">Table of Contents</span>
@@ -49,6 +53,7 @@ export default function BlogPage({ blogIndex }: BlogPageInterface) {
                     </div>
                 </div>
 
+                {/* Blog Content */}
                 <div className="flex flex-col w-full md:w-[709px] px-4 md:px-0">
                     <span
                         className="flex flex-row text-white text-sm mb-4 cursor-pointer"
@@ -82,7 +87,29 @@ export default function BlogPage({ blogIndex }: BlogPageInterface) {
                             ref={(el) => { sectionRefs.current[index] = el; }}
                         >
                             <span className="text-white text-2xl mb-4">{section.header}</span>
-                            <div className="text-white text-base normal-case opacity-50">{section.content}</div>
+                            <div className="text-[#808080] text-base normal-case">
+                                <ReactMarkdown
+                                    children={section.content}
+                                    components={{
+                                        code({ node, inline, className, children, ...props }) {
+                                            const match = /language-(\w+)/.exec(className || "");
+                                            return !inline && match ? (
+                                                <SyntaxHighlighter
+                                                    children={String(children).replace(/\n$/, "")}
+                                                    style={dracula}
+                                                    language={match[1]}
+                                                    PreTag="div"
+                                                    {...props}
+                                                />
+                                            ) : (
+                                                <code className={className} {...props}>
+                                                    {children}
+                                                </code>
+                                            );
+                                        },
+                                    }}
+                                />
+                            </div>
                         </div>
                     ))}
 
