@@ -12,6 +12,12 @@ interface BlogPageInterface {
     blogIndex: string;
 }
 
+type CodeProps = {
+    inline?: boolean;
+    className?: string;
+    children?: React.ReactNode;
+};
+
 export default function BlogPage({ blogIndex }: BlogPageInterface) {
     const clock = "/clock.svg";
     const calendar = "/calendar.svg";
@@ -89,18 +95,18 @@ export default function BlogPage({ blogIndex }: BlogPageInterface) {
                             <span className="text-white text-2xl mb-4">{section.header}</span>
                             <div className="text-[#808080] text-base normal-case">
                                 <ReactMarkdown
-                                    children={section.content}
                                     components={{
-                                        code({ node, inline, className, children, ...props }) {
+                                        code({ inline, className, children, ...props }: CodeProps) {
                                             const match = /language-(\w+)/.exec(className || "");
                                             return !inline && match ? (
                                                 <SyntaxHighlighter
-                                                    children={String(children).replace(/\n$/, "")}
                                                     style={dracula}
                                                     language={match[1]}
                                                     PreTag="div"
                                                     {...props}
-                                                />
+                                                >
+                                                    {String(children).replace(/\n$/, "")}
+                                                </SyntaxHighlighter>
                                             ) : (
                                                 <code className={className} {...props}>
                                                     {children}
@@ -108,7 +114,9 @@ export default function BlogPage({ blogIndex }: BlogPageInterface) {
                                             );
                                         },
                                     }}
-                                />
+                                >
+                                    {section.content}
+                                </ReactMarkdown>
                             </div>
                         </div>
                     ))}
