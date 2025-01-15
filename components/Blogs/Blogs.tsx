@@ -9,7 +9,7 @@ export default function Blogs() {
         <>
             <Navbar />
             <div className="flex flex-col w-full h-full justify-center items-center">
-                <div className="flex flex-col w-[63%]">
+                <div className="flex flex-col md:w-[63%] w-[85%]">
                     {blogs.map((blog, index) => (
                         <BlogCard
                             key={index}
