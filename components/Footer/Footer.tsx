@@ -6,17 +6,17 @@ export default function Footer() {
     return (
         <>
             <div className="flex flex-col w-full justify-center items-center">  
-                <div className="w-full h-[5%] flex flex-row justify-center items-center bg-black text-white/70 px-4 md:px-10 py-4 md:py-7">
+                <div className="w-full h-[5%] flex flex-row justify-center items-center text-white/70 px-4 md:px-10 py-4 md:py-7">
                     <div className="flex flex-col w-[50%] gap-4">
                         <span className="text-[16px]">BACKED BY</span>
                         <Image src="/longhash.svg" width={200} height={30} alt="Rize Logo" />
                         <p className="text-[16px]">© 2025 RIZE LABS, HQ SINGAPORE</p>
                     </div>
                     <div className="flex flex-row w-[50%] justify-end">
-                        <Share image="/telegram.svg" />
-                        <Share image="/twitter.svg" />
-                        <Share image="/discord.svg" />
-                        <Share image="/github.svg" />
+                        <Share image="/telegram.svg" platform="telegram" />
+                        <Share image="/twitter.svg" platform="twitter"/>
+                        <Share image="/discord.svg" platform="twitter"/>
+                        <Share image="/github.svg" platform="twitter"/>
                     </div>
                 </div>
                 <div className="w-[95%] h-[2px] bg-white opacity-10 "></div>

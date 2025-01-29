@@ -153,7 +153,7 @@ export default function BlogPage({ blogIndex }: BlogPageInterface) {
                     <div className="flex flex-row justify-start my-14">
                         <div className="flex flex-row justify-center items-center mr-4">
                             <span className="text-white text-base normal-case mr-4">Share on</span>
-                            <MiniShare image="/twitter.svg" />
+                            <MiniShare image="/twitter.svg" platform="twitter" />
                         </div>
                     </div>
                 </div>
