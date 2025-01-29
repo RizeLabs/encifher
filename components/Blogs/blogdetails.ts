@@ -1,7 +1,7 @@
 
 export const blogs = [
     {
-        title: "An Incomplete Guide to Encrypted ERC20 [COMPLETED]",
+        title: "An Incomplete Guide to Encrypted ERC20",
         image: "/header4.png",
         readtime: "10",
         date: "13 Jan 2025",
