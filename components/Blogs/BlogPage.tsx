@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Navbar from "../Navbar/Navbar";
 import { blogs } from "./blogdetails";
-import Share, { MiniShare } from "../Share/Share";
+import { MiniShare } from "../Share/Share";
 import { useRef } from "react";
 import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
