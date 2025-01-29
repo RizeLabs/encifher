@@ -96,7 +96,7 @@ export default function BlogPage({ blogIndex }: BlogPageInterface) {
                             ref={(el) => { sectionRefs.current[index] = el; }}
                         >
                             <span className="text-white text-2xl mb-4">{section.header}</span>
-                            <div className="text-[#808080] text-base normal-case">
+                            <div className="text-[#808080] text-base normal-case font-extralight">
                                 <ReactMarkdown
                                     remarkPlugins={[remarkGfm]}
                                     components={{
@@ -129,7 +129,6 @@ export default function BlogPage({ blogIndex }: BlogPageInterface) {
                                             ) : null;
                                         },
                                         p({ children }) {
-                                            // If the paragraph contains only an image, avoid wrapping it in <p>
                                             if (
                                                 Array.isArray(children) &&
                                                 children.length === 1 &&
