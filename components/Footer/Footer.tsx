@@ -10,7 +10,7 @@ export default function Footer() {
                     <Image src="/enc.svg" width={150} height={150} alt="Rize Logo" />
                 </div>
                 <div className="flex flex-col text-white/70 text-[16px] normal-case py-8" >
-                    <span>Encifher is a decentralized technology platform focused on providing secure and privacy-enhancing Web3 solutions. Please note that some services may be supported by trusted third-party providers. By using our platform, you agree to comply with applicable local laws and our <span className="text-white underline decoration-[#5024FF]">[Terms of Service]</span> and <span className="text-white underline decoration-[#5024FF]">[Privacy Policy]</span>.</span>
+                    <span>Encifher is creating a Compliant Privacy 2.0 engine for DeFi. This engine allows dApps across existing L1, L2, and L3 networks to incorporate compliant privacy features seamlessly without fragmenting liquidity. Please note that some services may be supported by trusted third-party providers. By using our platform, you agree to comply with applicable local laws and our <span className="text-white underline decoration-[#5024FF]">[Terms of Service]</span> and <span className="text-white underline decoration-[#5024FF]">[Privacy Policy]</span>.</span>
                 </div>
                 <div className="flex flex-row w-full my-4" >
                     <div className="flex flex-row w-[50%] justify-start items-center">
