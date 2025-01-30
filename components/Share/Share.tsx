@@ -23,9 +23,9 @@ export default function Share({ image, platform }: ShareInterface) {
     return (
         <div
             onClick={sharePage}
-            className="w-[58px] h-[58px] bg-[#5024FF26] mr-4 border-[1.5px] border-[#5024FF40] rounded-lg flex justify-center items-center cursor-pointer"
+            className="w-[48px] h-[48px] bg-[#5024FF26] mr-4 border-[1.5px] border-[#5024FF40] rounded-lg flex justify-center items-center cursor-pointer"
         >
-            <Image src={image} width={30} height={30} alt={`${platform} Share Icon`} />
+            <Image src={image} width={25} height={25} alt={`${platform} Share Icon`} />
         </div>
     );
 }

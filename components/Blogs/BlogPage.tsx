@@ -10,6 +10,10 @@ import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import remarkGfm from "remark-gfm";
 import Footer from "../Footer/Footer";
 import MatrixLetters from "@/decorations/MatrixLetters";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
+import "katex/dist/katex.min.css";
+import rehypeRaw from "rehype-raw";
 
 interface BlogPageInterface {
     blogIndex: string;
@@ -98,7 +102,8 @@ export default function BlogPage({ blogIndex }: BlogPageInterface) {
                             <span className="text-white text-2xl mb-4">{section.header}</span>
                             <div className="text-[#808080] text-base normal-case font-extralight">
                                 <ReactMarkdown
-                                    remarkPlugins={[remarkGfm]}
+                                    remarkPlugins={[remarkGfm, remarkMath]}
+                                    rehypePlugins={[rehypeKatex, rehypeRaw]}
                                     components={{
                                         code({ inline, className, children, ...props }: CodeProps) {
                                             const match = /language-(\w+)/.exec(className || "");
