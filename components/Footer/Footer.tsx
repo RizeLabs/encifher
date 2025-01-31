@@ -1,6 +1,7 @@
 'use client';
 import Image from "next/image";
 import Share from "../Share/Share";
+import Community from "../Community/Community";
 
 export default function Footer() {
     return (
@@ -22,10 +23,9 @@ export default function Footer() {
 
             <div className="flex flex-col md:flex-row items-center justify-between my-6 w-full">
                 <div className="flex flex-wrap justify-center md:justify-start gap-4 mb-4 md:mb-0">
-                    <Share image="/telegram.svg" platform="telegram" />
-                    <Share image="/twitter.svg" platform="twitter" />
-                    <Share image="/discord.svg" platform="twitter" />
-                    <Share image="/github.svg" platform="twitter" />
+                    <Community image="/telegram.svg" platform="telegram" url="https://t.me/+QJjLUOh0ib9iYzI1" />
+                    <Community image="/twitter.svg" platform="twitter" url="https://x.com/encifherio" />
+                    <Community image="/github.svg" platform="twitter" url="https://github.com/Rizelabs" />
                 </div>
 
                 <div className="flex items-center gap-4">
