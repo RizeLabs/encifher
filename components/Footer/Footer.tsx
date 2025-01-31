@@ -1,6 +1,5 @@
 'use client';
 import Image from "next/image";
-import Share from "../Share/Share";
 import Community from "../Community/Community";
 
 export default function Footer() {
