@@ -2,11 +2,18 @@
 import Image from "next/image";
 import Navbar from "../Navbar/Navbar";
 import { blogs } from "./blogdetails";
-import Share from "../Share/Share";
+import { MiniShare } from "../Share/Share";
 import { useRef } from "react";
 import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import remarkGfm from "remark-gfm";
+import Footer from "../Footer/Footer";
+import MatrixLetters from "@/decorations/MatrixLetters";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
+import "katex/dist/katex.min.css";
+import rehypeRaw from "rehype-raw";
 
 interface BlogPageInterface {
     blogIndex: string;
@@ -36,13 +43,13 @@ export default function BlogPage({ blogIndex }: BlogPageInterface) {
     return (
         <>
             <Navbar />
-
+            <MatrixLetters />
             <div className="flex flex-col md:flex-row w-full h-full mt-8">
-                {/* Table of Contents for Desktop */}
-                <div className="w-full md:w-[33%] flex justify-center">
-                    <div className="w-[200px] sticky top-20 ml-4 hidden md:block">
-                        <span className="text-white text-lg font-bold mb-4">Table of Contents</span>
-                        <div className="w-[200px] h-[1px] bg-white opacity-15 my-4"></div>
+                {/* Sticky & Scrollable Table of Contents */}
+                <div className="hidden md:flex w-[33%] justify-center">
+                    <div className="w-[250px] sticky top-0 max-h-screen overflow-y-auto self-start p-4 ">
+                        <span className="text-white text-lg font-bold mb-4 block">Table of Contents</span>
+                        <div className="w-full h-[1px] bg-white opacity-15 my-4"></div>
                         <ul className="list-none p-0">
                             {blogs[Number(blogIndex)].sections.map((section, index) => (
                                 <li key={index} className="mb-2">
@@ -93,8 +100,10 @@ export default function BlogPage({ blogIndex }: BlogPageInterface) {
                             ref={(el) => { sectionRefs.current[index] = el; }}
                         >
                             <span className="text-white text-2xl mb-4">{section.header}</span>
-                            <div className="text-[#808080] text-base normal-case">
+                            <div className="text-[#808080] text-base normal-case font-extralight">
                                 <ReactMarkdown
+                                    remarkPlugins={[remarkGfm, remarkMath]}
+                                    rehypePlugins={[rehypeKatex, rehypeRaw]}
                                     components={{
                                         code({ inline, className, children, ...props }: CodeProps) {
                                             const match = /language-(\w+)/.exec(className || "");
@@ -113,6 +122,29 @@ export default function BlogPage({ blogIndex }: BlogPageInterface) {
                                                 </code>
                                             );
                                         },
+                                        img({ src, alt }) {
+                                            return src ? (
+                                                <Image
+                                                    src={src}
+                                                    alt={alt || "Blog Image"}
+                                                    width={700}
+                                                    height={400}
+                                                    className="rounded-lg my-8 mx-auto"
+                                                />
+                                            ) : null;
+                                        },
+                                        p({ children }) {
+                                            if (
+                                                Array.isArray(children) &&
+                                                children.length === 1 &&
+                                                typeof children[0] === "object" &&
+                                                "type" in children[0] &&
+                                                children[0].type === "img"
+                                            ) {
+                                                return <>{children}</>;
+                                            }
+                                            return <p className="mb-4">{children}</p>;
+                                        },
                                     }}
                                 >
                                     {section.content}
@@ -122,15 +154,15 @@ export default function BlogPage({ blogIndex }: BlogPageInterface) {
                     ))}
 
                     <div className="w-full h-[1px] bg-white opacity-50"></div>
-                    <span className="text-white text-base normal-case md:mt-16">Share on</span>
-                    <div className="flex flex-row justify-start my-4">
-                        <Share image="/telegram.svg" />
-                        <Share image="/twitter.svg" />
-                        <Share image="/discord.svg" />
-                        <Share image="/github.svg" />
+                    <div className="flex flex-row justify-start my-14">
+                        <div className="flex flex-row justify-center items-center mr-4">
+                            <span className="text-white text-base normal-case mr-4">Share on</span>
+                            <MiniShare image="/twitter.svg" platform="twitter" />
+                        </div>
                     </div>
                 </div>
             </div>
+            <Footer />
         </>
     );
 }

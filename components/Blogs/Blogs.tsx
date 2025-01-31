@@ -1,14 +1,17 @@
-"use client"
+"use client";
+import MatrixLetters from "@/decorations/MatrixLetters";
 import BlogCard from "../BlogContent/BlogCard";
+import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
 import { blogs } from "./blogdetails";
 
 export default function Blogs() {
-
     return (
-        <>
+        <div className="flex flex-col min-h-screen">
             <Navbar />
-            <div className="flex flex-col w-full h-full justify-center items-center">
+            <MatrixLetters />
+
+            <div className="flex flex-col w-full flex-grow justify-center items-center">
                 <div className="flex flex-col md:w-[63%] w-[85%]">
                     {blogs.map((blog, index) => (
                         <BlogCard
@@ -23,6 +26,8 @@ export default function Blogs() {
                     ))}
                 </div>
             </div>
-        </>
+
+            <Footer />
+        </div>
     );
 }

@@ -2,22 +2,13 @@ import Image from "next/image";
 
 interface ShareInterface {
     image: string;
-    platform: "twitter" | "telegram"; 
+    platform: "twitter" | "telegram" | "github"; 
+    url: string;
 }
 
-export default function Share({ image, platform }: ShareInterface) {
+export default function Community({ image, platform, url }: ShareInterface) {
     const sharePage = () => {
-        const url = encodeURIComponent(window.location.href);
-        const text = encodeURIComponent("Check out this amazing blog by Encifher!");
-
-        let shareUrl = "";
-        if (platform === "twitter") {
-            shareUrl = `https://twitter.com/intent/tweet?url=${url}&text=${text}`;
-        } else if (platform === "telegram") {
-            shareUrl = `https://t.me/share/url?url=${url}&text=${text}`;
-        }
-
-        window.open(shareUrl, "_blank", "noopener,noreferrer");
+        window.open(url, "_blank", "noopener,noreferrer");
     };
 
     return (
