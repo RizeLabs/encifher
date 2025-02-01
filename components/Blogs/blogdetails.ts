@@ -68,7 +68,7 @@ export const blogs = [
     },
     {
         title: "Encifher x Rabble: Private Transactions, Made Simple",
-        image: "/rabble.jpg",
+        image: "/rabble.jepg",
         readtime: "5",
         date: "30 Jan 2025",
         content: "Encifher is teaming up with Rabble to enable private transactions for users on Arbitrum. Sending money on-chain no longer means exposing transaction history to the world. With Encifher’s privacy technology, users can send funds confidentially and securely with just a few clicks.",
