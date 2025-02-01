@@ -13,10 +13,6 @@ export default function Footer() {
                 <p>
                     Encifher is creating a Compliant Privacy 2.0 engine for DeFi. This engine allows dApps across existing 
                     L1, L2, and L3 networks to incorporate compliant privacy features seamlessly without fragmenting liquidity.
-                    Please note that some services may be supported by trusted third-party providers. By using our platform, 
-                    you agree to comply with applicable local laws and our&nbsp; 
-                    <span className="text-white underline decoration-[#5024FF]">[Terms of Service]</span> and&nbsp; 
-                    <span className="text-white underline decoration-[#5024FF]">[Privacy Policy]</span>.
                 </p>
             </div>
 
