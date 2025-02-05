@@ -6,7 +6,7 @@ import CitreaLink from "@/public/citrealink.svg"
 
 export default function CitreaHeader(){
     return(
-        <div className="flex flex-row w-full justify-center items-center bg-[#5024FF] text-white px-4 py-2 normal-case" >
+        <div className="flex flex-row w-full h-[36px] justify-center text-[14px] items-center bg-[#5024FF] text-white normal-case" >
             <span className="flex flex-row">
                 <Image src={PopperLeft} width={18} height={18} className="mx-2" alt=""/>
                 We are Live on <Image src={Citrea} width={18} height={18} className="mx-2" alt=""/> Citrea
