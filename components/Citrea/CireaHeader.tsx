@@ -1,17 +1,19 @@
 import Image from "next/image"
 import Citrea from "@/public/citrea.svg"
-import PopperLeft from "@/public/popper1.svg"
-import PopperRight from "@/public/popper2.svg"
 import CitreaLink from "@/public/citrealink.svg"
+
+const citreaPaymentBotLink = 'https://t.me/EncifherPayCitreaBot';
 
 export default function CitreaHeader(){
     return(
         <div className="flex flex-row w-full h-[36px] justify-center text-[14px] items-center bg-[#5024FF] text-white normal-case" >
             <span className="flex flex-row">
-                <Image src={PopperLeft} width={18} height={18} className="mx-2" alt=""/>
-                We are Live on <Image src={Citrea} width={18} height={18} className="mx-2" alt=""/> Citrea
+                Payments bot live on 
+                <span className="flex flex-row hover:cursor-pointer" onClick={() => window.open(citreaPaymentBotLink, "_blank")}>
+                <Image src={Citrea} width={18} height={18} className="mx-2" alt=""  /> 
+                    Citrea
                 <Image src={CitreaLink} width={18} height={18} className="mx-2" alt=""/>
-                <Image src={PopperRight} width={18} height={18} className="mx-2" alt=""/>
+                </span>
             </span>
         </div>
     )
