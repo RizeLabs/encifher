@@ -1,6 +1,35 @@
 
 export const blogs = [
     {
+        "title": "Why Privacy in Bitcoin Matters",
+        "image": "/citrea.png",
+        "readtime": "8",
+        "date": "07 Feb 2025",
+        "content": "Bitcoin is often praised for being decentralized and censorship-resistant, but its public ledger creates a serious problem—lack of privacy. Every transaction is permanently recorded, meaning anyone can trace wallet addresses, balances, and transaction history. This poses risks for individuals, businesses, and institutions, making privacy a necessity rather than a luxury.",
+        "sections": [
+            {
+                "header": "Bitcoin’s Privacy Problem",
+                "content": "Bitcoin transactions are transparent, meaning anyone can see wallet balances and transaction histories. While this ensures security and decentralization, it exposes users to risks such as targeted hacks, scams, and financial surveillance. Unlike traditional banking, where transactions remain private, Bitcoin’s open ledger makes it easy to track financial activities. For institutions and businesses handling large sums, this lack of privacy is a significant barrier to adoption."
+            },
+            {
+                "header": "The Risks of Exposure",
+                "content": "Beyond personal safety, Bitcoin’s lack of privacy is also a barrier to wider adoption. Institutions and businesses handling large sums need confidentiality, just like they have with traditional banking. Without it, they’re less likely to integrate Bitcoin into their operations. Even individuals who simply want to transact without exposing their financial activity find themselves limited. If Bitcoin is ever going to function as true digital cash, privacy isn’t optional—it’s essential."
+            },
+            {
+                "header": "Introducing Citrea: Enhancing Bitcoin Privacy",
+                "content": "That’s where Citrea comes in. Citrea is a zero-knowledge rollup that expands Bitcoin’s capabilities while maintaining security and decentralization. By enabling smart contracts and scalable applications, Citrea brings more utility to Bitcoin, but more importantly, it introduces privacy-preserving technology through zero-knowledge proofs. This means users can interact with DeFi, payments, and other financial tools without revealing unnecessary details on-chain."
+            },
+            {
+                "header": "Encifher: Enabling Private Bitcoin Transactions",
+                "content": "Encifher takes privacy to the next level by allowing people to send BTC privately using EncifherBot. Instead of exposing wallet addresses and transaction history, Encifher enables discreet Bitcoin transfers, protecting users from surveillance and tracking. Whether you're a whale, a business, or just an everyday Bitcoiner who values privacy, Encifher makes Bitcoin transactions safer and more secure."
+            },
+            {
+                "header": "The Future of Private Bitcoin Transactions",
+                "content": "Together, Citrea and Encifher are pushing Bitcoin forward—making it scalable, private, and usable for everyone. If Bitcoin is going to be the foundation of the world’s financial system, it can’t just be hard money—it also needs to be private money."
+            }
+        ]
+    },
+    {
         title: "An Incomplete Guide to Encrypted ERC20",
         image: "/header4.png",
         readtime: "10",
