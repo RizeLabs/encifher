@@ -12,7 +12,7 @@ export default function Blogs() {
             <MatrixLetters />
 
             <div className="flex flex-col w-full flex-grow justify-center items-center">
-                <div className="flex flex-col md:w-[63%] w-[85%]">
+                <div className="flex flex-col md:w-[63%] lg:w-[75%] w-[85%]">
                     {blogs.map((blog, index) => (
                         <BlogCard
                             key={index}
