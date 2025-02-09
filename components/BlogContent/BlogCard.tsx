@@ -1,49 +1,111 @@
 import Image from "next/image";
+import { useState, useEffect, useRef } from "react";
 
 interface BlogCardInterface {
-    blogIndex: number;
-    title: string;
-    image: string;
-    readtime: string;
-    date: string;
-    content: string;
+  slug: string;
+  title: string;
+  image: string;
+  readtime: string;
+  date: string;
+  content: string;
 }
 
-export default function BlogCard({ blogIndex, title, image, readtime, date, content }: BlogCardInterface) {
-    const clock = "/clock.svg";
-    const calendar = "/calendar.svg";
+export default function BlogCard({
+  slug,
+  title,
+  image,
+  readtime,
+  date,
+  content,
+}: BlogCardInterface) {
+  const clock = "/clock.svg";
+  const calendar = "/calendar.svg";
 
-    return (
-        <>
-            <div className="flex flex-col md:flex-row justify-between">
-                <div className="flex flex-col w-full md:w-[50%]">
-                    <span 
-                        className="cursor-pointer text-white text-2xl"
-                        onClick={() => window.location.href = `/blog/${blogIndex}`}
-                    >
-                        {title}
-                    </span>
+  const cardContainerRef = useRef<HTMLDivElement>(null);
+  const [isVertical, setIsVertical] = useState(false);
 
-                    <span className="flex flex-row my-4 opacity-50">
-                        <span className="flex flex-row text-white text-base mr-6">
-                            <Image src={clock} width={20} height={20} alt="Clock Icon" className="mr-2" />
-                            {readtime} min read
-                        </span>
-                        <span className="text-white text-base flex flex-row">
-                            <Image src={calendar} width={16} height={16} alt="Calendar Icon" className="mr-2" />
-                            {date}
-                        </span>
-                    </span>
+  useEffect(() => {
+    if (!cardContainerRef.current) return;
 
-                    <div className="text-white text-base normal-case opacity-50">
-                        {content}
-                    </div>
-                </div>
+    const threshold = 600;
+    const margin = 20;
 
-                    <Image src={image} width={500} height={100} alt="Blog Image" className="md:ml-4 ml-0 mt-8 md:mt-0" />
-            </div>
+    const observer = new ResizeObserver((entries) => {
+      for (const entry of entries) {
+        const width = entry.contentRect.width;
 
-            <div className="w-full h-[1px] bg-white opacity-50 my-8 md:my-16"></div>
-        </>
-    );
+        if (!isVertical && width < threshold - margin) {
+          setIsVertical(true);
+        } else if (isVertical && width > threshold + margin) {
+          setIsVertical(false);
+        }
+      }
+    });
+
+    observer.observe(cardContainerRef.current);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [isVertical]);
+
+  const containerClasses = isVertical ? "flex flex-col" : "flex flex-row";
+  const textContainerClasses = isVertical ? "w-full" : "w-1/2";
+  const imageContainerClasses = isVertical ? "w-full mt-8" : "w-1/2 ml-4";
+
+  return (
+    <>
+      <div ref={cardContainerRef} className={containerClasses}>
+        {/* Text Section */}
+        <div className={textContainerClasses}>
+          <span
+            className="cursor-pointer text-white text-2xl"
+            onClick={() => (window.location.href = `/blog/${slug}`)}
+          >
+            {title}
+          </span>
+
+          <span className="flex flex-row my-4 opacity-50">
+            <span className="flex flex-row text-white text-base mr-6">
+              <Image
+                src={clock}
+                width={20}
+                height={20}
+                alt="Clock Icon"
+                className="mr-2"
+              />
+              {readtime} min read
+            </span>
+            <span className="flex flex-row text-white text-base">
+              <Image
+                src={calendar}
+                width={16}
+                height={16}
+                alt="Calendar Icon"
+                className="mr-2"
+              />
+              {date}
+            </span>
+          </span>
+
+          <div className="text-white text-base opacity-50 normal-case">
+            {content}
+          </div>
+        </div>
+
+        <div className={imageContainerClasses}>
+          <Image
+            src={image}
+            alt="Blog Image"
+            layout="responsive"
+            width={500}
+            height={100}
+            className="object-cover"
+          />
+        </div>
+      </div>
+
+      <div className="w-full h-[1px] bg-white opacity-50 my-8"></div>
+    </>
+  );
 }

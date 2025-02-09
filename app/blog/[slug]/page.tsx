@@ -7,6 +7,6 @@ export default async function Page({
   }) {
     const slug = (await params).slug
     return (
-        <BlogPage blogIndex={slug}/>
+        <BlogPage blogSlug={slug}/>
     )
   }
