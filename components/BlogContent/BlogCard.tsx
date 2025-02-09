@@ -2,7 +2,7 @@ import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 
 interface BlogCardInterface {
-  blogIndex: number;
+  slug: string;
   title: string;
   image: string;
   readtime: string;
@@ -11,7 +11,7 @@ interface BlogCardInterface {
 }
 
 export default function BlogCard({
-  blogIndex,
+  slug,
   title,
   image,
   readtime,
@@ -60,7 +60,7 @@ export default function BlogCard({
         <div className={textContainerClasses}>
           <span
             className="cursor-pointer text-white text-2xl"
-            onClick={() => (window.location.href = `/blog/${blogIndex}`)}
+            onClick={() => (window.location.href = `/blog/${slug}`)}
           >
             {title}
           </span>
@@ -88,16 +88,18 @@ export default function BlogCard({
             </span>
           </span>
 
-          <div className="text-white text-base opacity-50 normal-case">{content}</div>
+          <div className="text-white text-base opacity-50 normal-case">
+            {content}
+          </div>
         </div>
 
         <div className={imageContainerClasses}>
           <Image
             src={image}
             alt="Blog Image"
-            layout="responsive" 
-            width={500}       
-            height={100}      
+            layout="responsive"
+            width={500}
+            height={100}
             className="object-cover"
           />
         </div>
