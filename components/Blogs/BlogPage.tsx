@@ -28,6 +28,7 @@ type CodeProps = {
 export default function BlogPage({ blogSlug }: BlogPageInterface) {
   // Find the blog that matches the slug
   const blog = blogs.find((b) => b.slug === blogSlug);
+  const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   if (!blog) {
     return (
@@ -40,8 +41,6 @@ export default function BlogPage({ blogSlug }: BlogPageInterface) {
   const clock = "/clock.svg";
   const calendar = "/calendar.svg";
   const back = "/back.svg";
-
-  const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const scrollToSection = (index: number) => {
     sectionRefs.current[index]?.scrollIntoView({ behavior: "smooth" });
