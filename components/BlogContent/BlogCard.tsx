@@ -59,14 +59,14 @@ export default function BlogCard({
         {/* Text Section */}
         <div className={textContainerClasses}>
           <span
-            className="cursor-pointer text-white text-2xl"
+            className="cursor-pointer text-white text-xl"
             onClick={() => (window.location.href = `/blog/${slug}`)}
           >
             {title}
           </span>
 
           <span className="flex flex-row my-4 opacity-50">
-            <span className="flex flex-row text-white text-base mr-6">
+            <span className="flex flex-row text-white text-sm mr-6">
               <Image
                 src={clock}
                 width={20}
@@ -76,7 +76,7 @@ export default function BlogCard({
               />
               {readtime} min read
             </span>
-            <span className="flex flex-row text-white text-base">
+            <span className="flex flex-row text-white text-sm">
               <Image
                 src={calendar}
                 width={16}
@@ -88,7 +88,7 @@ export default function BlogCard({
             </span>
           </span>
 
-          <div className="text-white text-base opacity-50 normal-case">
+          <div className="text-white text-[14.5px] opacity-50 normal-case">
             {content}
           </div>
         </div>
