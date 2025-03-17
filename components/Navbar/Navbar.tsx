@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion"
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState<boolean>(false);
-    const [tmpText, setTmpText] = useState<string>("Launch app")
+    // const [tmpText, setTmpText] = useState<string>("Launch app")
     const menuRef = useRef<HTMLDivElement>(null);
     const buttonsRef = useRef<HTMLDivElement>(null);
     const menuVariants = {
