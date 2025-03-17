@@ -4,13 +4,10 @@ import MatrixLetters from "@/decorations/MatrixLetters"
 import Navbar from "../Navbar/Navbar"
 import Button from '../Button/Button'
 import UnderlinedText from '../Underlined/Underlined'
-import CitreaHeader from '../Citrea/CireaHeader'
 
 export default function Hero() {
     return (
         <>
-            <CitreaHeader />
-
             <div className="min-h-screen w-full flex flex-col justify-between items-center gap-8">
                 <MatrixLetters />
                 <Navbar />

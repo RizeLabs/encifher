@@ -74,7 +74,7 @@ export default function Navbar() {
                                 animate={{ opacity: 1 }}
                                 transition={{ delay: 0.5, duration: 0.5, ease: "easeInOut" }}
                             >
-                                <Button text="Launch App" onClick={() => null} className="w-[80%] px-4 py-2 text-lg select-none" />
+                                <Button text="Launch App" onClick={() => window.open("https://monad.encifher.io", "_blank")} className="w-[80%] px-4 py-2 text-lg select-none" />
                                 {/* <Button text="Launch App" onClick={() => window.open("https://swap.encifher.io", "_blank")} className="w-[80%] px-4 py-2 text-lg select-none" /> */}
                             </motion.div>
                         </div>
