@@ -27,6 +27,7 @@ export default function Footer() {
                     <span className="text-white/70 text-[14px] md:text-[16px]">BACKED BY</span>
                     <div className="bg-white opacity-10 w-[2px] h-[20px]"></div>
                     <Image src="/longhash.svg" width={140} height={30} alt="LongHash" className="w-auto h-6 md:h-8" />
+                    <Image src="/factor.png" width={140} height={30} alt="LongHash" className="w-auto h-6 md:h-8" />
                 </div>
             </div>
 
