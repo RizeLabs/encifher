@@ -4,17 +4,17 @@ const features = [
     {
         title: "Privacy to the Existing Ecosystem",
         description: "Users don't need to leave their favorite chains and communities just to get privacy as an added feature in a chain.",
-        icon: "/star.svg"
+        icon: "/feature1.svg"
     },
     {
         title: "Programmable Compliance",
         description: "With Privacy 2.0, we enable users to adopt compliance-friendly methods of protecting their funds.",
-        icon: "/pass.svg"
+        icon: "/feature2.svg"
     },
     {
         title: "Seamless User Experience",
         description: "Enjoy privacy without compromising on speed, usability, or functionality. Encifher integrates directly into your favorite DeFi platforms, making the experience as intuitive as ever.",
-        icon: "/account.svg"
+        icon: "/feature3.svg"
     }
 ]
 
