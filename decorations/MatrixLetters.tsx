@@ -147,13 +147,24 @@ const MatrixLetters: React.FC = () => {
 			isPhone = window.innerWidth <= 768;
 		};
 
+		const handleScroll = () => {
+			if(!isPhone) {
+				mousePos = {
+					x: mousePos.x || (canvas.width / 2),
+					y: (window.scrollY + canvas.height / 2) % canvas.height,
+				};
+			}
+		}
+
 		window.addEventListener('mousemove', handleMouseMove);
 		window.addEventListener('resize', handleResize);
+		window.addEventListener('scroll', handleScroll);
 
 		return () => {
 			window.removeEventListener('resize', resizeCanvas);
 			window.removeEventListener('mousemove', handleMouseMove);
 			window.removeEventListener('resize', handleResize);
+			window.removeEventListener('scroll', handleScroll);
 			cancelAnimationFrame(animationFrameId);
 		};
 	}, []);
