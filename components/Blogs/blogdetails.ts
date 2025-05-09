@@ -119,7 +119,7 @@ export const blogs = [
     {
       title: "Encifher x Chainsight: Bringing Privacy to On-Chain Data",
       slug: "encifher-x-chainsight-bringing-privacy-to-on-chain-data", 
-      image: "/ecc.jpeg",
+      image: "/ecc.png",
       readtime: "5",
       date: "28 Jan 2025",
       content:
