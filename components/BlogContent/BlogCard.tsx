@@ -88,7 +88,7 @@ export default function BlogCard({
             </span>
           </span>
 
-          <div className="text-white text-[14.5px] opacity-50 normal-case">
+          <div className="text-white text-[14.5px] opacity-90 normal-case">
             {content}
           </div>
         </div>

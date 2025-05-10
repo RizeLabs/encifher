@@ -136,7 +136,7 @@ export default function BlogPage({ blogSlug }: BlogPageInterface) {
               <span className="text-white text-2xl mb-4">
                 {section.header}
               </span>
-              <div className="text-[#808080] text-base normal-case font-extralight">
+              <div className="text-white opacity-90 text-base normal-case font-extralight">
                 <ReactMarkdown
                   remarkPlugins={[remarkGfm, remarkMath]}
                   rehypePlugins={[rehypeKatex, rehypeRaw]}
@@ -180,6 +180,60 @@ export default function BlogPage({ blogSlug }: BlogPageInterface) {
                         return <>{children}</>;
                       }
                       return <p className="mb-4">{children}</p>;
+                    },
+                    h1({ children }) {
+                      return <h1 className="text-4xl font-bold mt-10 mb-6">{children}</h1>;
+                    },
+                    h2({ children }) {
+                      return <h2 className="text-3xl font-semibold mt-8 mb-4">{children}</h2>;
+                    },
+                    h3({ children }) {
+                      return <h3 className="text-2xl font-medium mt-6 mb-3">{children}</h3>;
+                    },
+                    ul({ children }) {
+                      return <ul className="list-disc pl-6 mb-4">{children}</ul>;
+                    },
+                    ol({ children }) {
+                      return <ol className="list-decimal pl-6 mb-4">{children}</ol>;
+                    },
+                    li({ children }) {
+                      return <li className="mb-1">{children}</li>;
+                    },
+                    table({ children }) {
+                      return (
+                        <div className="overflow-x-auto my-6">
+                          <table className="min-w-full border border-gray-300 text-left">
+                            {children}
+                          </table>
+                        </div>
+                      );
+                    },
+                    thead({ children }) {
+                      return (
+                        <thead className="bg-gray-800 border-b border-gray-300">
+                          {children}
+                        </thead>
+                      );
+                    },
+                    tbody({ children }) {
+                      return <tbody>{children}</tbody>;
+                    },
+                    tr({ children }) {
+                      return <tr className="border-b border-gray-200">{children}</tr>;
+                    },
+                    th({ children }) {
+                      return (
+                        <th className="px-4 py-2 font-semibold text-sm text-white">
+                          {children}
+                        </th>
+                      );
+                    },
+                    td({ children }) {
+                      return (
+                        <td className="px-4 py-2 text-sm text-white">
+                          {children}
+                        </td>
+                      );
                     },
                   }}
                 >
