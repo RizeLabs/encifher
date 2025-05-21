@@ -1,6 +1,5 @@
 'use client'
 import Image from "next/image"
-import Button from "../Button/Button";
 
 interface CardProps {
     icon: string;
@@ -9,7 +8,7 @@ interface CardProps {
     onClick: () => void;
 }
 
-export const Card = ({ icon, title, description, onClick }: CardProps) => {
+export const Card = ({ icon, title, description }: CardProps) => {
     return (
         <div className="flex flex-col items-center md:items-start card-border w-full">
             <Image src={icon} width={20} height={20} alt="" className="w-[98%]" />
