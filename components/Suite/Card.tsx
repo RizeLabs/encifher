@@ -17,7 +17,7 @@ export const Card = ({ icon, title, description, onClick }: CardProps) => {
                 <h2 className="text-xl md:text-[32px] gradient-text font-[400] leading-relaxed md:leading-tight">{title}</h2>
                 <p className="text-[16px] md:text-[20px] text-white/60 font-[300] pt-[1rem]">{description}</p>
             </div>
-            <Button text="Learn More" onClick={onClick} className="mx-2 md:mx-[2rem] mt-4 md:mt-0 mb-[2rem]" />
+            {/* <Button text="Learn More" onClick={onClick} className="mx-2 md:mx-[2rem] mt-4 md:mt-0 mb-[2rem]" /> */}
         </div>
     )
 } 
