@@ -48,7 +48,7 @@ export default function Waitlist() {
                         Join the waitlist to get early access to Encifher.
                     </span>
                     <div className="mb-8 md:mb-[50px] mt-8 md:mt-[35px] flex flex-col md:flex-row w-full max-w-xs md:max-w-lg">
-                        <input type="text" placeholder="xyz@gmail.com" className="bg-white/10 px-2 py-2 w-full md:w-[310px] border border-white/25 " value={email} onChange={e => setEmail(e.target.value)} onKeyDown={e => { if (e.key === 'Enter') handleSubmit(); }} />
+                        <input type="text" placeholder="xyz@gmail.com" className="bg-white/10 px-2 py-2 w-full md:w-[310px] border border-white/25 text-white " value={email} onChange={e => setEmail(e.target.value)} onKeyDown={e => { if (e.key === 'Enter') handleSubmit(); }} />
                         <button className="bg-primary-brand/15 border border-primary-brand/30 text-primary-brand-light font-mono uppercase px-6 md:px-10 py-2 text-[14px] w-full md:w-auto mt-2 md:mt-0" onClick={handleSubmit}>
                             {status}
                         </button>

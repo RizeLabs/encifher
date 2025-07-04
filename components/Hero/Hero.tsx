@@ -68,7 +68,7 @@ export default function Hero() {
                         <br />fast. secure. private
                     </h1>
                     <div className="flex flex-col md:flex-row items-center mt-[1rem] items-stretch w-full max-w-xs md:max-w-lg mx-auto">
-                        <input className='bg-white/10 px-2 py-2 w-full md:w-[310px] border border-white/25 '
+                        <input className='bg-white/10 px-2 py-2 w-full md:w-[310px] border border-white/25 text-white'
                             placeholder='xyz@gmail.com'
                             value={email}
                             onChange={e => setEmail(e.target.value)}
@@ -83,7 +83,7 @@ export default function Hero() {
                 </div>
 
                 <div className='absolute left-1/2 bottom-0 transform -translate-x-1/2 w-full flex justify-center items-end pointer-events-none'>
-                    <Image src="/bg.svg" alt="hero-image" className='w-full max-w-[2000px] h-auto' width={2000} height={1000} />
+                    <Image src="/bg.svg" alt="hero-image" className='w-auto max-w-auto md:h-[90vh]' width={2000} height={1000} />
                 </div>
                 <div className='absolute left-1/2 bottom-10 transform -translate-x-1/2 w-full flex justify-center items-end pointer-events-none'>
                     <span className='text-white/60 text-xs font-lexend text-center flex flex-col items-center gap-2'>
