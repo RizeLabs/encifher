@@ -4,8 +4,30 @@ import MatrixLetters from "@/decorations/MatrixLetters"
 import Navbar from "../Navbar/Navbar"
 // import Button from '../Button/Button'
 import UnderlinedText from '../Underlined/Underlined'
+import { useState } from 'react'
 
 export default function Hero() {
+    const [email, setEmail] = useState("")
+    const [status, setStatus] = useState("Join Waitlist")
+
+    const handleSubmit = async () => {
+        if (!email || status === "Joined") return
+        try {
+            setStatus("Joining...")
+            const response = await fetch('/api/submit-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email }),
+            })
+            if (!response.ok) throw new Error(await response.text())
+            setStatus("Joined")
+        } catch (error) {
+            setStatus("Join Waitlist")
+        }
+    }
+
     return (
         <>
             <div className="relative min-h-screen w-full flex flex-col mt-10 items-center gap-8">
@@ -33,9 +55,15 @@ export default function Hero() {
                     </h1>
                     <div className="flex flex-col md:flex-row items-center mt-[1rem] items-stretch">
                         <input className='bg-white/10 bg-white/10 px-2 py-2 w-[310px] border border-white/25 '
-                            placeholder='xyz@gmail.com' />
-                        <button className='bg-primary-brand/15 border border-primary-brand/30 text-primary-brand-light font-mono uppercase px-10 py-2 text-[14px]'>
-                            Join Waitlist
+                            placeholder='xyz@gmail.com'
+                            value={email}
+                            onChange={e => setEmail(e.target.value)}
+                            onKeyDown={e => { if (e.key === 'Enter') handleSubmit(); }}
+                        />
+                        <button className='bg-primary-brand/15 border border-primary-brand/30 text-primary-brand-light font-mono uppercase px-10 py-2 text-[14px]'
+                            onClick={handleSubmit}
+                        >
+                            {status}
                         </button>
                     </div>
                 </div>
