@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+  overflow-x: hidden;
+}
+
 :root {
   background-color: #000;
 }

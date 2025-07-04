@@ -9,7 +9,7 @@ import Testimonial from "../Testimonial/Testimonial";
 
 export default function Home() {
     return (
-        <div className="bg-[#0c0c0c]">
+        <div className="bg-[#0c0c0c] w-fit">
             <Hero />
             {/* <Exposed /> */}
             {/* <Choose /> */}
