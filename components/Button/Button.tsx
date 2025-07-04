@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-
+import Image from "next/image";
 interface ButtonProps {
     text: ReactNode;
     onClick: () => void;
@@ -16,7 +16,11 @@ export default function Button({ text, onClick, className }: ButtonProps) {
             }
             onClick={onClick}
         >
+            
+            {text === "Blogs" && <Image src="/blog.svg" alt="button-image" width={20} height={20} className="mr-2" />}
+            {text === "Docs" && <Image src="/docs.svg" alt="button-image" width={20} height={20} className="mr-2" />}
             {text}
+            {text === "Launch App" && <Image src="/launch.svg" alt="button-image" width={20} height={20} className="ml-2" />}
         </div>
     )
 }

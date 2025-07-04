@@ -26,7 +26,7 @@ export default function Waitlist() {
     }
 
     return (
-        <div className="flex flex-col md:flex-row w-full px-[10%] gap-8 relative overflow-hidden">
+        <div className="flex flex-col md:flex-row w-full px-[10%] py-[133px] gap-8 relative overflow-hidden">
             <div className="flex-1 flex items-center justify-center bg-zinc-900 rounded-lg overflow-hidden relative">
                 <div className="absolute top-0 -left-[40%] w-full h-full flex flex-col items-center justify-start pointer-events-none">
                     <Image src="/strip1.svg" alt="strip1" width={49} height={341} />

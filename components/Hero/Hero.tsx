@@ -31,9 +31,9 @@ export default function Hero() {
 
     return (
         <>
-            <div className="relative min-h-screen w-full flex flex-col mt-10 items-center gap-8">
-               
-                <MatrixLetters />
+            <div className="relative bg-[#0c0c0c] min-h-screen w-full flex flex-col  items-center gap-8 pb-[200px]">
+
+
                 <Navbar />
                 <div className="flex flex-col md:flex-col items-center w-full gap-8 md:gap-6 pb-5 md:pb-12 z-20">
                     <div className=" text-sm md:text-[20px] font-[300] text-white/60 w-full md:w-1/2 text-center leading-relaxed px-4 md:px-0">
@@ -41,11 +41,11 @@ export default function Hero() {
                             Join our community today
                         </span>
                         <a href="https://t.me/+QJjLUOh0ib9iYzI1" target="_blank" rel="noopener noreferrer">
-                        <button className='bg-white/10 rounded-full p-3'>
-                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1.70615 11.0209L0.835938 10.1507L9.03635 1.94238H1.58115V0.692383H11.1645V10.2757H9.91448V2.82051L1.70615 11.0209Z" fill="white" fill-opacity="0.8" />
-                            </svg>
-                        </button>
+                            <button className='bg-white/10 rounded-full p-3'>
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.70615 11.0209L0.835938 10.1507L9.03635 1.94238H1.58115V0.692383H11.1645V10.2757H9.91448V2.82051L1.70615 11.0209Z" fill="white" fill-opacity="0.8" />
+                                </svg>
+                            </button>
                         </a>
                     </div>
                     <h1 className="text-3xl md:text-[40px] font-[400] gradient-text text-center leading-tight px-3">Bringing <UnderlinedText>Privacy</UnderlinedText> To Solana Defi</h1>
@@ -57,7 +57,7 @@ export default function Hero() {
                         <br />fast. secure. private
                     </h1>
                     <div className="flex flex-col md:flex-row items-center mt-[1rem] items-stretch w-full max-w-xs md:max-w-lg mx-auto">
-                        <input className='bg-white/10 px-2 py-2 w-full md:w-[310px] border border-white/25 ' 
+                        <input className='bg-white/10 px-2 py-2 w-full md:w-[310px] border border-white/25 '
                             placeholder='xyz@gmail.com'
                             value={email}
                             onChange={e => setEmail(e.target.value)}
@@ -70,9 +70,23 @@ export default function Hero() {
                         </button>
                     </div>
                 </div>
-                
+
                 <div className='absolute left-1/2 bottom-0 transform -translate-x-1/2 w-full flex justify-center items-end pointer-events-none'>
-                    <Image src="/bg.png" alt="hero-image" className='w-full max-w-[2000px] h-auto' width={2000} height={1000} />
+                    <Image src="/bg.svg" alt="hero-image" className='w-full max-w-[2000px] h-auto' width={2000} height={1000} />
+                </div>
+                <div className='absolute left-1/2 bottom-10 transform -translate-x-1/2 w-full flex justify-center items-end pointer-events-none'>
+                    <span className='text-white/60 text-xs font-lexend text-center flex flex-col items-center gap-2'>
+                        Start your journey
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_1_3466" maskUnits="userSpaceOnUse" x="0" y="0" width="18" height="18">
+                                <rect x="0.399414" y="0.257782" width="17.2012" height="17.2012" fill="#D9D9D9" />
+                            </mask>
+                            <g mask="url(#mask0_1_3466)">
+                                <path d="M8.46235 3.483V12.1746L4.37975 8.09203L3.62451 8.85837L8.99988 14.2337L14.3753 8.85837L13.62 8.09203L9.53742 12.1746V3.483H8.46235Z" fill="white" fill-opacity="0.8" />
+                            </g>
+                        </svg>
+
+                    </span>
                 </div>
             </div>
         </>
