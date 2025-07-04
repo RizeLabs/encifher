@@ -21,6 +21,7 @@ export default function Waitlist() {
             setStatus("Joined");
         } catch (error) {
             setStatus("Join Waitlist");
+            console.error(error)
         }
     }
 
@@ -39,16 +40,16 @@ export default function Waitlist() {
                 <div className="absolute top-0 -right-[40%] w-full h-full flex flex-col items-center justify-start pointer-events-none">
                     <Image src="/strip4.svg" alt="strip4" width={49} height={341} />
                 </div>
-                <div className="relative z-10 flex flex-col p-8">
+                <div className="relative z-10 flex flex-col p-8 items-center">
                     <span className="text-white text-[40px] font-[300] mt-[50px]">
                         Privacy without compromise
                     </span>
                     <span className="text-white/60 text-[16px] font-[300] mt-[10px]">
                         Join the waitlist to get early access to Encifher.
                     </span>
-                    <div className="mb-[50px] mt-[35px]">
-                        <input type="text" placeholder="xyz@gmail.com" className="bg-white/10 bg-white/10 px-2 py-2 w-[310px] border border-white/25 " value={email} onChange={e => setEmail(e.target.value)} onKeyDown={e => { if (e.key === 'Enter') handleSubmit(); }} />
-                        <button className="bg-primary-brand/15 border border-primary-brand/30 text-primary-brand-light font-mono uppercase px-10 py-2 text-[14px]" onClick={handleSubmit}>
+                    <div className="mb-[50px] mt-[35px] flex flex-col md:flex-row w-full max-w-xs md:max-w-lg">
+                        <input type="text" placeholder="xyz@gmail.com" className="bg-white/10 px-2 py-2 w-full md:w-[310px] border border-white/25 " value={email} onChange={e => setEmail(e.target.value)} onKeyDown={e => { if (e.key === 'Enter') handleSubmit(); }} />
+                        <button className="bg-primary-brand/15 border border-primary-brand/30 text-primary-brand-light font-mono uppercase px-6 md:px-10 py-2 text-[14px] w-full md:w-auto mt-2 md:mt-0" onClick={handleSubmit}>
                             {status}
                         </button>
                     </div>

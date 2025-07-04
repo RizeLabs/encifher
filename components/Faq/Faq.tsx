@@ -31,7 +31,7 @@ const Question = ({ index }: QuestionProps) => {
     return (
         <div className="p-4 md:p-[3%] text-white  bg-zinc-900 rounded-[4px]">
             <div className="flex justify-between items-center gap-4 md:gap-0">
-                <h3 className="text-[16px] md:text-[20px] font-[400] gradient-text">{faqs[index].question}</h3>
+                <h3 className="text-[16px] font-[400] gradient-text">{faqs[index].question}</h3>
                 <button
                     onClick={toggleFAQ}
                     className={`text-primary-brand transform transition-transform duration-300 text-2xl focus:outline-none ${isOpen ? 'rotate-90' : ''}`}
@@ -56,14 +56,14 @@ const Question = ({ index }: QuestionProps) => {
 
 export default function Faq() {
     return (
-        <div className="flex flex-row  gap-[2rem] my-[7rem]">
-            <div className=" px-[10%] text-left w-[95%] md:w-[48%]">
-                <h1 className="text-[40px] gradient-text font-[400]">{"FAQ's"}</h1>
-                <span className="text-white/60 text-[16px] font-[300]">
+        <div className="flex flex-col md:flex-row gap-[2rem] my-[7rem] w-full px-4 md:px-[10%]">
+            <div className="text-left w-full md:w-[48%] mb-6 md:mb-0 ">
+                <h1 className="text-[32px] md:text-[40px] gradient-text font-[400]">{"FAQ's"}</h1>
+                <span className="text-white/60 text-[15px] md:text-[16px] font-[300]">
                     Everything you need to know before getting started with Encifher.
                 </span>
             </div>
-            <div className="flex flex-col gap-[1rem] w-[95%] md:w-[48%]">
+            <div className="flex flex-col gap-[1rem] w-full md:w-[48%]">
                 {faqs.map((_, index) => (
                     <Question key={index} index={index} />
                 ))}

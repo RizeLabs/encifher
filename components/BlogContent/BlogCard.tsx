@@ -49,9 +49,15 @@ export default function BlogCard({
     };
   }, [isVertical]);
 
-  const containerClasses = isVertical ? "flex flex-col" : "flex flex-row";
-  const textContainerClasses = isVertical ? "w-full" : "w-1/2";
-  const imageContainerClasses = isVertical ? "w-full mt-8" : "w-1/2 ml-4";
+  const containerClasses =
+    (isVertical ? "flex flex-col" : "flex flex-row") +
+    " w-full gap-4 md:gap-8 mb-8 items-start";
+  const textContainerClasses =
+    (isVertical ? "w-full" : "w-1/2") +
+    " flex flex-col justify-between";
+  const imageContainerClasses =
+    (isVertical ? "w-full mt-4" : "w-1/2 ml-0 md:ml-4") +
+    " flex-shrink-0";
 
   return (
     <>
@@ -97,10 +103,9 @@ export default function BlogCard({
           <Image
             src={image}
             alt="Blog Image"
-            layout="responsive"
             width={500}
             height={100}
-            className="object-cover"
+            className="object-cover w-full h-auto rounded-lg"
           />
         </div>
       </div>

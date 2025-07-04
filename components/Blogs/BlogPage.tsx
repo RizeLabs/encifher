@@ -56,8 +56,8 @@ export default function BlogPage({ blogSlug }: BlogPageInterface) {
       <MatrixLetters />
       <div className="flex flex-col md:flex-row w-full h-full mt-8">
         {/* Sticky & Scrollable Table of Contents */}
-        <div className="hidden md:flex w-[33%] justify-center">
-          <div className="w-[250px] sticky top-0 max-h-screen overflow-y-auto self-start p-4">
+        <div className="hidden md:flex w-full md:w-[33%] justify-center mb-8 md:mb-0">
+          <div className="w-full md:w-[250px] sticky top-0 max-h-screen overflow-y-auto self-start p-4">
             <span className="text-white text-lg font-bold mb-4 block">
               Table of Contents
             </span>
@@ -79,7 +79,7 @@ export default function BlogPage({ blogSlug }: BlogPageInterface) {
         </div>
 
         {/* Blog Content */}
-        <div className="flex flex-col w-full md:w-[709px] px-4 md:px-0">
+        <div className="flex flex-col w-full md:w-[67%] max-w-full px-4 md:px-0">
           <span
             className="flex flex-row text-white text-sm mb-4 cursor-pointer"
             onClick={() => (window.location.href = `/blogs`)}
@@ -123,7 +123,7 @@ export default function BlogPage({ blogSlug }: BlogPageInterface) {
             width={709}
             height={400}
             alt="Blog Image"
-            className="my-12 w-full h-auto"
+            className="my-12 w-full h-auto max-w-full rounded-lg"
           />
           {blog.sections.map((section, index) => (
             <div
@@ -165,7 +165,7 @@ export default function BlogPage({ blogSlug }: BlogPageInterface) {
                           alt={alt || "Blog Image"}
                           width={700}
                           height={400}
-                          className="rounded-lg my-8 mx-auto"
+                          className="rounded-lg my-8 mx-auto w-full max-w-full h-auto"
                         />
                       ) : null;
                     },
@@ -201,7 +201,7 @@ export default function BlogPage({ blogSlug }: BlogPageInterface) {
                     },
                     table({ children }) {
                       return (
-                        <div className="overflow-x-auto my-6">
+                        <div className="overflow-x-auto my-6 w-full">
                           <table className="min-w-full border border-gray-300 text-left">
                             {children}
                           </table>
