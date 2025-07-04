@@ -1,6 +1,6 @@
 'use client'
 import Image from 'next/image'
-import MatrixLetters from "@/decorations/MatrixLetters"
+// import MatrixLetters from "@/decorations/MatrixLetters"
 import Navbar from "../Navbar/Navbar"
 // import Button from '../Button/Button'
 import UnderlinedText from '../Underlined/Underlined'
@@ -32,7 +32,18 @@ export default function Hero() {
     return (
         <>
             <div className="relative bg-[#0c0c0c] min-h-screen w-full flex flex-col  items-center gap-8 pb-[200px]">
-
+                <div className="absolute top-0 -left-[40%] w-full h-full flex flex-col items-center justify-start pointer-events-none">
+                    <Image src="/bgstrip3.svg" alt="strip1" width={49} height={341} />
+                </div>
+                <div className="absolute top-0 -left-[30%] w-full h-full flex flex-col items-center justify-start pointer-events-none">
+                    <Image src="/bgstrip1.svg" alt="strip2" width={49} height={341} />
+                </div>
+                <div className="absolute top-0 -right-[30%] w-full h-full flex flex-col items-center justify-start pointer-events-none">
+                    <Image src="/bgstrip2.svg" alt="strip2" width={49} height={341} />
+                </div>
+                <div className="absolute top-0 -right-[40%] w-full h-full flex flex-col items-center justify-start pointer-events-none">
+                    <Image src="/bgstrip4.svg" alt="strip4" width={49} height={341} />
+                </div>
 
                 <Navbar />
                 <div className="flex flex-col md:flex-col items-center w-full gap-8 md:gap-6 pb-5 md:pb-12 z-20">
