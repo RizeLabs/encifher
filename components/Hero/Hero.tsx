@@ -10,8 +10,16 @@ export default function Hero() {
     const [email, setEmail] = useState("")
     const [status, setStatus] = useState("Join Waitlist")
 
+    const validateEmail = (email: string) => {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    };
+
     const handleSubmit = async () => {
         if (!email || status === "Joined") return
+        if (!validateEmail(email)) {
+            setStatus("Invalid Email")
+            return
+        }
         try {
             setStatus("Joining...")
             const response = await fetch('/api/submit-email', {
@@ -22,7 +30,7 @@ export default function Hero() {
                 body: JSON.stringify({ email }),
             })
             if (!response.ok) throw new Error(await response.text())
-            setStatus("Joined")
+            setStatus("Joined Waitlist")
         } catch (error) {
             setStatus("Join Waitlist")
             console.error(error)

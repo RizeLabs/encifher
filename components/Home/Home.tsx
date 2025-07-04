@@ -14,8 +14,8 @@ export default function Home() {
             {/* <Exposed /> */}
             {/* <Choose /> */}
             {/* <Suite /> */}
-            <Faq />
             <Testimonial />
+            <Faq />
             <Waitlist />
             <Footer />
         </div>

@@ -7,10 +7,10 @@ export default function Testimonial() {
         <div className="flex flex-col bg-[#0c0c0c] items-center justify-center gap-8 md:gap-[2rem] my-16 md:my-[7rem] w-full px-4 sm:px-6 md:px-0">
             <span className="text-white text-2xl sm:text-3xl md:text-4xl text-center">Users love Encifher</span>
             <span className="text-white/80 text-base md:text-[16px] text-center">
-                Trusted by privacy-first users who value <br/> secure, seamless payments.
+                Chosen by traders who wont compromise on performance or privacy
             </span>
             <div className="relative w-full flex justify-center items-center">
-                <Image src="/tweets.svg" alt="testimonial" width={1000} height={1000} className="w-full md:w-[90%] h-auto" />
+                <Image src="/tweets.png" alt="testimonial" width={1000} height={1000} className="w-full md:w-[90%] h-auto" />
                 {/* Left Gradient */}
                 <div className="absolute left-0 top-0 h-full w-1/4 pointer-events-none z-10" style={{background: 'linear-gradient(to right, #0c0c0c 13%, transparent 100%)'}} />
                 {/* Right Gradient */}
