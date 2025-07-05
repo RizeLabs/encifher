@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 
-export default function UnderlinedText({ children, color = '#5024FF' }: { children: React.ReactNode; color?: string }) {
+export default function UnderlinedText({ children, color = '#987EFF' }: { children: React.ReactNode; color?: string }) {
 	const [isHovered, setIsHovered] = useState(false);
 
 	return (

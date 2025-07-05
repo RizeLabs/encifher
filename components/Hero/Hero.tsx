@@ -40,22 +40,22 @@ export default function Hero() {
     return (
         <>
             <div className="relative bg-[#0c0c0c] min-h-screen w-full flex flex-col  items-center gap-8 pb-[200px]">
-                <div className="absolute top-0 -left-[40%] w-full h-full flex flex-col items-center justify-start pointer-events-none">
+                <div className="absolute top-0 -left-[40%] w-full h-full flex flex-col items-center justify-start pointer-events-none md:z-0 -z-10">
                     <Image src="/bgstrip3.svg" alt="strip1" width={49} height={341} />
                 </div>
-                <div className="absolute top-0 -left-[30%] w-full h-full flex flex-col items-center justify-start pointer-events-none">
+                <div className="absolute top-0 -left-[30%] w-full h-full flex flex-col items-center justify-start pointer-events-none md:z-0 -z-10">
                     <Image src="/bgstrip1.svg" alt="strip2" width={49} height={341} />
                 </div>
-                <div className="absolute top-0 -right-[30%] w-full h-full flex flex-col items-center justify-start pointer-events-none">
+                <div className="absolute top-0 -right-[30%] w-full h-full flex flex-col items-center justify-start pointer-events-none md:z-0 -z-10">
                     <Image src="/bgstrip2.svg" alt="strip2" width={49} height={341} />
                 </div>
-                <div className="absolute top-0 -right-[40%] w-full h-full flex flex-col items-center justify-start pointer-events-none">
+                <div className="absolute top-0 -right-[40%] w-full h-full flex flex-col items-center justify-start pointer-events-none md:z-0 -z-10">
                     <Image src="/bgstrip4.svg" alt="strip4" width={49} height={341} />
                 </div>
 
                 <Navbar />
-                <div className="flex flex-col md:flex-col items-center w-full gap-8 md:gap-6 pb-5 md:pb-12 z-20">
-                    <div className=" text-sm md:text-[20px] font-[300] text-white/60 w-full md:w-1/2 text-center leading-relaxed px-4 md:px-0">
+                <div className="flex flex-col md:flex-col items-center w-full pb-5 md:pb-12 z-20">
+                    <div className=" text-sm md:text-[20px] font-[300] text-white/60 w-full md:w-1/2 text-center leading-relaxed px-4 md:px-0 md:mb-8">
                         <span className='px-4 text-[14px] py-2 bg-white/10 rounded-full mr-4'>
                             Join our community today
                         </span>
@@ -67,22 +67,23 @@ export default function Hero() {
                             </button>
                         </a>
                     </div>
-                    <h1 className="text-3xl md:text-[40px] font-[400] gradient-text text-center leading-tight px-3">Bringing <UnderlinedText>Privacy</UnderlinedText> To Solana Defi</h1>
+                    <h1 className="text-3xl md:text-[40px] font-[400] gradient-text text-center leading-tight px-3 mt-[34px] md:mt-[54px] md:mb-[34px] mb-[32px]">Bringing <UnderlinedText>Privacy</UnderlinedText> To Solana Defi</h1>
                     <div>
 
                     </div>
                     <h1 className="text-sm md:text-[16px] font-[300] text-white/60 w-full md:w-1/2 text-center leading-relaxed px-4 md:px-0">
                         unlocking best price execution without exposing your wallet.
-                        <br />fast. secure. private
+                        <br />
+                        <span className='text-primary-brand-light'>fast. secure. private</span>
                     </h1>
-                    <div className="flex flex-col md:flex-row items-center mt-[1rem] items-stretch w-full max-w-xs md:max-w-lg mx-auto">
-                        <input className='bg-white/10 px-2 py-2 w-full md:w-[310px] border border-white/25 text-white'
+                    <div className="flex flex-col md:flex-row items-center mt-[1rem] items-stretch w-full max-w-xs md:max-w-lg mx-auto md:mt-16">
+                                                 <input className='bg-white/5 px-4 py-2 w-full md:w-[310px] md:border-l md:border-y md:border-r-0 border md:rounded-l-[4px] md:rounded-r-[0px] rounded-[4px] border-white/10 text-[14px] text-white placeholder:text-white/40'
                             placeholder='xyz@gmail.com'
                             value={email}
                             onChange={e => setEmail(e.target.value)}
                             onKeyDown={e => { if (e.key === 'Enter') handleSubmit(); }}
                         />
-                        <button className='bg-primary-brand/15 border border-primary-brand/30 text-primary-brand-light font-mono uppercase px-6 md:px-10 py-2 text-[14px] w-full md:w-auto mt-2 md:mt-0'
+                        <button className='bg-primary-brand/15 md:rounded-r-[4px] md:rounded-l-[0px] rounded-[4px] border border-primary-brand/30 text-primary-brand-light font-mono uppercase px-6 md:px-10 py-2 text-[14px] w-full md:w-auto mt-2 md:mt-0'
                             onClick={handleSubmit}
                         >
                             {status}
@@ -91,7 +92,8 @@ export default function Hero() {
                 </div>
 
                 <div className='absolute left-1/2 bottom-0 transform -translate-x-1/2 w-full flex justify-center items-end pointer-events-none'>
-                    <Image src="/bg.svg" alt="hero-image" className='w-auto max-w-auto md:h-[90vh]' width={2000} height={1000} />
+                    <Image src="/bg.svg" alt="hero-image" className='hidden md:block w-auto max-w-auto md:h-[90vh]' width={2000} height={1000} />
+                    <Image src="/mobilebg.svg" alt="hero-image-mobile" className='block md:hidden w-auto max-w-auto' width={2000} height={1000} />
                 </div>
                 <div className='absolute left-1/2 bottom-10 transform -translate-x-1/2 w-full flex justify-center items-end pointer-events-none'>
                     <span className='text-white/60 text-xs font-lexend text-center flex flex-col items-center gap-2'>

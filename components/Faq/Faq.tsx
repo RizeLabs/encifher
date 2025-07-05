@@ -19,7 +19,7 @@ const Question = ({ index }: QuestionProps) => {
         while ((match = regex.exec(str)) !== null) {
             parts.push(str.slice(lastIndex, match.index));
             parts.push(
-                <a key={match.index} href={match[2]} className="font-[500] text-primary-brand" target="_blank" rel="noopener noreferrer">
+                <a key={match.index} href={match[2]} className="font-[500] text-[#987EFF]" target="_blank" rel="noopener noreferrer">
                     {match[1]}
                 </a>
             );
@@ -29,27 +29,28 @@ const Question = ({ index }: QuestionProps) => {
         return parts;
     };
     return (
-        <div className="p-4 md:p-[3%] text-white  bg-zinc-900 rounded-[4px]">
-            <div className="flex justify-between items-center gap-4 md:gap-0">
+        <div className=" text-white   rounded-[4px]">
+            <div className="flex justify-between bg-[rgb(255,255,255,0.08)] items-center gap-4 md:gap-0 px-8 py-4 rounded-[4px]">
                 <h3 className="text-[16px] font-[400] gradient-text">{faqs[index].question}</h3>
                 <button
                     onClick={toggleFAQ}
-                    className={`text-primary-brand transform transition-transform duration-300 text-2xl focus:outline-none ${isOpen ? 'rotate-45' : ''}`}
+                    className={`text-[#987EFF] transform transition-transform duration-300 text-2xl focus:outline-none ${isOpen ? 'rotate-45' : ''}`}
                 >
-                    <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9.5 17.9996C9.21667 17.9996 8.97917 17.9038 8.7875 17.7121C8.59583 17.5205 8.5 17.283 8.5 16.9996V9.99963H1.5C1.21667 9.99963 0.979167 9.9038 0.7875 9.71213C0.595833 9.52047 0.5 9.28297 0.5 8.99963C0.5 8.7163 0.595833 8.4788 0.7875 8.28713C0.979167 8.09547 1.21667 7.99963 1.5 7.99963H8.5V0.999634C8.5 0.7163 8.59583 0.4788 8.7875 0.287134C8.97917 0.0954671 9.21667 -0.000366211 9.5 -0.000366211C9.78333 -0.000366211 10.0208 0.0954671 10.2125 0.287134C10.4042 0.4788 10.5 0.7163 10.5 0.999634V7.99963H17.5C17.7833 7.99963 18.0208 8.09547 18.2125 8.28713C18.4042 8.4788 18.5 8.7163 18.5 8.99963C18.5 9.28297 18.4042 9.52047 18.2125 9.71213C18.0208 9.9038 17.7833 9.99963 17.5 9.99963H10.5V16.9996C10.5 17.283 10.4042 17.5205 10.2125 17.7121C10.0208 17.9038 9.78333 17.9996 9.5 17.9996Z" fill="#663FFF" />
-                    </svg>
+                    <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9 18.2275C8.71667 18.2275 8.47917 18.1317 8.2875 17.94C8.09583 17.7484 8 17.5109 8 17.2275V10.2275H1C0.716667 10.2275 0.479167 10.1317 0.2875 9.94004C0.0958333 9.74837 0 9.51087 0 9.22754C0 8.9442 0.0958333 8.70671 0.2875 8.51504C0.479167 8.32337 0.716667 8.22754 1 8.22754H8V1.22754C8 0.944206 8.09583 0.706706 8.2875 0.515039C8.47917 0.323372 8.71667 0.227539 9 0.227539C9.28333 0.227539 9.52083 0.323372 9.7125 0.515039C9.90417 0.706706 10 0.944206 10 1.22754V8.22754H17C17.2833 8.22754 17.5208 8.32337 17.7125 8.51504C17.9042 8.70671 18 8.9442 18 9.22754C18 9.51087 17.9042 9.74837 17.7125 9.94004C17.5208 10.1317 17.2833 10.2275 17 10.2275H10V17.2275C10 17.5109 9.90417 17.7484 9.7125 17.94C9.52083 18.1317 9.28333 18.2275 9 18.2275Z" fill="#987EFF"/>
+</svg>
+
 
                 </button>
             </div>
             <div
-                className={`${isOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
+                className={`${isOpen ? 'max-h-screen bg-[rgb(255,255,255,0.04)] px-[32px] py-[24px]' : 'max-h-0 opacity-0'
                     } ease-in-out overflow-hidden transition-all duration-500 delay-100`}
             >
-                <p className="pt-4 text-white text-opacity-60 text-[16px] font-[300] normal-case">
+                <p className="pt-4 text-white text-opacity-60 text-[14px] font-[300] normal-case">
                     {parseText(faqs[index].answer)}
                 </p>
-                <p className="pt-4 text-primary-brand text-[16px] font-[500] hover:cursor-pointer" onClick={() => window.open(faqs[index].link, "_blank")}>
+                <p className="pt-4 text-[#987EFF] text-[14px] font-[500] hover:cursor-pointer" onClick={() => window.open(faqs[index].link, "_blank")}>
                     {faqs[index].linkText}
                 </p>
             </div>
