@@ -39,7 +39,8 @@ export default function Hero() {
 
     return (
         <>
-            <div className="relative bg-[#0c0c0c] min-h-screen w-full flex flex-col  items-center gap-8 pb-[200px]">
+            <Navbar />
+            <div className="relative bg-[#0c0c0c] min-h-[700px] md:min-h-[900px] w-full flex flex-col  items-center gap-8 pb-[200px]">
                 <div className="absolute top-0 -left-[40%] w-full h-full flex flex-col items-center justify-start pointer-events-none md:z-0 -z-10">
                     <Image src="/bgstrip3.svg" alt="strip1" width={49} height={341} />
                 </div>
@@ -53,7 +54,6 @@ export default function Hero() {
                     <Image src="/bgstrip4.svg" alt="strip4" width={49} height={341} />
                 </div>
 
-                <Navbar />
                 <div className="flex flex-col md:flex-col items-center w-full pb-5 md:pb-12 z-20">
                     <div className=" text-sm md:text-[20px] font-[300] text-white/60 w-full md:w-1/2 text-center leading-relaxed px-4 md:px-0 md:mb-8">
                         <span className='px-4 text-[14px] py-2 bg-white/10 rounded-full mr-4'>
@@ -92,7 +92,7 @@ export default function Hero() {
                 </div>
 
                 <div className='absolute left-1/2 bottom-0 transform -translate-x-1/2 w-full flex justify-center items-end pointer-events-none'>
-                    <Image src="/bg.svg" alt="hero-image" className='hidden md:block w-auto max-w-auto md:h-[90vh]' width={2000} height={1000} />
+                    <Image src="/bg.svg" alt="hero-image" className='hidden md:block w-auto max-w-auto md:h-[90%]' width={2000} height={1000} />
                     <Image src="/mobilebg.png" alt="hero-image-mobile" className='block md:hidden w-auto max-w-auto h-[70vh]' width={2000} height={1000} />
                 </div>
                 <div className='absolute left-1/2 bottom-10 transform -translate-x-1/2 w-full flex justify-center items-end pointer-events-none'>

@@ -29,7 +29,7 @@ export default function Navbar() {
 
     return (
         <div
-            className="w-[100%] h-[3%] flex justify-between items-center px-4 md:px-10 py-4 md:py-7"
+            className="w-[100%] h-[3%] flex justify-between items-center px-4 md:px-10 py-4 md:py-7 sticky top-0 z-40 bg-[#0c0c0c]/90 backdrop-blur-md"
         >
             <div className="flex items-center gap-2">
                 <Image width={120} height={30} src="/enc.svg" alt="logo" />

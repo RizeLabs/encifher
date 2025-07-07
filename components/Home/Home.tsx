@@ -6,11 +6,13 @@ import Faq from "../Faq/Faq";
 import Footer from "../Footer/Footer";
 import Waitlist from "../Waitlist/Waitlist";
 import Testimonial from "../Testimonial/Testimonial";
+import { Video } from "../Video/Video";
 
 export default function Home() {
     return (
         <div className="bg-[#0c0c0c] w-fit">
             <Hero />
+            <Video/>
             {/* <Exposed /> */}
             {/* <Choose /> */}
             {/* <Suite /> */}

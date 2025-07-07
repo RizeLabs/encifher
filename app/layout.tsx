@@ -20,7 +20,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={jetbrainsFont.className}>
-        {children}
+        <div className="fixed-center-container">
+          {children}
+        </div>
       </body>
     </html>
   );
