@@ -73,9 +73,9 @@ export default function Faq() {
                 <div className="absolute top-[50%] -right-[48%] w-full h-full flex flex-col items-center justify-start pointer-events-none opacity-50">
                     <Image src="/missingusdc.svg" alt="strip4" width={49} height={341} />
                 </div>
-                <div className="text-center w-full mb-6 md:mb-0 z-20">
+                <div className="flex flex-col text-center w-full mb-6 md:mb-0 z-20">
                     <h1 className="text-[32px] md:text-[40px] gradient-text font-[400]">{"FAQ's"}</h1>
-                    <span className="text-white/60 text-[15px] md:text-[16px] font-[300]">
+                    <span className="text-white/60 text-[15px] md:text-[16px] font-[300] pt-[20px]">
                         Everything you need to know before getting started with Encifher
                     </span>
                 </div>
