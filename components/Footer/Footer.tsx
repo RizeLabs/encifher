@@ -14,7 +14,7 @@ export default function Footer() {
                             <Image src="/enc.svg" width={32} height={32} alt="Encifher Logo" className="w-[100px] sm:w-[139px] h-[24px]" />
                         </div>
                         <p className="text-white/70 text-sm md:text-[14px] font-mono uppercase mb-6 w-full md:w-[60%] uppercase">
-                        Encifher is bringing compliant pribacy to users
+                        Encifher is bringing compliant privacy to users
                         </p>
                     </div>
                     <div className="flex items-center gap-3 mt-2">
