@@ -72,9 +72,9 @@ export default function Hero() {
 
                     </div>
                     <h1 className="text-sm md:text-[16px] font-[300] text-white/60 w-full md:w-1/2 text-center leading-relaxed px-4 md:px-0">
-                        unlocking best price execution without exposing your wallet
+                        unlocking best price execution without exposing your wallet.
                         <br />
-                        <span className='text-primary-brand-light'>fast. secure. private.</span>
+                        <span className='text-primary-brand-light'>fast. secure. private</span>
                     </h1>
                     <div className="flex flex-col md:flex-row items-center mt-[1rem] items-stretch w-full max-w-xs md:max-w-lg mx-auto md:mt-16">
                                                  <input className='bg-white/5 px-4 py-2 w-full md:w-[310px] md:border-l md:border-y md:border-r-0 border md:rounded-l-[4px] md:rounded-r-[0px] rounded-[4px] border-white/10 text-[14px] text-white placeholder:text-white/40'

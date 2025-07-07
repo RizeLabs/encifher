@@ -8,16 +8,16 @@ export default function Footer() {
         <footer className="w-full px-4 sm:px-6 md:px-10 py-8 bg-[#0c0c0c] text-white font-mono">
             <div className="flex flex-col md:flex-row w-full max-w-full">
                 {/* Left 60%: Logo, Description, Backed by */}
-                <div className="w-full md:w-[60%] flex flex-col justify-between">
+                <div className="w-full md:w-[60%] flex flex-col justify-between gap-6 mb-8 md:mb-0">
                     <div>
                         <div className="flex items-center gap-2 mb-4">
                             <Image src="/enc.svg" width={32} height={32} alt="Encifher Logo" className="w-[100px] sm:w-[139px] h-[24px]" />
                         </div>
-                        <p className="text-white/70 text-sm md:text-[14px] font-mono uppercase mb-2 w-full md:w-[60%] uppercase">
+                        <p className="text-white/70 text-sm md:text-[14px] font-mono uppercase mb-6 w-full md:w-[60%] uppercase">
                         Encifher is bringing compliant privacy to users
                         </p>
                     </div>
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-3 mt-2">
                         <span className="text-white/70 text-sm md:text-[14px] font-mono">BACKED BY</span>
                         <div className="w-[1px] h-[25px] bg-white/40"/>
                         <Image src="/longhash.svg" width={70} height={20} alt="LongHash" className="w-[60px] sm:w-[97px] h-[30px] sm:h-[40px]" />
@@ -45,6 +45,7 @@ export default function Footer() {
                             <span className="text-sm md:text-[14px] text-white/50 mb-2">COMPANY</span>
                             <Link href="#" className=" text-base md:text-[16px] mb-1">TERMS OF SERVICE</Link>
                             <Link href="#" className=" text-base md:text-[16px] mb-1">PRIVACY POLICY</Link>
+                            <Link href="#" className=" text-base md:text-[16px]">COOKIES</Link>
                         </div>
                     </div>
                 </div>

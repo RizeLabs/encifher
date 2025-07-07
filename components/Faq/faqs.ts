@@ -53,7 +53,7 @@ If you're interested in an integration, {contact us.}{https://t.me/rishotics}`
     // },
     {
         question: "Does Encifher have a community for discussions?",
-        answer: "Yes! Join our community on {Telegram}{https://t.me/+ZWHGMW4ZHXQwYTZl} and {Twitter}{https://x.com/@encifherio} to stay updated and share feedback."
+        answer: "Yes! Join our community on {Telegram}{https://t.me/BananaHQ} and {Twitter}{https://x.com/@encifherio} to stay updated and share feedback."
     },
     // {
     //     question: "How do I get involved with Encifher as a developer?",
