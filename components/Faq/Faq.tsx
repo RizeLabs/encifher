@@ -76,7 +76,7 @@ export default function Faq() {
                 <div className="text-center w-full mb-6 md:mb-0 z-20">
                     <h1 className="text-[32px] md:text-[40px] gradient-text font-[400]">{"FAQ's"}</h1>
                     <span className="text-white/60 text-[15px] md:text-[16px] font-[300]">
-                        Everything you need to know before getting started with Encifher.
+                        Everything you need to know before getting started with Encifher
                     </span>
                 </div>
                 <div className="flex flex-col gap-[1rem] w-full md:w-[65%] mt-[34px]">
