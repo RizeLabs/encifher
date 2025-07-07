@@ -15,13 +15,7 @@ export function Video() {
 
     return (
         <div className="flex flex-col items-center justify-center min-h-[60vh] w-full bg-[#0c0c0c] text-white relative px-4">
-            <h2 className="text-[2rem] md:text-[40px] font-mono pb-6 md:pb-[34px] pt-16 md:pt-[178px] text-center leading-tight">
-                SEE ENCIFHER IN ACTION
-            </h2>
-            <p className="text-[15px] md:text-[16px] font-mono text-white/40 mb-10 md:mb-[60px] text-center max-w-xl">
-                A 60-second demo of how Encifher enables private, compliant, and best-execution swaps on Solana.
-            </p>
-            <div className="relative w-full max-w-[95vw] sm:max-w-2xl md:max-w-3xl aspect-video mb-16 md:mb-[178px] flex items-center justify-center rounded-2xl bg-white/10">
+            <div className="relative w-full max-w-[95vw] sm:max-w-2xl md:max-w-3xl aspect-video mb-16 md:my-[90px] flex items-center justify-center rounded-2xl bg-white/10">
                 {!playing && (
                     <button
                         className="absolute inset-0 flex items-center justify-center z-10 w-full h-full focus:outline-none"
