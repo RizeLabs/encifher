@@ -4,10 +4,10 @@ import Image from "next/image";
 
 export default function Testimonial() {
     return (
-        <div className="flex flex-col bg-[#0c0c0c] items-center justify-center  my-16 md:my-[7rem] w-full px-4 sm:px-6 md:px-0">
+        <div className="flex flex-col bg-[#0c0c0c] items-center justify-center  my-16 md:mb-[2rem] w-full px-4 sm:px-6 md:px-0">
             <span className="text-white text-2xl sm:text-3xl md:text-4xl text-center">Users love Encifher</span>
-            <span className="text-white/80 text-base md:text-[16px] text-center mt-[28px] mb-[100px]">
-                Chosen by traders who wont compromise on <br/> performance or privacy
+            <span className="text-white/80 text-base md:text-[16px] text-center mt-[20px] mb-[64px]">
+                Chosen by traders who wont compromise on performance or privacy
             </span>
             <div className="relative w-full flex justify-center items-center overflow-hidden">
                 {/* Auto-scrolling row for md+ screens */}

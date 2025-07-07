@@ -73,12 +73,12 @@ export default function Contact() {
                     <Button text={
                         <Image src="/telegram.svg" height={20} width={20} alt="" className="h-[18px] w-[18px] md:h-[40px] md:w-[28px]" />
                     }
-                        onClick={() => window.open("https://t.me/BananaHQ", "_blank")}
+                        onClick={() => window.open("https://t.me/+ZWHGMW4ZHXQwYTZl", "_blank")}
                     />
                     <Button text={
                         <Image src="/discord.svg" height={20} width={20} alt="" className="h-[18px] w-[18px] md:h-[40px] md:w-[28px]" />
                     }
-                        onClick={() => window.open("https://t.me/BananaHQ", "_blank")}
+                        onClick={() => window.open("https://t.me/+ZWHGMW4ZHXQwYTZl", "_blank")}
                     />
                     <Button text={
                         <Image src="/github.svg" height={20} width={20} alt="" className="h-[18px] w-[18px] md:h-[40px] md:w-[28px]" />
