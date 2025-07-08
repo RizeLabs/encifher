@@ -29,16 +29,16 @@ export default function Footer() {
                         {/* Socials */}
                         <div className="flex flex-col gap-2">
                             <span className="text-sm md:text-[14px] text-white/50 mb-2">SOCIALS</span>
-                            <Link href="https://x.com/encifherio" className=" text-base md:text-[16px] mb-1">X/TWITTER</Link>
-                            <Link href="https://discord.gg/" className=" text-base md:text-[16px] mb-1">DISCORD</Link>
-                            <Link href="https://t.me/+ZWHGMW4ZHXQwYTZl" className=" text-base md:text-[16px]">TELEGRAM</Link>
+                            <Link href="https://x.com/encifherio" target="_blank" className=" text-base md:text-[16px] mb-1">X/TWITTER</Link>
+                            <Link href="https://discord.gg/" target="_blank" className=" text-base md:text-[16px] mb-1">DISCORD</Link>
+                            <Link href="https://t.me/+ZWHGMW4ZHXQwYTZl" target="_blank" className=" text-base md:text-[16px]">TELEGRAM</Link>
                         </div>
                         {/* Resources */}
                         <div className="flex flex-col gap-2">
                             <span className="text-sm md:text-[14px] text-white/50 mb-2">RESOURCES</span>
-                            <Link href="/blogs" className=" text-base md:text-[16px] mb-1">BLOG</Link>
-                            <Link href="https://docs.encifher.io/" target="_blank" className=" text-base md:text-[16px] mb-1">DOCS</Link>
-                            <Link href="#" className=" text-base md:text-[16px]">BRAND KIT</Link>
+                            <Link target="_blank" href="/blogs" className=" text-base md:text-[16px] mb-1">BLOG</Link>
+                            <Link target="_blank" href="https://docs.encifher.io/" target="_blank" className=" text-base md:text-[16px] mb-1">DOCS</Link>
+                            <Link target="_blank" href="#" className=" text-base md:text-[16px]">BRAND KIT</Link>
                         </div>
                         {/* Company */}
                         <div className="flex flex-col gap-2">
