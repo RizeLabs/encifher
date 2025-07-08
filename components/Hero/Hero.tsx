@@ -93,7 +93,8 @@ export default function Hero() {
 
                 <div className='absolute left-1/2 bottom-0 transform -translate-x-1/2 w-full flex justify-center items-end pointer-events-none'>
                     <Image src="/bg.svg" alt="hero-image" className='hidden md:block w-auto max-w-auto md:h-[90%]' width={2000} height={1000} />
-                    <Image src="/mobilebg.svg" alt="hero-image-mobile" className='block md:hidden w-full h-[70vh] object-cover' width={2000} height={1000} />
+                    <Image src="/mobilebg.svg" alt="hero-image-mobile" className='block md:hidden w-full h-[85vh] object-cover' width={2000} height={1000} />
+                    {/* <div className="block md:hidden absolute bottom-0 left-0 w-full h-[25px] pointer-events-none" style={{background: 'linear-gradient(to top, #0c0c0c 4%, transparent 100%)'}} /> */}
                 </div>
                 <div className='absolute left-1/2 bottom-10 transform -translate-x-1/2 w-full flex justify-center items-end pointer-events-none'>
                     <span className='text-white/60 text-xs font-lexend text-center flex flex-col items-center gap-2'>
