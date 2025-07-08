@@ -37,7 +37,7 @@ export function Video() {
                     ref={videoRef}
                     src="/demo.mp4"
                     poster="/thumbnail.svg"
-                    className={`w-full h-full rounded-2xl object-cover ${playing ? '' : ''}`}
+                    className="w-full h-full rounded-2xl object-cover"
                     controls={playing}
                     tabIndex={-1}
                 />

@@ -93,7 +93,7 @@ export default function Hero() {
 
                 <div className='absolute left-1/2 bottom-0 transform -translate-x-1/2 w-full flex justify-center items-end pointer-events-none'>
                     <Image src="/bg.svg" alt="hero-image" className='hidden md:block w-auto max-w-auto md:h-[90%]' width={2000} height={1000} />
-                    <Image src="/mobilebg.svg" alt="hero-image-mobile" className='block md:hidden w-auto max-w-auto h-[70vh]' width={2000} height={1000} />
+                    <Image src="/mobilebg.svg" alt="hero-image-mobile" className='block md:hidden w-full h-[70vh] object-cover' width={2000} height={1000} />
                 </div>
                 <div className='absolute left-1/2 bottom-10 transform -translate-x-1/2 w-full flex justify-center items-end pointer-events-none'>
                     <span className='text-white/60 text-xs font-lexend text-center flex flex-col items-center gap-2'>
