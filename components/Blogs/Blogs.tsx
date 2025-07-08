@@ -8,8 +8,7 @@ import { blogs } from "./blogdetails";
 export default function Blogs() {
   return (
     <div className="flex flex-col min-h-screen">
-      <Navbar />
-      <MatrixLetters />
+      <Navbar isMenuOpen={false} onMenuClick={() => { }} onLogoClick={() => { }} />      <MatrixLetters />
 
       <div className="flex flex-col w-full flex-grow justify-center items-center mt-8 px-2 md:px-0">
         <div className="flex flex-col w-full max-w-2xl md:max-w-3xl lg:max-w-4xl">

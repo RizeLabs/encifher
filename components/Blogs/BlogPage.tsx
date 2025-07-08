@@ -52,7 +52,7 @@ export default function BlogPage({ blogSlug }: BlogPageInterface) {
 
   return (
     <>
-      <Navbar />
+      <Navbar isMenuOpen={false} onMenuClick={() => {}} onLogoClick={() => {}} />
       <MatrixLetters />
       <div className="flex flex-col md:flex-row w-full h-full mt-8">
         {/* Sticky & Scrollable Table of Contents */}

@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image'
 // import MatrixLetters from "@/decorations/MatrixLetters"
-import Navbar from "../Navbar/Navbar"
+// import Navbar from "../Navbar/Navbar"
 // import Button from '../Button/Button'
 import UnderlinedText from '../Underlined/Underlined'
 import { useState } from 'react'

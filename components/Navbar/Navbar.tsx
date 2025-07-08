@@ -1,8 +1,8 @@
 'use client'
-import { useState, useEffect, useRef } from "react"
+// import { useState, useEffect, useRef } from "react"
 import Image from "next/image"
 import Button from "../Button/Button"
-import { motion, AnimatePresence } from "framer-motion"
+// import { motion, AnimatePresence } from "framer-motion"
 import { FC } from "react";
 
 interface NavbarProps {

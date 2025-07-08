@@ -37,7 +37,7 @@ export default function Footer() {
                         <div className="flex flex-col gap-2">
                             <span className="text-sm md:text-[14px] text-white/50 mb-2">RESOURCES</span>
                             <Link target="_blank" href="/blogs" className=" text-base md:text-[16px] mb-1">BLOG</Link>
-                            <Link target="_blank" href="https://docs.encifher.io/" target="_blank" className=" text-base md:text-[16px] mb-1">DOCS</Link>
+                            <Link target="_blank" href="https://docs.encifher.io/" className=" text-base md:text-[16px] mb-1">DOCS</Link>
                             <Link target="_blank" href="#" className=" text-base md:text-[16px]">BRAND KIT</Link>
                         </div>
                         {/* Company */}
