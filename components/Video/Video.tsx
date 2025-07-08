@@ -36,7 +36,8 @@ export function Video() {
                 <video
                     ref={videoRef}
                     src="/demo.mp4"
-                    className={`w-full h-full rounded-2xl object-cover bg-black ${!playing ? 'opacity-5' : 'opacity-100'}`}
+                    poster="/thumbnail.svg"
+                    className={`w-full h-full rounded-2xl object-cover ${playing ? '' : ''}`}
                     controls={playing}
                     tabIndex={-1}
                 />
