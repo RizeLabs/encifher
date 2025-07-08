@@ -50,7 +50,7 @@ export default function Waitlist() {
                     <Image src="/strip4.svg" alt="strip4" width={49} height={341} />
                 </div>
                 <div className="relative z-10 flex flex-col p-4 sm:p-8 items-center">
-                    <span className="text-white text-[34px] sm:text-3xl md:text-[40px] font-[300] mt-8 md:mt-[50px] text-center">
+                    <span className="text-white text-[24px] md:text-[40px] font-[300] mt-8 md:mt-[50px] text-center">
                        <UnderlinedText>Privacy</UnderlinedText>  without compromise
                     </span>
                     <span className="text-white/60 text-[14px] md:text-[16px] font-[300] mt-2 md:mt-[34px]  text-center">
