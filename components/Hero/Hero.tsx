@@ -6,7 +6,11 @@ import Navbar from "../Navbar/Navbar"
 import UnderlinedText from '../Underlined/Underlined'
 import { useState } from 'react'
 
-export default function Hero() {
+interface HeroProps {
+  children?: React.ReactNode;
+}
+
+export default function Hero({ children }: HeroProps) {
     const [email, setEmail] = useState("")
     const [status, setStatus] = useState("Join Waitlist")
 
@@ -39,7 +43,7 @@ export default function Hero() {
 
     return (
         <>
-            <Navbar />
+            {children}
             <div className="relative bg-[#0c0c0c] min-h-[700px] md:min-h-[900px] w-full flex flex-col  items-center gap-8 pb-[200px]">
                 <div className="absolute top-0 -left-[40%] w-full h-full flex flex-col items-center justify-start pointer-events-none md:z-0 -z-10">
                     <Image src="/bgstrip3.svg" alt="strip1" width={49} height={341} />
