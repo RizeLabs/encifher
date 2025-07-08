@@ -29,7 +29,7 @@ export default function Footer() {
                         {/* Socials */}
                         <div className="flex flex-col gap-2">
                             <span className="text-sm md:text-[14px] text-white/50 mb-2">SOCIALS</span>
-                            <Link href="https://x.com/encifherio" className=" text-base md:text-[16px] mb-1">TWITTER</Link>
+                            <Link href="https://x.com/encifherio" className=" text-base md:text-[16px] mb-1">X/TWITTER</Link>
                             <Link href="https://discord.gg/" className=" text-base md:text-[16px] mb-1">DISCORD</Link>
                             <Link href="https://t.me/+ZWHGMW4ZHXQwYTZl" className=" text-base md:text-[16px]">TELEGRAM</Link>
                         </div>
