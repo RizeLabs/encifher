@@ -58,8 +58,11 @@ export default function MobileMenu({ isOpen, onClose, onBlogsClick, onDocsClick,
               animate={{ opacity: 1 }}
               transition={{ delay: 0.1, duration: 0.5, ease: "easeInOut" }}
             >
-              <button
-                onClick={onBlogsClick}
+              {/* BLOGS link */}
+              <a
+                href="/blogs"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center w-full mx-auto px-4 py-2 text-[14px] font-mono uppercase text-white/80 bg-white/10 border border-white/10 rounded-[4px] mt-[16px] focus:outline-none"
               >
                 <span className="mr-3">
@@ -73,15 +76,18 @@ export default function MobileMenu({ isOpen, onClose, onBlogsClick, onDocsClick,
                   </svg>
                 </span>
                 BLOGS
-              </button>
+              </a>
             </motion.div>
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3, duration: 0.5, ease: "easeInOut" }}
             >
-              <button
-                onClick={onDocsClick}
+              {/* DOCS link */}
+              <a
+                href="/docs"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center w-full mx-auto px-4 py-2 text-[14px] font-mono uppercase text-white/80 bg-white/10 border border-white/10 rounded-[4px] my-[16px] focus:outline-none"
               >
                 <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -94,15 +100,18 @@ export default function MobileMenu({ isOpen, onClose, onBlogsClick, onDocsClick,
                 </svg>
 
                 <span className="pl-3"> DOCS</span>
-              </button>
+              </a>
             </motion.div>
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.5, ease: "easeInOut" }}
             >
-              <button
-                onClick={onLaunchAppClick}
+              {/* LAUNCH APP link */}
+              <a
+                href="https://app.encifher.com" // replace with your actual app URL
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex mb-[16px] items-center justify-between w-full mx-auto px-4 py-2 text-[14px] font-mono uppercase text-primary-brand-light bg-primary-brand/10 border border-primary-brand/40 rounded-[4px] focus:outline-none"
               >
                 <span>LAUNCH APP</span>
@@ -116,7 +125,7 @@ export default function MobileMenu({ isOpen, onClose, onBlogsClick, onDocsClick,
                     </g>
                   </svg>
                 </span>
-              </button>
+              </a>
             </motion.div>
           </div>
         </motion.div>
