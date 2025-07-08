@@ -10,7 +10,7 @@ interface MobileMenuProps {
   onLaunchAppClick: () => void;
 }
 
-export default function MobileMenu({ isOpen, onClose, onBlogsClick, onDocsClick, onLaunchAppClick }: MobileMenuProps) {
+export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   const menuRef = useRef<HTMLDivElement>(null);
   const buttonsRef = useRef<HTMLDivElement>(null);
   const menuVariants = {
