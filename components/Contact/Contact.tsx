@@ -86,7 +86,7 @@ export default function Contact() {
                         onClick={() => window.open("https://github.com/RizeLabs", "_blank")}
                     />
                 </div>
-                <div className="text-center text-white/60 text-sm font-[300]">© 2024 Rize Labs, HQ Singapore</div>
+                {/* <div className="text-center text-white/60 text-sm font-[300]">© 2024 Rize Labs, HQ Singapore</div> */}
             </div>
         </>
     );

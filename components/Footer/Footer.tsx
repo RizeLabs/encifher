@@ -58,9 +58,9 @@ export default function Footer() {
                     className="absolute left-0 bottom-0 w-full h-full object-cover z-0 pointer-events-none select-none"
                     aria-hidden="true"
                 />
-                <p className="absolute left-0 right-0 bottom-4 text-xs md:text-[14px] text-white/70 font-mono tracking-wide z-10">
+                {/* <p className="absolute left-0 right-0 bottom-4 text-xs md:text-[14px] text-white/70 font-mono tracking-wide z-10">
                     © 2025 RIZE LABS, HQ SINGAPORE. All Rights Reserved.
-                </p>
+                </p> */}
             </div>
         </footer>
     );
