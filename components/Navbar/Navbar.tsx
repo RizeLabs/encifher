@@ -19,7 +19,7 @@ const Navbar: FC<NavbarProps> = ({ isMenuOpen, onMenuClick, onLogoClick }) => {
       </div>
       <div className="items-center gap-2 hidden md:flex">
         <Button text="Blogs" onClick={() => window.open("/blogs", "_blank")} className="px-4 py-2 text-sm text-white/60 bg-white/5 border-white/5 hover:bg-white/10" />
-        <Button text="Docs" onClick={() => window.open("https://docs.encifher.io/docs/intro/", "_blank")} className="px-4 py-2 text-sm text-white/60 bg-white/5 border-white/5 hover:bg-white/10" />
+        <Button text="Docs" onClick={() => window.open("https://docs.encifher.io/docs", "_blank")} className="px-4 py-2 text-sm text-white/60 bg-white/5 border-white/5 hover:bg-white/10" />
         <Button text="Launch App" onClick={() => window.open("https://app.encifher.io", "_blank")} className="px-4 py-2 text-sm" />
       </div>
       <div className="md:hidden w-9 h-8 border-2 border-white/15 p-2 rounded-sm" onClick={onMenuClick}>

@@ -27,7 +27,7 @@ export default function Home() {
                 isOpen={isMenuOpen}
                 onClose={handleCloseMenu}
                 onBlogsClick={() => { window.open("/blogs", "_blank"); handleCloseMenu(); }}
-                onDocsClick={() => { window.open("https://docs.encifher.io/docs/intro/", "_blank"); handleCloseMenu(); }}
+                onDocsClick={() => { window.open("https://docs.encifher.io/docs", "_blank"); handleCloseMenu(); }}
                 onLaunchAppClick={() => { window.open("https://app.encifher.io", "_blank"); handleCloseMenu(); }}
             />
             <div ref={heroRef}>
