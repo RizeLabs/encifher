@@ -10,6 +10,7 @@ import Faq from "../Faq/Faq";
 import Footer from "../Footer/Footer";
 import Waitlist from "../Waitlist/Waitlist";
 import Testimonial from "../Testimonial/Testimonial";
+import HowItWorks from "../HowItWorks/HowItWorks";
 import { Video } from "../Video/Video";
 
 export default function Home() {
@@ -38,6 +39,7 @@ export default function Home() {
             {/* <Choose /> */}
             {/* <Suite /> */}
             <Testimonial />
+            <HowItWorks />
             <Faq />
             <Waitlist />
             <Footer />
