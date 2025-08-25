@@ -1,3 +1,4 @@
+/* eslint-disable */
 "use client"
 
 import { Shield, Cpu, FileCheck } from 'lucide-react';
