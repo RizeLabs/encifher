@@ -19,17 +19,17 @@ export default function HowItWorks() {
                 <div className="flex flex-col items-center text-center">
                     <div className="flex items-center gap-3 mb-6">
                         <button className="bg-primary-brand/15 border border-primary-brand/30 text-primary-brand-light font-mono uppercase px-4 py-2 text-sm rounded-md">
-                            COMMIT
+                           EXPRESS
                         </button>
                         <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center border border-white/20">
                             <Shield className="w-6 h-6 text-white" />
                         </div>
                     </div>
                     <h3 className="text-lg md:text-xl font-[400] text-white mb-4">
-                        Make Encryption Easy
+                        Make Encryption Expressive
                     </h3>
                     <p className="text-sm md:text-[14px] font-[300] text-white/60 leading-relaxed">
-                        Wrap SPL tokens into encrypted balances. The chain keeps a handle — not your amount. Non-custodial; threshold-split keys.
+                        Wrap SPL tokens into encrypted equivalents. Express your execution intent on top of it
                     </p>
                 </div>
 
@@ -44,10 +44,10 @@ export default function HowItWorks() {
                         </div>
                     </div>
                     <h3 className="text-lg md:text-xl font-[400] text-white mb-4">
-                        Encrypted Compute at Chain Speed
+                        Encrypted Compute at Scale
                     </h3>
                     <p className="text-sm md:text-[14px] font-[300] text-white/60 leading-relaxed">
-                        Actions run on ciphertext inside an attested co-processor (TEE). Outputs are re-encrypted and you get a verifiable receipt.
+                    Privacy guarantees derived from the underline encryption scheme, with speed and integrity of TEEs
                     </p>
                 </div>
 
@@ -65,7 +65,7 @@ export default function HowItWorks() {
                         Verify Without Trusting
                     </h3>
                     <p className="text-sm md:text-[14px] font-[300] text-white/60 leading-relaxed">
-                        Contracts check attestation + state-root transitions before updates land. Roots + DA pointers let anyone independently verify batches.
+                     Verify every bit of your encrypted intent against proof and attestations onchain via Encifher's extensive verification mechanism
                     </p>
                 </div>
             </div>
