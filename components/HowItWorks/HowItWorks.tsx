@@ -1,75 +1,131 @@
 /* eslint-disable */
 "use client"
 
-import { Shield, Cpu, FileCheck } from 'lucide-react';
+import Image from "next/image";
 
 export default function HowItWorks() {
     return (
-        <div className="flex flex-col bg-[#0c0c0c] items-center justify-center my-16 md:mb-[2rem] w-full px-4 sm:px-6 md:px-0">
+        <div className="flex flex-col bg-[#0c0c0c] items-center justify-center my-16 md:mb-[2rem] w-full px-4 sm:px-6 md:px-4">
             <div className="text-center mb-16">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-[400] text-white mb-4">
-                    How it works — <span className="text-primary-brand-light">Trustless Private Compute</span>
+                    Trustless Private Compute
                 </h2>
                 <p className="text-sm md:text-[16px] font-[300] text-white/60 max-w-3xl mx-auto leading-relaxed">
                     Build private flows with encrypted state, attested execution, and on-chain verification — no custody, no plaintext on chain.
                 </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 w-full max-w-6xl">
-                {/* Column 1: Commit */}
-                <div className="flex flex-col items-center text-center">
-                    <div className="flex items-center gap-3 mb-6">
-                        <button className="bg-primary-brand/15 border border-primary-brand/30 text-primary-brand-light font-mono uppercase px-4 py-2 text-sm rounded-md">
-                           EXPRESS
-                        </button>
-                        <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center border border-white/20">
-                            <Shield className="w-6 h-6 text-white" />
-                        </div>
+            {/* How It Works Steps */}
+            <div className="w-full max-w-7xl">
+                {/* Top Row - SCREENING (Full Width) */}
+                <div className="mb-8 md:mb-12">
+                    <div className="bg-[#161616] backdrop-blur-md border border-white/10 rounded-xl relative overflow-hidden flex flex-col md:flex-row justify-start items-center">
+{/* Icon */}
+<div className="bg-none">
+                                <Image 
+                                    src="/hiw1.svg"
+                                    alt="Screening Icon" 
+                                    width={200} 
+                                    height={200}
+                                    className="w-full h-full"
+                                />
+                            </div>
+                        
+                        
+                            
+                            
+                            {/* Content */}
+                            <div className="flex-1 md:ml-10 p-6 md:p-0 text-center md:text-left">
+                                <h3 className="text-xs md:text-lg font-bold text-white mb-3 uppercase tracking-wider">
+                                    Compliance
+                                </h3>
+                                <p className="text-[8px] md:text-xs text-white/80 leading-relaxed max-w-2xl">
+                                    Encifher screens your wallet against blacklist address registries for fraud, terror financing, dark net transactions, hacks etc. This ensures users have a safe interaction.
+                                </p>
+                            </div>
+                        
                     </div>
-                    <h3 className="text-lg md:text-xl font-[400] text-white mb-4">
-                        Make Encryption Expressive
-                    </h3>
-                    <p className="text-sm md:text-[14px] font-[300] text-white/60 leading-relaxed">
-                        Wrap SPL tokens into encrypted equivalents. Express your execution intent on top of it
-                    </p>
                 </div>
 
-                {/* Column 2: Compute */}
-                <div className="flex flex-col items-center text-center">
-                    <div className="flex items-center gap-3 mb-6">
-                        <button className="bg-primary-brand/15 border border-primary-brand/30 text-primary-brand-light font-mono uppercase px-4 py-2 text-sm rounded-md">
-                            COMPUTE
-                        </button>
-                        <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center border border-white/20">
-                            <Cpu className="w-6 h-6 text-white" />
-                        </div>
+                {/* Bottom Row - Three Steps */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                    {/* ENCRYPT */}
+                    <div className="bg-[#161616] backdrop-blur-md border border-white/10 rounded-xl relative overflow-hidden">
+                
+                        {/* Icon */}
+                        <div>
+                                <Image 
+                                    src="/hiw2.svg" 
+                                    alt="Encrypt Icon" 
+                                    width={120} 
+                                    height={120}
+                                    className="w-full h-full"
+                                />
+                            </div>
+                            
+                        <div className="flex-col justify-center items-center p-6 md:text-left text-center">
+                                <h3 className="text-xs md:text-lg font-bold text-white mb-3 uppercase tracking-wider">
+                                Encrypt
+                                </h3>
+                                <p className="text-[8px] md:text-xs text-white/80 leading-relaxed max-w-2xl">
+                                Wrap tokens into encrypted balances. On-chain we store a handle, not your amount
+                                </p>
+                            </div>
+                        
                     </div>
-                    <h3 className="text-lg md:text-xl font-[400] text-white mb-4">
-                        Encrypted Compute at Scale
-                    </h3>
-                    <p className="text-sm md:text-[14px] font-[300] text-white/60 leading-relaxed">
-                    Privacy guarantees derived from the underline encryption scheme, with speed and integrity of TEEs
-                    </p>
-                </div>
 
-                {/* Column 3: Verify */}
-                <div className="flex flex-col items-center text-center">
-                    <div className="flex items-center gap-3 mb-6">
-                        <button className="bg-primary-brand/15 border border-primary-brand/30 text-primary-brand-light font-mono uppercase px-4 py-2 text-sm rounded-md">
-                            VERIFY
-                        </button>
-                        <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center border border-white/20">
-                            <FileCheck className="w-6 h-6 text-white" />
-                        </div>
+                    {/* EXECUTE */}
+                    <div className="bg-[#161616] backdrop-blur-md border border-white/10 rounded-xl relative overflow-hidden">
+                
+                        {/* Icon */}
+                        <div>
+                                <Image 
+                                    src="/hiw3.svg" 
+                                    alt="Encrypt Icon" 
+                                    width={120} 
+                                    height={120}
+                                    className="w-full h-full"
+                                />
+                            </div>
+                            
+                        <div className="flex-col justify-center items-center p-6 md:text-left text-center">
+                                <h3 className="text-xs md:text-lg font-bold text-white mb-3 uppercase tracking-wider">
+                                Execute
+                                </h3>
+                                <p className="text-[8px] md:text-xs text-white/80 leading-relaxed max-w-2xl">
+                                Our TEE co-processor decrypts inside the enclave, routes via Jupiter, re-encrypts results.
+                                </p>
+                            </div>
+                        
                     </div>
-                    <h3 className="text-lg md:text-xl font-[400] text-white mb-4">
-                        Verify Without Trusting
-                    </h3>
-                    <p className="text-sm md:text-[14px] font-[300] text-white/60 leading-relaxed">
-                     Verify every bit of your encrypted intent against proof and attestations onchain via Encifher's extensive verification mechanism
-                    </p>
+
+                    {/* VERIFY */}
+                    <div className="bg-[#161616] backdrop-blur-md border border-white/10 rounded-xl relative overflow-hidden">
+                
+                        {/* Icon */}
+                        <div>
+                                <Image 
+                                    src="/hiw4.svg" 
+                                    alt="Encrypt Icon" 
+                                    width={120} 
+                                    height={120}
+                                    className="w-full h-full"
+                                />
+                            </div>
+                            
+                        <div className="flex-col justify-center items-center p-6 md:text-left text-center">
+                                <h3 className="text-xs md:text-lg font-bold text-white mb-3 uppercase tracking-wider">
+                                Verify                                </h3>
+                                <p className="text-[8px] md:text-xs text-white/80 leading-relaxed max-w-2xl">
+                                We post a signed Merkle root + DA pointer so anyone can verify the computation.
+                                </p>
+                            </div>
+                        
+                    </div>
+           
                 </div>
             </div>
         </div>
     )
 }
+// No code needed here; the file is already complete and properly closed.
