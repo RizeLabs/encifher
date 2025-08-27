@@ -2,7 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
+html,
+body {
   overflow-x: hidden !important;
   height: 100%;
   width: 100%;
@@ -32,7 +33,12 @@ html, body {
   /* position: relative; */
   border: 1px solid;
   border-image-slice: 1;
-  border-image-source: radial-gradient(100% 100% at 50% 0%, #FFFFFF 0%, rgba(255, 255, 255, 0.5) 20.07%, rgba(255, 255, 255, 0) 86.88%);
+  border-image-source: radial-gradient(
+    100% 100% at 50% 0%,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0.5) 20.07%,
+    rgba(255, 255, 255, 0) 86.88%
+  );
 }
 
 /* .border-gradient::before {
@@ -54,15 +60,19 @@ html, body {
 }
 
 .button-gradient::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   border-radius: 12px;
   border: 1px solid transparent;
-  background: radial-gradient(59.02% 100% at 50.31% 100%, #FFFFFF 0%, rgba(255, 255, 255, 0.4) 44.62%, rgba(255, 255, 255, 0.12) 100%) border-box;
-  mask:
-    linear-gradient(#000 0 0) padding-box,
-    linear-gradient(#000 0 0);
+  background: radial-gradient(
+      59.02% 100% at 50.31% 100%,
+      #ffffff 0%,
+      rgba(255, 255, 255, 0.4) 44.62%,
+      rgba(255, 255, 255, 0.12) 100%
+    )
+    border-box;
+  mask: linear-gradient(#000 0 0) padding-box, linear-gradient(#000 0 0);
   mask-composite: exclude;
   z-index: -1;
 }
@@ -72,15 +82,19 @@ html, body {
 }
 
 .input-gradient::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   border-radius: 12px;
   border: 1px solid transparent;
-  background: radial-gradient(59.02% 100% at 50.31% 100%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.2) 44.62%, rgba(255, 255, 255, 0.12) 100%) border-box;
-  mask:
-    linear-gradient(#000 0 0) padding-box,
-    linear-gradient(#000 0 0);
+  background: radial-gradient(
+      59.02% 100% at 50.31% 100%,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(255, 255, 255, 0.2) 44.62%,
+      rgba(255, 255, 255, 0.12) 100%
+    )
+    border-box;
+  mask: linear-gradient(#000 0 0) padding-box, linear-gradient(#000 0 0);
   mask-composite: exclude;
   z-index: -1;
 }
@@ -89,7 +103,13 @@ html, body {
   /* position: relative; */
   border: 1px solid;
   border-image-slice: 1;
-  border-image-source: linear-gradient(149.2deg, rgba(255, 255, 255, 0.08) 12.9%, rgba(255, 255, 255, 0.16) 43.98%, rgba(255, 255, 255, 0.16) 62.27%, rgba(255, 255, 255, 0.08) 82.65%);
+  border-image-source: linear-gradient(
+    149.2deg,
+    rgba(255, 255, 255, 0.08) 12.9%,
+    rgba(255, 255, 255, 0.16) 43.98%,
+    rgba(255, 255, 255, 0.16) 62.27%,
+    rgba(255, 255, 255, 0.08) 82.65%
+  );
 }
 
 /* .card-border::before {
@@ -110,7 +130,13 @@ html, body {
   /* position: relative; */
   border: 1px solid;
   border-image-slice: 1;
-  border-image-source: linear-gradient(149.2deg, rgba(255, 255, 255, 0.08) 12.9%, rgba(255, 255, 255, 0.16) 43.98%, rgba(255, 255, 255, 0.16) 62.27%, rgba(255, 255, 255, 0.08) 82.65%);
+  border-image-source: linear-gradient(
+    149.2deg,
+    rgba(255, 255, 255, 0.08) 12.9%,
+    rgba(255, 255, 255, 0.16) 43.98%,
+    rgba(255, 255, 255, 0.16) 62.27%,
+    rgba(255, 255, 255, 0.08) 82.65%
+  );
 }
 
 /* .faq-border::before {
@@ -131,7 +157,12 @@ html, body {
   /* position: relative; */
   border: 1px solid;
   border-image-slice: 1;
-  border-image-source: radial-gradient(100% 100% at 50% 100%, #FFFFFF 0%, rgba(255, 255, 255, 0.5) 20.07%, rgba(255, 255, 255, 0) 86.88%);
+  border-image-source: radial-gradient(
+    100% 100% at 50% 100%,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0.5) 20.07%,
+    rgba(255, 255, 255, 0) 86.88%
+  );
 }
 
 /* .border-gradient-b::before {
@@ -179,11 +210,16 @@ html, body {
   /* Optional: add padding or shadow for effect */
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-img, svg, video, canvas {
+img,
+svg,
+video,
+canvas {
   max-width: 100%;
   height: auto;
   display: block;

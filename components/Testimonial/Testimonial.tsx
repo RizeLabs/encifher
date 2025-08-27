@@ -399,11 +399,11 @@ export default function Testimonial() {
     let firstRowAnimationId: number;
     let secondRowAnimationId: number;
 
-    // Only run animation on screens larger than mobile
-    const isMobile =
-      typeof window !== "undefined" ? window.innerWidth < 768 : false;
+    // Only run animation on screens larger than tablet (lg breakpoint)
+    const isTabletOrMobile =
+      typeof window !== "undefined" ? window.innerWidth < 1024 : false;
 
-    if (isMobile) return;
+    if (isTabletOrMobile) return;
 
     const speed = 1.5;
 
@@ -459,18 +459,24 @@ export default function Testimonial() {
         </div>
 
         {/* Mobile Layout with Animation */}
-        <div className="block md:hidden">
+        <div className="block lg:hidden relative">
           <MobileTestimonials />
         </div>
 
         {/* Desktop Scrolling Layout */}
-        <div className="hidden md:block space-y-16">
+        <div className="hidden lg:block space-y-16 relative">
           {/* First Row */}
           <div
-            className="overflow-hidden"
+            className="overflow-hidden relative"
             onMouseEnter={() => setIsFirstRowHovered(true)}
             onMouseLeave={() => setIsFirstRowHovered(false)}
           >
+            {/* Left Fade Effect */}
+            <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-[#0c0c0c] to-transparent z-10 pointer-events-none"></div>
+
+            {/* Right Fade Effect */}
+            <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-[#0c0c0c] to-transparent z-10 pointer-events-none"></div>
+
             <div
               ref={firstRowRef}
               className="flex space-x-6 items-start"
@@ -491,10 +497,16 @@ export default function Testimonial() {
 
           {/* Second Row */}
           <div
-            className="overflow-hidden"
+            className="overflow-hidden relative"
             onMouseEnter={() => setIsSecondRowHovered(true)}
             onMouseLeave={() => setIsSecondRowHovered(false)}
           >
+            {/* Left Fade Effect */}
+            <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-[#0c0c0c] to-transparent z-10 pointer-events-none"></div>
+
+            {/* Right Fade Effect */}
+            <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-[#0c0c0c] to-transparent z-10 pointer-events-none"></div>
+
             <div
               ref={secondRowRef}
               className="flex space-x-6 items-start"
