@@ -8,7 +8,7 @@ export default function HowItWorks() {
         <div className="flex flex-col bg-[#0c0c0c] items-center justify-center my-16 md:mb-[2rem] w-full px-4 sm:px-6 md:px-4">
             <div className="text-center mb-16">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-[400] text-white mb-4">
-                    How it works — <span className="text-primary-brand-light">Trustless Private Compute</span>
+                    Trustless Private Compute
                 </h2>
                 <p className="text-sm md:text-[16px] font-[300] text-white/60 max-w-3xl mx-auto leading-relaxed">
                     Build private flows with encrypted state, attested execution, and on-chain verification — no custody, no plaintext on chain.
@@ -37,7 +37,7 @@ export default function HowItWorks() {
                             {/* Content */}
                             <div className="flex-1 md:ml-10 p-6 md:p-0 text-center md:text-left">
                                 <h3 className="text-xs md:text-lg font-bold text-white mb-3 uppercase tracking-wider">
-                                    Screening
+                                    Compliance
                                 </h3>
                                 <p className="text-[8px] md:text-xs text-white/80 leading-relaxed max-w-2xl">
                                     Encifher screens your wallet against blacklist address registries for fraud, terror financing, dark net transactions, hacks etc. This ensures users have a safe interaction.
