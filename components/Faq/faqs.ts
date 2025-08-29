@@ -4,7 +4,7 @@ export const faqs = [
         answer: `Encifher allows users to export a detailed report of their transactions to provide to the relevant authorities. This report includes the total number of blockchain interactions.
 Additionally, we perform pre-transaction checks through hooks and predicates to verify the legitimacy of users before executing transactions`,
         linkText: "Learn more about our compliance policy here.",
-        link: "https://docs.encifher.io/docs/solution/compliance/"
+        link: "https://docs.encifher.io/docs/compliance"
     },
     {
         question: "Is this similar to being a mixer?",
