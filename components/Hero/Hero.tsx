@@ -60,30 +60,23 @@ export default function Hero({ children }: HeroProps) {
 
         <div className="flex flex-col md:flex-col items-center w-full pb-5 md:pb-12 z-20">
           <div className="group text-sm md:text-[20px] font-[300] text-white/60 w-full md:w-1/2 text-center leading-relaxed px-4 md:mt-[74px] md:px-0 md:mb-[14px] ">
-            <span className="px-4 text-[14px] py-2 bg-white/10 rounded-full mr-4 border border-transparent group-hover:bg-primary-brand/15 group-hover:border-primary-brand/25 group-hover:border transition-colors">
-              Join our community today
-            </span>
-            <a
-              href="https://t.me/+QJjLUOh0ib9iYzI1"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <button className="bg-white/10 rounded-full p-3 border border-transparent group-hover:bg-primary-brand/15 group-hover:border-primary-brand/25 group-hover:border transition-colors">
-                <svg
-                  width="12"
-                  height="12"
-                  viewBox="0 0 12 12"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M1.70615 11.0209L0.835938 10.1507L9.03635 1.94238H1.58115V0.692383H11.1645V10.2757H9.91448V2.82051L1.70615 11.0209Z"
-                    fill="white"
-                    fill-opacity="0.8"
-                  />
-                </svg>
-              </button>
-            </a>
+            <div className="flex items-center justify-center gap-2">
+              <a 
+                href="https://alliance.xyz/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-black/80 to-gray-900/70 rounded-full border border-gray-700/40 hover:from-gray-900/90 hover:to-gray-800/80 hover:border-gray-600/50 transition-all duration-300 cursor-pointer backdrop-blur-sm shadow-lg hover:shadow-xl"
+              >
+                <span className="text-white/80 text-sm font-mono">Backed by Alliance DAO</span>
+                <Image
+                  src="/AllianceMark_Light.png"
+                  width={60}
+                  height={18}
+                  alt="Alliance DAO"
+                  className="h-4 w-auto"
+                />
+              </a>
+            </div>
           </div>
           <h1 className="text-3xl md:text-[40px] font-[400] gradient-text text-center leading-tight px-3 mt-[34px] md:mt-[54px] md:mb-[34px] mb-[32px] font-medium">
             Bringing <UnderlinedText>Privacy</UnderlinedText> To Solana Defi
