@@ -23,19 +23,7 @@ export default function Footer() {
               Encifher is bringing compliant privacy to users
             </p>
           </div>
-          <div className="flex items-center gap-3">
-            <span className="text-white/70 text-sm md:text-[14px] font-mono">
-              BACKED BY
-            </span>
-            <div className="w-[1px] h-[25px] bg-white/40" />
-            <Image
-              src="/longhash.svg"
-              width={70}
-              height={20}
-              alt="LongHash"
-              className="w-[60px] sm:w-[97px] h-[30px] sm:h-[40px]"
-            />
-          </div>
+
         </div>
         {/* Right 40%: Socials, Resources, Company */}
         <div className="w-full md:w-[40%] ml-auto">
